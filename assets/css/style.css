@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f8fb;
+  color: #333;
+}
+
+header {
+  padding: 24px;
+  background-color: #1f4e79;
+  color: white;
+}
+
+main {
+  padding: 24px;
+}
+
+h1, h2 {
+  margin: 0 0 12px;
+}
+
+ul {
+  list-style: disc inside;
+}
