@@ -1,173 +1,94 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Strategy Insight</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .insight-body h2 {
-            font-size: 17px;
-            font-weight: 600;
-            color: #0C2244;
-            margin: 28px 0 12px;
-            border-bottom: 2px solid #E6F1FB;
-            padding-bottom: 8px;
-        }
-        .insight-body h2:first-child {
-            margin-top: 0;
-        }
-        .insight-body h3 {
-            font-size: 14px;
-            font-weight: 600;
-            color: #1a2740;
-            margin: 20px 0 8px;
-        }
-        .insight-body p {
-            font-size: 14px;
-            line-height: 1.85;
-            color: #374151;
-            margin-bottom: 12px;
-        }
-        .insight-body ul, .insight-body ol {
-            padding-left: 20px;
-            margin-bottom: 12px;
-        }
-        .insight-body li {
-            font-size: 14px;
-            line-height: 1.8;
-            color: #374151;
-            margin-bottom: 4px;
-        }
-        .insight-body .table-wrap {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            margin: 16px 0;
-        }
-        .insight-body table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-        .insight-body th {
-            background: #0C2244;
-            color: #fff;
-            padding: 10px 12px;
-            text-align: left;
-            font-weight: 600;
-            font-size: 12px;
-        }
-        .insight-body td {
-            padding: 9px 12px;
-            border-bottom: 1px solid #E8ECF4;
-            color: #374151;
-        }
-        .insight-body tr:nth-child(even) td {
-            background: #F8FAFD;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Strategy Insight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- 헤더 -->
-    <header class="header">
-        <div class="header-content">
-            <div class="header-left">
-                <h1 class="header-title">Daily Strategy Insight Hub</h1>
-                <p class="header-subtitle">전일 14:00 ~ 금일 08:00 수집 기사 기반</p>
-            </div>
-            <div class="header-right">
-                <span id="current-date" class="header-date"></span>
-            </div>
-        </div>
-    </header>
 
-    <!-- 서브 네비게이션 -->
-    <nav class="search-bar">
-        <div class="search-container" style="display: flex; gap: 12px; justify-content: flex-end;">
-            <button class="nav-button" onclick="history.back()">← 뒤로가기</button>
-            <button class="nav-button" onclick="window.location.href='index.html'">홈으로</button>
-        </div>
-    </nav>
+  <!-- 헤더 -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <div class="header-title">Daily Strategy Insight Hub</div>
+        <div class="header-subtitle">전일 14:00 ~ 금일 08:00 수집 기사 기반</div>
+      </div>
+      <span id="current-date" class="header-date"></span>
+    </div>
+  </header>
 
-    <!-- 메타 카드 -->
-    <section class="section">
-        <div id="meta-card" class="snapshot-card" style="max-width: 960px; margin: 0 auto;"></div>
-    </section>
+  <!-- 서브 네비게이션 -->
+  <nav class="subnav">
+    <div class="subnav-inner">
+      <button class="subnav-btn" onclick="history.back()">← 뒤로가기</button>
+      <button class="subnav-btn" onclick="location.href='index.html'">홈으로</button>
+    </div>
+  </nav>
 
-    <!-- 본문 -->
-    <section class="section">
-        <div id="content-card" class="snapshot-card" style="max-width: 960px; margin: 0 auto; padding: 28px 32px;">
-            <div id="insight-body" class="insight-body"></div>
-        </div>
-    </section>
+  <!-- 본문 -->
+  <div class="insight-main">
+    <div id="meta-card" class="meta-card"></div>
+    <div id="content-card" class="content-card">
+      <div id="insight-body" class="insight-body"></div>
+    </div>
+  </div>
 
-    <script src="assets/js/app.js"></script>
-    <script>
-        // 상세 페이지 로직
-        document.addEventListener('DOMContentLoaded', function() {
-            setCurrentDate();
-            loadInsightDetail();
-        });
+  <script src="assets/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      setCurrentDate();
+      loadDetail();
+    });
 
-        async function loadInsightDetail() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const filePath = urlParams.get('file');
+    async function loadDetail() {
+      const file = new URLSearchParams(location.search).get('file');
+      if (!file) {
+        showError('잘못된 접근입니다.');
+        return;
+      }
 
-            if (!filePath) {
-                showError('잘못된 접근입니다. 인사이트 목록에서 카드로 진입하거나 <a href="index.html">홈으로</a> 이동해 주세요.');
-                return;
-            }
+      try {
+        const [insightsRes, contentRes] = await Promise.all([
+          fetch('data/insights.json'),
+          fetch(file)
+        ]);
 
-            try {
-                const contentUrl = new URL(filePath, window.location.href).href;
+        if (!insightsRes.ok) throw new Error('insights.json 로드 실패');
+        const insights = await insightsRes.json();
+        const item = insights.find(i => i.path === file);
 
-                // 메타 정보 로드
-                const insightsResponse = await fetch('data/insights.json');
-                if (!insightsResponse.ok) throw new Error(`Failed to load insights (${insightsResponse.status})`);
-                const insights = await insightsResponse.json();
+        if (item) renderMeta(item);
+        else document.getElementById('meta-card').style.display = 'none';
 
-                const insight = insights.find(item => item.path === filePath);
-                if (!insight) {
-                    document.getElementById('meta-card').innerHTML = '<div class="error-message">등록된 인사이트가 아닙니다.</div>';
-                    showError('인사이트 정보를 불러오지 못했습니다.');
-                    return;
-                }
+        if (!contentRes.ok) throw new Error(`파일 로드 실패 (${contentRes.status})`);
+        document.getElementById('insight-body').innerHTML = await contentRes.text();
 
-                renderMetaCard(insight);
+        if (item) document.title = `${item.categoryName} — ${item.date}`;
+      } catch (e) {
+        console.error(e);
+        showError(`인사이트 파일을 불러오지 못했습니다. (${e.message})`);
+      }
+    }
 
-                // 본문 로드
-                const contentResponse = await fetch(contentUrl);
-                if (!contentResponse.ok) throw new Error(`Failed to load content (${contentResponse.status}) ${contentUrl}`);
-                const content = await contentResponse.text();
+    function renderMeta(item) {
+      document.getElementById('meta-card').innerHTML = `
+        <div><span class="badge badge-${item.category}">${item.categoryName}</span></div>
+        <div class="meta-card-title">${item.title}</div>
+        ${item.summary ? `<div class="meta-card-summary">${item.summary}</div>` : ''}
+        <div class="meta-divider"></div>
+        <div class="meta-footer">${item.date} · ${item.time}</div>
+      `;
+    }
 
-                document.getElementById('insight-body').innerHTML = content;
-            } catch (error) {
-                console.error('Error loading insight:', error);
-                showError(`인사이트 파일을 불러오지 못했습니다. (${error.message})`);
-            }
-        }
-
-        function renderMetaCard(insight) {
-            const badgeClass = `badge-${insight.category}`;
-            const card = document.getElementById('meta-card');
-
-            card.innerHTML = `
-                <div class="snapshot-card-header" style="margin-bottom: 8px;">
-                    <span class="snapshot-badge ${badgeClass}">${insight.categoryName}</span>
-                </div>
-                <h1 style="font-size: 18px; font-weight: 600; color: #0C2244; margin: 8px 0; line-height: 1.5;">${insight.title}</h1>
-                ${insight.summary ? `<p style="font-size: 13px; color: #6b7a8d; line-height: 1.7; margin: 6px 0;">${insight.summary}</p>` : ''}
-                <div style="height: 1px; background-color: #E8ECF4; margin: 14px 0;"></div>
-                <div style="font-size: 11px; color: #9aa3af;">날짜 · ${insight.time}</div>
-            `;
-        }
-
-        function showError(message) {
-            document.getElementById('content-card').innerHTML = `<div class="error-message">${message}</div>`;
-        }
-    </script>
+    function showError(msg) {
+      document.getElementById('content-card').innerHTML =
+        `<div class="empty-state">${msg}</div>`;
+    }
+  </script>
 </body>
 </html>
