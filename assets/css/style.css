@@ -160,6 +160,16 @@ body {
   overflow: hidden;
   line-height: 1.55;
 }
+.snapshot-summary {
+  font-size: 11px;
+  color: #6b7a8d;
+  line-height: 1.6;
+  margin: 4px 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .snapshot-divider {
   height: 1px;
   background: #f0f2f5;

@@ -80,6 +80,7 @@ function createSnapshotCard(item, showDot) {
       ${showDot ? '<div class="snapshot-dot"></div>' : ''}
     </div>
     <div class="snapshot-title">${cleanTitle(item.title)}</div>
+    ${item.summary ? `<div class="snapshot-summary">${item.summary}</div>` : ''}
     <div class="snapshot-divider"></div>
     <div class="snapshot-meta">
       <span>${item.time}</span>
