@@ -1,41 +1,77 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Strategy Insight</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데일리 전략 인사이트 허브</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=2">
 </head>
 <body>
-  <header>
-    <h1>Daily Strategy Insight</h1>
-    <p>카테고리별 뉴스 전략 인사이트를 저장하고 보여주는 정적 홈페이지</p>
-  </header>
-  <main>
-    <section>
-      <h2>폴더 구조 안내</h2>
-      <ul>
-        <li><strong>assets/css</strong> - 스타일시트</li>
-        <li><strong>assets/js</strong> - JavaScript</li>
-        <li><strong>assets/images</strong> - 이미지 리소스</li>
-        <li><strong>reports/YYYY-MM-DD</strong> - 날짜별 리포트</li>
-        <li><strong>data</strong> - 카테고리별 HTML 인사이트</li>
-        <li><strong>docs</strong> - 문서 및 안내</li>
-        <li><strong>archive</strong> - 보관용 파일</li>
-      </ul>
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1 class="header-title">데일리 전략 인사이트 허브</h1>
+                <p class="header-subtitle">전일 14:00 ~ 금일 08:00 수집 기사 기반</p>
+            </div>
+            <div class="header-right">
+                <span id="current-date" class="header-date"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 오늘의 인사이트 스냅샷 -->
+    <section id="snapshot-section" class="section">
+        <h2 id="snapshot-title" class="section-label"></h2>
+        <div id="snapshot-grid" class="snapshot-grid"></div>
     </section>
-    <section>
-      <h2>카테고리</h2>
-      <ul>
-        <li>기업금융</li>
-        <li>자동차금융</li>
-        <li>일반</li>
-        <li>소매금융</li>
-        <li>AX</li>
-        <li>IT</li>
-      </ul>
+
+    <!-- 전략 인사이트 아카이브 -->
+    <section class="section">
+        <div class="archive-toolbar">
+            <div class="archive-toolbar-left">
+                <div class="archive-title-group">
+                    <h2 class="section-label">전략 인사이트 목록</h2>
+                    <span class="archive-subtitle">검색, 카테고리, 날짜로 빠르게 찾아보세요.</span>
+                </div>
+                <div class="archive-filters">
+                    <div class="search-input-group">
+                        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21L16.5 16.5M19 11C19 15.4183 15.4183 19 11 19S3 15.4183 3 11 6.58172 3 11 3 19 6.58172 19 11Z" stroke="#9aa3af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="text" id="search-input" class="search-input" placeholder="검색어 입력 (카테고리/제목/요약)">
+                    </div>
+                    <div class="date-filter-box">
+                        <label for="date-filter" class="filter-label">날짜 선택</label>
+                        <div class="date-filter-row">
+                            <input type="date" id="date-filter" class="date-filter" />
+                            <button type="button" id="date-clear" class="date-clear">지우기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar-meta">
+                <span id="total-count" class="total-count"></span>
+            </div>
+        </div>
+
+        <div class="tabs-container">
+            <div class="tabs" id="category-tabs">
+                <button class="tab active" data-category="all">전체</button>
+                <button class="tab" data-category="general">일반</button>
+                <button class="tab" data-category="retail-finance">소매금융</button>
+                <button class="tab" data-category="corporate-finance">기업금융</button>
+                <button class="tab" data-category="auto-finance">자동차금융</button>
+                <button class="tab" data-category="AX">AX</button>
+                <button class="tab" data-category="IT">IT</button>
+            </div>
+        </div>
+        <div id="archive-list" class="archive-list"></div>
     </section>
-  </main>
-  <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/app.js?v=2"></script>
 </body>
 </html>
