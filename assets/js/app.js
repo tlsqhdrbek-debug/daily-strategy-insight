@@ -1,4 +1,4 @@
-/* Daily Strategy Insight Hub — app.js */
+/* 뉴스 전략 인사이트 플랫폼 — app.js */
 let allInsights = [];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -162,14 +162,7 @@ function setupSearch() {
   if (!input) return;
 
   input.addEventListener('input', () => {
-    const query = input.value.trim();
-    if (clearBtn) clearBtn.classList.toggle('visible', query.length > 0);
-    const snapshot = document.getElementById('snapshot-section');
-    if (query) {
-      if (snapshot) snapshot.style.display = 'none';
-    } else {
-      renderSnapshot(allInsights);
-    }
+    if (clearBtn) clearBtn.classList.toggle('visible', input.value.trim().length > 0);
     applyFilters();
   });
 
@@ -178,7 +171,6 @@ function setupSearch() {
       input.value = '';
       clearBtn.classList.remove('visible');
       input.focus();
-      renderSnapshot(allInsights);
       applyFilters();
     });
   }
@@ -205,9 +197,18 @@ function applyFilters() {
     return matchCat && matchQ;
   });
 
+  if (query) {
+    const snapshot = document.getElementById('snapshot-section');
+    if (snapshot) snapshot.style.display = 'none';
+  } else {
+    renderSnapshot(filtered);
+  }
+
   renderArchive(filtered);
 }
 
 function cleanTitle(title) {
-  return (title || '').replace(/Daily Strategy Insight/gi, '전략 인사이트');
+  return (title || '')
+    .replace(/Daily Strategy Insight/gi, '전략 인사이트')
+    .replace(/Strategy Insight/gi, '전략 인사이트');
 }
