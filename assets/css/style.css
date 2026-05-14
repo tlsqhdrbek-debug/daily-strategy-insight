@@ -1,5 +1,5 @@
 /* ============================================================
-   Daily Strategy Insight — Premium UI Design System
+   뉴스 전략 인사이트 플랫폼 — Design System
    ============================================================ */
 
 /* ── Reset ── */
@@ -18,9 +18,9 @@
   --border:      #DDE3EE;
   --border-lt:   #EDF0F8;
   --text-1:      #0A1628;
-  --text-2:      #374B6E;
-  --text-3:      #7A8CAA;
-  --text-4:      #A8B6CA;
+  --text-2:      #243552;
+  --text-3:      #4A6080;
+  --text-4:      #7890A8;
   --live:        #F03D3D;
   --green:       #0DB976;
 
@@ -99,7 +99,7 @@ body {
 }
 .header-subtitle {
   font-size: 10px;
-  color: rgba(255,255,255,.4);
+  color: rgba(255,255,255,.65);
   margin-top: 2px;
 }
 .header-right {
@@ -135,7 +135,7 @@ body {
 }
 .header-date {
   font-size: 12px;
-  color: rgba(255,255,255,.45);
+  color: rgba(255,255,255,.75);
   font-weight: 500;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -170,7 +170,7 @@ body {
 }
 .context-stat-label {
   font-size: 10px;
-  color: rgba(255,255,255,.38);
+  color: rgba(255,255,255,.65);
   white-space: nowrap;
 }
 .context-divider {
@@ -182,7 +182,7 @@ body {
 }
 .context-stat-text {
   font-size: 10px;
-  color: rgba(255,255,255,.25);
+  color: rgba(255,255,255,.50);
   white-space: nowrap;
   flex: 1;
   text-align: right;
@@ -334,8 +334,9 @@ body {
 }
 .section-count {
   font-size: 11px;
-  color: var(--text-4);
+  color: var(--text-3);
   font-variant-numeric: tabular-nums;
+  font-weight: 600;
 }
 
 /* ── Snapshot Section ── */
@@ -437,7 +438,7 @@ body {
 .date-label {
   font-size: 11px;
   font-weight: 700;
-  color: var(--text-3);
+  color: var(--text-2);
   letter-spacing: .06em;
   white-space: nowrap;
 }
@@ -514,14 +515,15 @@ body {
 }
 .archive-time {
   font-size: 10px;
-  color: var(--text-4);
+  color: var(--text-3);
   font-variant-numeric: tabular-nums;
+  font-weight: 500;
 }
 .archive-arrow {
   display: flex;
   align-items: center;
   padding: 0 14px;
-  color: var(--text-4);
+  color: var(--text-3);
   font-size: 18px;
   flex-shrink: 0;
 }
@@ -642,8 +644,9 @@ body {
 .meta-divider { height: 1px; background: var(--border-lt); margin: 14px 0; }
 .meta-footer {
   font-size: 11px;
-  color: var(--text-4);
+  color: var(--text-3);
   font-variant-numeric: tabular-nums;
+  font-weight: 500;
 }
 
 /* Content Card */
