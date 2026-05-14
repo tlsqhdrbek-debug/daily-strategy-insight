@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-/* ---------- 날짜 ---------- */
 function setCurrentDate() {
   const el = document.getElementById('current-date');
   if (!el) return;
@@ -21,7 +20,6 @@ function setCurrentDate() {
   el.textContent = `${y}.${m}.${d}`;
 }
 
-/* ---------- 데이터 로드 ---------- */
 async function loadInsights() {
   try {
     const res = await fetch('data/insights.json');
@@ -34,73 +32,81 @@ async function loadInsights() {
     });
 
     allInsights = data;
+    updateStats(data);
     renderSnapshot(data);
     renderArchive(data);
   } catch (e) {
     console.error('loadInsights failed:', e);
     document.getElementById('archive-list').innerHTML =
-      '<div class="empty-state">인사이트 데이터를 불러오지 못했습니다.</div>';
+      '<div class="empty-state"><div class="empty-icon">⚠️</div>인사이트 데이터를 불러오지 못했습니다.</div>';
   }
 }
 
-/* ---------- 스냅샷 ---------- */
+function todayStr() {
+  const n = new Date();
+  return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,'0')}-${String(n.getDate()).padStart(2,'0')}`;
+}
+
+function updateStats(insights) {
+  const totalEl = document.getElementById('stat-total');
+  const todayEl = document.getElementById('stat-today');
+  if (totalEl) totalEl.textContent = insights.length;
+  if (todayEl) {
+    const today = todayStr();
+    todayEl.textContent = insights.filter(i => i.date === today).length;
+  }
+}
+
 function renderSnapshot(insights) {
   const section = document.getElementById('snapshot-section');
-  if (!section || insights.length === 0) return;
+  if (!section) return;
+  if (insights.length === 0) { section.style.display = 'none'; return; }
 
   const latestDate = insights[0].date;
-  const today = (() => {
-    const n = new Date();
-    return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,'0')}-${String(n.getDate()).padStart(2,'0')}`;
-  })();
-
-  if (latestDate !== today) {
-    section.style.display = 'none';
-    return;
-  }
+  if (latestDate !== todayStr()) { section.style.display = 'none'; return; }
 
   const items = insights.filter(i => i.date === latestDate);
-  document.getElementById('snapshot-label').textContent =
-    `오늘의 인사이트 — ${latestDate.replace(/-/g, '.')}`;
+  const labelEl = document.getElementById('snapshot-label');
+  const countEl = document.getElementById('snapshot-count');
+  if (labelEl) labelEl.textContent = `오늘의 인사이트 — ${latestDate.replace(/-/g, '.')}`;
+  if (countEl) countEl.textContent = `${items.length}건`;
   section.style.display = 'block';
 
   const grid = document.getElementById('snapshot-grid');
   grid.innerHTML = '';
-  items.forEach(item => grid.appendChild(createSnapshotCard(item, true)));
+  items.forEach(item => grid.appendChild(createSnapshotCard(item)));
 }
 
-function createSnapshotCard(item, showDot) {
+function createSnapshotCard(item) {
   const card = document.createElement('div');
   card.className = 'snapshot-card';
+  card.dataset.cat = item.category;
   card.onclick = () => location.href = `insight.html?file=${item.path}`;
 
   card.innerHTML = `
-    <div class="snapshot-card-top">
+    <div class="snapshot-card-header">
       <span class="badge badge-${item.category}">${item.categoryName}</span>
-      ${showDot ? '<div class="snapshot-dot"></div>' : ''}
     </div>
     <div class="snapshot-title">${cleanTitle(item.title)}</div>
     ${item.summary ? `<div class="snapshot-summary">${item.summary}</div>` : ''}
-    <div class="snapshot-divider"></div>
-    <div class="snapshot-meta">
-      <span>${item.time}</span>
-      <span class="snapshot-view">보기 →</span>
+    <div class="snapshot-footer">
+      <span class="snapshot-time">${item.time}</span>
+      <span class="snapshot-cta">자세히 보기 →</span>
     </div>
   `;
   return card;
 }
 
-/* ---------- 아카이브 ---------- */
 function renderArchive(insights) {
   const list = document.getElementById('archive-list');
   const countEl = document.getElementById('total-count');
   if (!list) return;
 
-  if (countEl) countEl.textContent = `전체 ${insights.length}건`;
+  if (countEl) countEl.textContent = `${insights.length}건`;
   list.innerHTML = '';
 
   if (insights.length === 0) {
-    list.innerHTML = '<div class="empty-state">등록된 인사이트가 없습니다.</div>';
+    list.innerHTML = '<div class="empty-state"><div class="empty-icon">🔍</div>검색 결과가 없습니다.</div>';
     return;
   }
 
@@ -112,12 +118,11 @@ function renderArchive(insights) {
     const header = document.createElement('div');
     header.className = 'date-group-header';
     header.innerHTML = `
-      <span class="date-label">${date.replace(/-/g, ' · ')}</span>
+      <span class="date-label">${date.replace(/-/g, '.')}</span>
       <div class="date-line"></div>
       ${date === latestDate ? '<span class="new-pill">NEW</span>' : ''}
     `;
     list.appendChild(header);
-
     groups[date].forEach(item => list.appendChild(createArchiveItem(item)));
   });
 }
@@ -133,28 +138,32 @@ function groupByDate(insights) {
 function createArchiveItem(item) {
   const div = document.createElement('div');
   div.className = 'archive-item';
+  div.dataset.cat = item.category;
   div.onclick = () => location.href = `insight.html?file=${item.path}`;
 
   div.innerHTML = `
+    <div class="archive-item-accent"></div>
     <div class="archive-badge-wrap">
       <span class="badge badge-${item.category}">${item.categoryName}</span>
     </div>
     <div class="archive-content">
       <div class="archive-title">${cleanTitle(item.title)}</div>
       ${item.summary ? `<div class="archive-summary">${item.summary}</div>` : ''}
-      <div class="archive-meta">${item.time}</div>
+      <div class="archive-time">${item.time}</div>
     </div>
-    <span class="archive-arrow">›</span>
+    <div class="archive-arrow">›</div>
   `;
   return div;
 }
 
-/* ---------- 검색 ---------- */
 function setupSearch() {
   const input = document.getElementById('search-input');
+  const clearBtn = document.getElementById('search-clear');
   if (!input) return;
+
   input.addEventListener('input', () => {
-    const query = input.value.trim().toLowerCase();
+    const query = input.value.trim();
+    if (clearBtn) clearBtn.classList.toggle('visible', query.length > 0);
     const snapshot = document.getElementById('snapshot-section');
     if (query) {
       if (snapshot) snapshot.style.display = 'none';
@@ -163,9 +172,18 @@ function setupSearch() {
     }
     applyFilters();
   });
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      input.value = '';
+      clearBtn.classList.remove('visible');
+      input.focus();
+      renderSnapshot(allInsights);
+      applyFilters();
+    });
+  }
 }
 
-/* ---------- 탭 ---------- */
 function setupTabs() {
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
@@ -176,7 +194,6 @@ function setupTabs() {
   });
 }
 
-/* ---------- 필터 적용 ---------- */
 function applyFilters() {
   const query = (document.getElementById('search-input')?.value || '').trim().toLowerCase();
   const cat = document.querySelector('.tab.active')?.dataset.category || 'all';
@@ -191,7 +208,6 @@ function applyFilters() {
   renderArchive(filtered);
 }
 
-/* ---------- 유틸 ---------- */
 function cleanTitle(title) {
   return (title || '').replace(/Daily Strategy Insight/gi, '전략 인사이트');
 }

@@ -2,62 +2,89 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Daily Strategy Insight Hub</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <!-- 헤더 -->
   <header class="header">
     <div class="header-inner">
-      <div class="header-left">
-        <div class="header-title">Daily Strategy Insight Hub</div>
-        <div class="header-subtitle">전일 14:00 ~ 금일 08:00 수집 기사 기반</div>
+      <div class="header-brand">
+        <div class="header-logo-mark">DSI</div>
+        <div class="header-text">
+          <div class="header-title">Daily Strategy Insight</div>
+          <div class="header-subtitle">전략 정보 인텔리전스 플랫폼</div>
+        </div>
       </div>
-      <span id="current-date" class="header-date"></span>
+      <div class="header-right">
+        <div class="live-indicator">
+          <span class="live-dot"></span>
+          <span class="live-label">LIVE</span>
+        </div>
+        <span id="current-date" class="header-date"></span>
+      </div>
     </div>
   </header>
 
-  <!-- 검색창 -->
-  <div class="search-bar-wrap">
-    <div class="search-bar-inner">
-      <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none">
-        <path d="M21 21L16.5 16.5M19 11C19 15.4183 15.4183 19 11 19S3 15.4183 3 11 6.58172 3 11 3 19 6.58172 19 11Z" stroke="#9aa3af" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <div class="context-bar">
+    <div class="context-bar-inner">
+      <div class="context-stat">
+        <span class="context-stat-value" id="stat-total">—</span>
+        <span class="context-stat-label">전체 인사이트</span>
+      </div>
+      <div class="context-divider"></div>
+      <div class="context-stat">
+        <span class="context-stat-value" id="stat-today">—</span>
+        <span class="context-stat-label">오늘 수집</span>
+      </div>
+      <div class="context-divider"></div>
+      <div class="context-stat-text">전일 14:00 ~ 금일 08:00</div>
+    </div>
+  </div>
+
+  <div class="search-wrap">
+    <div class="search-inner">
+      <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+        <path d="M21 21L16.5 16.5M19 11C19 15.4183 15.4183 19 11 19S3 15.4183 3 11 6.58172 3 11 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <input type="text" id="search-input" class="search-input" placeholder="카테고리, 제목, 요약 검색...">
+      <input type="text" id="search-input" class="search-input" placeholder="카테고리, 제목, 내용 검색...">
+      <button class="search-clear" id="search-clear" aria-label="검색 초기화">✕</button>
+    </div>
+  </div>
+
+  <div class="tabs-sticky">
+    <div class="tabs-inner" id="category-tabs">
+      <button class="tab active" data-category="all">전체</button>
+      <button class="tab" data-category="general">일반</button>
+      <button class="tab" data-category="retail-finance">소매금융</button>
+      <button class="tab" data-category="corporate-finance">기업금융</button>
+      <button class="tab" data-category="auto-finance">자동차금융</button>
+      <button class="tab" data-category="AX">AX</button>
+      <button class="tab" data-category="IT">IT</button>
     </div>
   </div>
 
   <main class="main">
 
-    <!-- 오늘의 인사이트 스냅샷 -->
-    <section id="snapshot-section">
-      <div class="section-label-row">
-        <span id="snapshot-label" class="section-label"></span>
+    <section id="snapshot-section" style="display:none">
+      <div class="section-header">
+        <div class="section-header-left">
+          <span class="section-title" id="snapshot-label"></span>
+          <span class="section-badge-new">NEW</span>
+        </div>
+        <span class="section-count" id="snapshot-count"></span>
       </div>
       <div id="snapshot-grid" class="snapshot-grid"></div>
     </section>
 
-    <!-- 전략 인사이트 아카이브 -->
     <section id="archive-section">
-      <div class="archive-header-row">
-        <span class="section-label">전략 인사이트 아카이브</span>
-        <span id="total-count" class="total-count"></span>
-      </div>
-      <div class="tabs-wrap">
-        <div class="tabs" id="category-tabs">
-          <button class="tab active" data-category="all">전체</button>
-          <button class="tab" data-category="general">일반</button>
-          <button class="tab" data-category="retail-finance">소매금융</button>
-          <button class="tab" data-category="corporate-finance">기업금융</button>
-          <button class="tab" data-category="auto-finance">자동차금융</button>
-          <button class="tab" data-category="AX">AX</button>
-          <button class="tab" data-category="IT">IT</button>
-        </div>
+      <div class="section-header">
+        <span class="section-title">전략 인사이트 아카이브</span>
+        <span class="section-count" id="total-count"></span>
       </div>
       <div id="archive-list" class="archive-list"></div>
     </section>

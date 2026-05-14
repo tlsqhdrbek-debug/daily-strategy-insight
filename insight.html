@@ -2,35 +2,47 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Daily Strategy Insight</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <!-- 헤더 -->
   <header class="header">
     <div class="header-inner">
-      <div class="header-left">
-        <div class="header-title">Daily Strategy Insight Hub</div>
-        <div class="header-subtitle">전일 14:00 ~ 금일 08:00 수집 기사 기반</div>
+      <div class="header-brand">
+        <div class="header-logo-mark">DSI</div>
+        <div class="header-text">
+          <div class="header-title">Daily Strategy Insight</div>
+          <div class="header-subtitle">전략 정보 인텔리전스 플랫폼</div>
+        </div>
       </div>
-      <span id="current-date" class="header-date"></span>
+      <div class="header-right">
+        <div class="live-indicator">
+          <span class="live-dot"></span>
+          <span class="live-label">LIVE</span>
+        </div>
+        <span id="current-date" class="header-date"></span>
+      </div>
     </div>
   </header>
 
-  <!-- 서브 네비게이션 -->
   <nav class="subnav">
     <div class="subnav-inner">
-      <button class="subnav-btn" onclick="history.back()">← 뒤로가기</button>
-      <button class="subnav-btn" onclick="location.href='index.html'">홈으로</button>
+      <button class="subnav-btn" onclick="history.back()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        뒤로
+      </button>
+      <button class="subnav-btn" onclick="location.href='index.html'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 9L12 2L21 9V20C21 20.5523 20.5523 21 20 21H15V16H9V21H4C3.44772 21 3 20.5523 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        홈으로
+      </button>
     </div>
   </nav>
 
-  <!-- 본문 -->
   <div class="insight-main">
     <div id="meta-card" class="meta-card"></div>
     <div id="content-card" class="content-card">
@@ -47,10 +59,7 @@
 
     async function loadDetail() {
       const file = new URLSearchParams(location.search).get('file');
-      if (!file) {
-        showError('잘못된 접근입니다.');
-        return;
-      }
+      if (!file) { showError('잘못된 접근입니다.'); return; }
 
       try {
         const [insightsRes, contentRes] = await Promise.all([
@@ -68,7 +77,7 @@
         if (!contentRes.ok) throw new Error(`파일 로드 실패 (${contentRes.status})`);
         document.getElementById('insight-body').innerHTML = await contentRes.text();
 
-        if (item) document.title = `${item.categoryName} — ${item.date}`;
+        if (item) document.title = `${item.categoryName} — ${item.date} | DSI`;
       } catch (e) {
         console.error(e);
         showError(`인사이트 파일을 불러오지 못했습니다. (${e.message})`);
@@ -76,18 +85,23 @@
     }
 
     function renderMeta(item) {
-      document.getElementById('meta-card').innerHTML = `
-        <div><span class="badge badge-${item.category}">${item.categoryName}</span></div>
+      const card = document.getElementById('meta-card');
+      card.dataset.cat = item.category;
+      card.innerHTML = `
+        <div class="meta-card-badge">
+          <span class="badge badge-${item.category}">${item.categoryName}</span>
+        </div>
         <div class="meta-card-title">${item.title}</div>
         ${item.summary ? `<div class="meta-card-summary">${item.summary}</div>` : ''}
         <div class="meta-divider"></div>
-        <div class="meta-footer">${item.date} · ${item.time}</div>
+        <div class="meta-footer">${item.date} &nbsp;·&nbsp; ${item.time} 수집</div>
       `;
     }
 
     function showError(msg) {
+      document.getElementById('meta-card').style.display = 'none';
       document.getElementById('content-card').innerHTML =
-        `<div class="empty-state">${msg}</div>`;
+        `<div class="empty-state"><div class="empty-icon">⚠️</div>${msg}</div>`;
     }
   </script>
 </body>
