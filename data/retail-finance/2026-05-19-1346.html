@@ -1,0 +1,129 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:480px;margin:0 auto;padding:16px;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+.event-card{background:#ffffff;border-radius:10px;padding:10px 14px;border-left:3px solid #D3D1C7;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-content b{color:#A32D2D;}
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;color:#444441 !important;line-height:1.5;background:#ffffff !important;border-radius:8px !important;padding:8px 10px !important;}
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+.impact-row{display:flex;flex-direction:row;border-radius:10px;overflow:hidden;margin-bottom:8px;}
+.impact-label{width:70px;min-width:70px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;font-weight:600;padding:8px 4px;word-break:keep-all;}
+.impact-label.short{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai{background:#EEEDFE;color:#3C3489;}
+.impact-content{background:#F1EFE8;padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;flex:1;}
+.impact-content b{color:#A32D2D;}
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">대환대출·포용금융 확대와 글로벌 금리 반등이 동시 진행되며, 캐피탈사 소매여신 전략의 양면 점검 필요</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">우리금융, 중저신용 전용 대환대출 <b>5월 말</b> 출시</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">서금원, 햇살론 구상채무자 상환기간 <b>최장 12년</b> 연장</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">수도권 대출규제 강화·<b>주담대 한도 6억원</b> 제한 지속</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">미국 30년 고정금리 주담대 <b>6.49%</b>로 반등 흐름</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">금감원, 빚투·레버리지 쏠림 소비자보호 점검 강화</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">은행권 대환대출 확대로 캐피탈 고금리 차주 이탈 가능성 존재하나, 대안신용평가 활용 확산은 <b>중저신용 여신시장</b> 전체 파이 확대 요인. 서민금융 정책 강화 기조에 맞춘 상품 설계 시 정책금융 연계 영업 기회 확보 가능</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">글로벌 장기금리 반등으로 조달비용 상승 압력 재점화 우려. 수도권 <b>대출규제</b> 장기화와 금감원 소비자보호 감독 강화가 여신 확대 전략에 제약 요인</div>
+  </div>
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content">대환대출 출시 즉시 영향</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content">금리 환경 변화는 분기 단위 점검 필요</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">우리금융그룹이 계열 캐피탈·카드·저축은행 고금리 대출 차주를 은행 대출로 전환하는 통합 대환상품 '우리 원 드림 갈아타기 대출'을 <b>2026년 5월 말</b> 출시 예정이며, 최고 금리 <b>연 7%</b>·최장 <b>10년</b> 분할상환 조건으로 운영. 케이뱅크는 개인사업자 대출 잔액이 <b>3조원</b>을 돌파하며 비대면 소상공인 여신 영역을 빠르게 확대 중</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short">단기<br>기회/리스크</div>
+    <div class="impact-content">은행권 대환대출 본격화 시 BNK캐피탈 기존 중저신용 차주 이탈 규모 점검 필요. 햇살론 구상채무 상환 완화(<b>최장 12년</b>)에 따른 서민금융 보증 연계 상품 수요 변화 모니터링 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid">중기<br>고려사항</div>
+    <div class="impact-content">글로벌 장기금리 상승 지속 시 캐피탈 조달금리 연동 영향 재평가 필요. 대출규제 장기화·포용금융 정책 확대 흐름에 맞춘 중저신용 여신 상품 경쟁력 재설계 검토 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai">AI<br>분석 제안</div>
+    <div class="impact-content">① BNK캐피탈 중저신용 개인여신 포트폴리오 중 은행 대환 전환 가능 차주 규모·금리 구간별 시뮬레이션 실시<br>② 대안신용평가모델 도입·고도화를 통한 소득증빙 취약 차주(프리랜서·주부 등) 신규 여신 접근성 확대 방안 검토</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.khan.co.kr/article/202605182108005" target="_blank">→ 대출 규제·다주택자 양도세 중과 재개…단기 대책 많아, 세제 개편 뒤따라야</a></div>
+  <div class="source-card"><a href="https://www.ezyeconomy.com/news/articleView.html?idxno=235515" target="_blank">→ 우리금융, 청년·서민 금융지원 확대</a></div>
+  <div class="source-card"><a href="https://www.hani.co.kr/arti/economy/finance/1259229.html" target="_blank">→ 서민금융진흥원, '햇살론 구상채무자' 재기 지원…12년까지 상환 연장</a></div>
+  <div class="source-card"><a href="http://www.fnnews.com/news/202605181808131366" target="_blank">→ '포용금융 강화' 우리금융, 중저신용 대환대출 실시</a></div>
+  <div class="source-card"><a href="https://www.joongang.co.kr/article/25429338" target="_blank">→ 우리금융, 중저신용자 전용 대환대출 출시…포용금융 확대</a></div>
+  <div class="source-card"><a href="https://www.donga.com/news/Economy/article/all/20260518/133946606/2" target="_blank">→ 우리금융, 중저신용자 전용 대환 대출상품 이달말 출시</a></div>
+  <div class="source-card"><a href="https://www.yna.co.kr/view/AKR20260518166800072?input=1195m" target="_blank">→ 美 인플레 우려에 주택대출금리 상승…주택거래 부진 가중</a></div>
+  <div class="source-card"><a href="https://www.etnews.com/20260518000258" target="_blank">→ 케이뱅크, 개인사업자 대출 잔액 3조원 돌파</a></div>
+  <div class="source-card"><a href="https://www.etoday.co.kr/news/view/2585690" target="_blank">→ 금감원, 빚투·레버리지 쏠림 점검⋯금융소비자 리스크 선제 대응</a></div>
+
+</div>
