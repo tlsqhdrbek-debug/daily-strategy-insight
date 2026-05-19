@@ -458,19 +458,22 @@ body {
   display: flex; align-items: center; justify-content: center;
   padding: 0 12px; min-width: 74px; flex-shrink: 0;
 }
-.archive-content { flex: 1; min-width: 0; padding: 13px 0; }
+.archive-content { flex: 1; min-width: 0; padding: 12px 0; }
 .archive-title {
   font-size: 13px; font-weight: 600; color: var(--text-1);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   margin-bottom: 3px; line-height: 1.4;
 }
 .archive-summary {
-  font-size: 11px; color: var(--text-2);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 4px;
+  font-size: 11px; color: var(--text-2); line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 4px;
 }
 .archive-time { font-size: 10px; color: var(--text-3); font-variant-numeric: tabular-nums; font-weight: 500; }
 .archive-arrow { display: flex; align-items: center; padding: 0 14px; color: var(--text-3); font-size: 18px; flex-shrink: 0; }
-@media (max-width: 480px) { .archive-summary { display: none; } }
 
 /* ── Badge ── */
 .badge {
