@@ -1,21 +1,24 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
-.wrap{max-width:100%;margin:0;padding:12px;}
+.wrap{max-width:100%;margin:0;padding:0;}
 .section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
-.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
 .summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
 .summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
 .event-card{background:#ffffff;border-radius:10px;padding:10px 14px;border-left:3px solid #D3D1C7;margin-bottom:8px;}
 .event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
 .event-text b{color:#A32D2D;}
+
 .insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
 .insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
-.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
-.insight-opportunity .insight-title{color:#0F6E56;}
-.insight-risk .insight-title{color:#A32D2D;}
+.insight-opportunity .insight-title{font-size:11px;font-weight:600;color:#0F6E56;margin-bottom:4px;}
+.insight-risk .insight-title{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:4px;}
 .insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
-.insight-content b{color:#A32D2D;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
 .timeline{position:relative;padding-left:20px;margin-bottom:16px;}
 .timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
 .tl-item{position:relative;margin-bottom:12px;}
@@ -28,21 +31,33 @@ body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
 .tl-label.short{color:#A32D2D;}
 .tl-label.mid{color:#BA7517;}
 .tl-label.long{color:#185FA5;}
-.tl-content{font-size:12px !important;color:#444441 !important;line-height:1.5;background:#ffffff !important;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
 .competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
 .competitor-content{font-size:13px;color:#444441;line-height:1.6;}
 .competitor-content b{color:#A32D2D;}
-.impact-row{display:flex;flex-direction:row;border-radius:10px;overflow:hidden;margin-bottom:8px;}
-.impact-label{width:70px;min-width:70px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;font-weight:600;padding:8px 4px;word-break:keep-all;}
-.impact-label.short{background:#FAEEDA;color:#854F0B;}
-.impact-label.mid{background:#E6F1FB;color:#0C447C;}
-.impact-label.ai{background:#EEEDFE;color:#3C3489;}
-.impact-content{background:#F1EFE8;padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;flex:1;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
 .impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
 .source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
 .source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
 .source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
 </style>
+
 <div class="wrap">
 
   <div class="summary-card">
@@ -67,22 +82,23 @@ body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
     <div class="insight-title">위협/리스크 요인</div>
     <div class="insight-content"><b>금융채(AAA) 5년물 금리 4.279%</b>(2024년 4월 이후 최고치) 등 시장금리 급등으로 회사채·ABS 조달비용 상승 압력 확대. 고유가·고물가에 따른 경기침체 우려로 개인·자영업자 연체율 상승 리스크 병존</div>
   </div>
+
   <div class="section-title">영향 시점</div>
   <div class="timeline">
     <div class="tl-item">
       <div class="tl-dot short"></div>
       <div class="tl-label short">단기</div>
-      <div class="tl-content">조달비용 상승 압력 (즉시)</div>
+      <div class="tl-content short">조달비용 상승 압력 (즉시)</div>
     </div>
     <div class="tl-item">
       <div class="tl-dot mid"></div>
       <div class="tl-label mid">중기</div>
-      <div class="tl-content">자산건전성 악화 리스크 / 업계 재편</div>
+      <div class="tl-content mid">자산건전성 악화 리스크 / 업계 재편</div>
     </div>
     <div class="tl-item">
       <div class="tl-dot long"></div>
       <div class="tl-label long">장기</div>
-      <div class="tl-content">해당 없음</div>
+      <div class="tl-content long">해당 없음</div>
     </div>
   </div>
 
@@ -93,15 +109,15 @@ body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
 
   <div class="section-title">🎯 영향도 분석</div>
   <div class="impact-row">
-    <div class="impact-label short">단기<br>기회/리스크</div>
+    <div class="impact-label short-label">단기 기회/리스크</div>
     <div class="impact-content">시장금리 급등에 따른 <b>회사채·ABS 발행 스프레드</b> 확대 여부 즉시 점검 필요. <b>코픽스 0.08%p 상승</b>(2025년 4월 기준) 등 변동금리 연동 여신의 차주 상환부담 증가에 따른 연체 선행지표 모니터링 강화 필요</div>
   </div>
   <div class="impact-row">
-    <div class="impact-label mid">중기<br>고려사항</div>
+    <div class="impact-label mid-label">중기 고려사항</div>
     <div class="impact-content">호르무즈 봉쇄 장기화 시 <b>경기침체</b> 본격화 가능성 대비, 소비자금융·자영업자 여신 포트폴리오 건전성 스트레스 테스트 검토 필요. 한국은행 <b>기준금리 인상</b> 가능성 시나리오별 조달 전략 수립 필요</div>
   </div>
   <div class="impact-row" style="margin-bottom:16px;">
-    <div class="impact-label ai">AI<br>분석 제안</div>
+    <div class="impact-label ai-label">AI 분석 제안</div>
     <div class="impact-content">① 금리 시나리오별(기준금리 동결·인상) 조달비용 변동 시뮬레이션 및 여신금리 재산정 검토<br>② 자영업자·중저신용 개인 여신 포트폴리오 대상 고유가·경기둔화 충격 연체율 시나리오 분석 실시</div>
   </div>
 
