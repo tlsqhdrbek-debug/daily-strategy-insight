@@ -1,0 +1,139 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">금융권 공동 사이버 위협 인텔리전스 플랫폼 구축과 AI 기반 인증·양자보안 기술 고도화가 금융 보안 체계의 전환을 가속화하는 흐름</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">금융보안원, 글로벌 해킹조직 추적 공동 플랫폼 <b>2025년 하반기</b> 운영 예정</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">AI 기반 얼굴·음성·행위 인증 솔루션 등장, 딥페이크 대응 본격화</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">양자내성암호(PQC) 경량 모듈 개발 마무리, 제로트러스트·N2SF 대응 확산</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">일본 공공시장 망분리 환경에서 제로트러스트 기반 보안 솔루션 수요 확대</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">금융보안원 공동 플랫폼 활용 시 자체 보안 분석 역량 보강 가능. AI 인증·제로트러스트 솔루션 도입으로 비대면 여신 심사 보안성 강화 기회</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">딥페이크·AI 탑재 악성코드 등 공격 고도화로 기존 인증 체계 취약점 노출 리스크. 공급망 경유 침해 시 캐피탈사도 연쇄 피해 가능성 존재</div>
+  </div>
+  <div class="section-title" style="margin-top:8px;">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">공동 플랫폼 <b>2025년 하반기</b> 가동</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">양자보안·N2SF 전환 대응</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">금일 수집 기사 검토 결과, 현재 부서와 키워드에 실질적으로 관련된 경쟁사 동향은 별도로 확인되지 않았습니다.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content"><b>금융보안원</b> 글로벌 위협 인텔리전스 플랫폼 참여·연동 계획 점검 필요. 비대면 본인인증 체계의 딥페이크 방어 수준 자체 진단 검토 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content"><b>국가망보안체계(N2SF)</b> 및 제로트러스트 전환 로드맵 수립 필요. 양자내성암호 전환 일정에 맞춘 암호 체계 점검 계획 수립 검토 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 현행 얼굴·신분증 기반 비대면 인증 프로세스의 라이브니스 검증 수준 점검 및 고도화 방안 검토<br>② 금융보안원 공동 플랫폼 가동 시 자사 보안관제 시스템 연계 방안 사전 협의</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.etnews.com/20260519000408" target="_blank">→ "글로벌 해킹조직 추적"…금융권 '공동 보안 플랫폼' 나온다</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260519_0003635501" target="_blank">→ 컬러 프린트 사진에 뚫리는 얼굴인증, AI 라이브니스 기술로 원천 차단</a></div>
+  <div class="source-card"><a href="https://www.news1.kr/it-science/general-it/6171408" target="_blank">→ 한컴위드, 차세대 보안 시장 확장…"블록체인·양자보안·AI 중점"</a></div>
+  <div class="source-card"><a href="http://www.fnnews.com/news/202605191823257362" target="_blank">→ AI 기업 '한컴'으로 재도약… 글로벌 양자보안 시장 정조준</a></div>
+  <div class="source-card"><a href="http://www.boannews.com/media/view.asp?idx=143719&kind=3" target="_blank">→ 소프트캠프, 일본 최대 공공 전시회서 "망분리 환경 AI·SaaS 보안 장벽 허물다"</a></div>
+  <div class="source-card"><a href="http://www.wikileaks-kr.org/news/articleView.html?idxno=187576" target="_blank">→ [WIKI 현장] 한컴위드, AI·양자보안·디지털 금융 승부수…차세대 인증 시장 정조준</a></div>
+
+</div>
