@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadInsights();
     setupSearch();
     setupTabs();
+    setupPanel();
   }
 });
 
@@ -47,6 +48,14 @@ function todayStr() {
   return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,'0')}-${String(n.getDate()).padStart(2,'0')}`;
 }
 
+function getDateLabel(dateStr) {
+  const today = todayStr();
+  if (dateStr === today) return '오늘';
+  const diff = Math.floor((new Date(today) - new Date(dateStr)) / 86400000);
+  if (diff === 1) return '어제';
+  return `${diff}일 전`;
+}
+
 function updateStats(insights) {
   const totalEl = document.getElementById('stat-total');
   const todayEl = document.getElementById('stat-today');
@@ -82,7 +91,6 @@ function createSnapshotCard(item) {
   card.className = 'snapshot-card';
   card.dataset.cat = item.category;
   card.onclick = () => location.href = `insight.html?file=${item.path}`;
-
   card.innerHTML = `
     <div class="snapshot-card-header">
       <span class="badge badge-${item.category}">${item.categoryName}</span>
@@ -97,11 +105,14 @@ function createSnapshotCard(item) {
   return card;
 }
 
+/* ── Archive: 날짜 탭 리스트 ── */
+
 function renderArchive(insights) {
   const list = document.getElementById('archive-list');
   const countEl = document.getElementById('total-count');
   if (!list) return;
 
+  closeDatePanel(false);
   if (countEl) countEl.textContent = `${insights.length}건`;
   list.innerHTML = '';
 
@@ -110,21 +121,17 @@ function renderArchive(insights) {
     return;
   }
 
-  const groups = groupByDate(insights);
-  const dates = Object.keys(groups).sort().reverse();
-  const latestDate = dates[0];
+  const query = (document.getElementById('search-input')?.value || '').trim();
 
-  dates.forEach(date => {
-    const header = document.createElement('div');
-    header.className = 'date-group-header';
-    header.innerHTML = `
-      <span class="date-label">${date.replace(/-/g, '.')}</span>
-      <div class="date-line"></div>
-      ${date === latestDate ? '<span class="new-pill">NEW</span>' : ''}
-    `;
-    list.appendChild(header);
-    groups[date].forEach(item => list.appendChild(createArchiveItem(item)));
-  });
+  if (query) {
+    /* 검색 중: 모든 결과를 플랫 리스트로 표시 */
+    insights.forEach(item => list.appendChild(createArchiveItem(item)));
+  } else {
+    /* 브라우즈 모드: 날짜 행 목록 */
+    const groups = groupByDate(insights);
+    const dates = Object.keys(groups).sort().reverse();
+    dates.forEach(date => list.appendChild(createDateRow(date, groups[date])));
+  }
 }
 
 function groupByDate(insights) {
@@ -135,12 +142,67 @@ function groupByDate(insights) {
   }, {});
 }
 
+function createDateRow(date, items) {
+  const row = document.createElement('div');
+  row.className = 'date-row';
+  const isToday = date === todayStr();
+  const label = getDateLabel(date);
+
+  row.innerHTML = `
+    <div class="date-row-left">
+      <span class="date-row-date">${date.replace(/-/g, '.')}</span>
+      ${isToday ? '<span class="date-row-new">NEW</span>' : ''}
+      <span class="date-row-label">${label}</span>
+    </div>
+    <div class="date-row-right">
+      <span class="date-row-count">${items.length}건</span>
+      <span class="date-row-arrow">›</span>
+    </div>
+  `;
+
+  row.addEventListener('click', () => openDatePanel(date, items));
+  return row;
+}
+
+/* ── 슬라이드 패널 ── */
+
+function setupPanel() {
+  document.getElementById('panel-back-btn')?.addEventListener('click', () => closeDatePanel(true));
+}
+
+function openDatePanel(date, items) {
+  const panel = document.getElementById('date-detail-panel');
+  if (!panel) return;
+
+  const panelDate  = document.getElementById('panel-date');
+  const panelCount = document.getElementById('panel-count');
+  const panelItems = document.getElementById('panel-items');
+
+  if (panelDate)  panelDate.textContent  = `${date.replace(/-/g, '.')}  ·  ${getDateLabel(date)}`;
+  if (panelCount) panelCount.textContent = `${items.length}건`;
+  if (panelItems) {
+    panelItems.innerHTML = '';
+    items.forEach(item => panelItems.appendChild(createArchiveItem(item)));
+  }
+
+  panel.scrollTop = 0;
+  /* 다음 프레임에 클래스 추가해야 transition이 발동됨 */
+  requestAnimationFrame(() => panel.classList.add('open'));
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDatePanel(animate) {
+  const panel = document.getElementById('date-detail-panel');
+  if (!panel) return;
+  panel.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
 function createArchiveItem(item) {
   const div = document.createElement('div');
   div.className = 'archive-item';
   div.dataset.cat = item.category;
   div.onclick = () => location.href = `insight.html?file=${item.path}`;
-
   div.innerHTML = `
     <div class="archive-item-accent"></div>
     <div class="archive-badge-wrap">
@@ -155,6 +217,8 @@ function createArchiveItem(item) {
   `;
   return div;
 }
+
+/* ── 검색 ── */
 
 function setupSearch() {
   const input = document.getElementById('search-input');
@@ -188,13 +252,12 @@ function setupTabs() {
 
 function applyFilters() {
   const query = (document.getElementById('search-input')?.value || '').trim().toLowerCase();
-  const cat = document.querySelector('.tab.active')?.dataset.category || 'all';
+  const cat   = document.querySelector('.tab.active')?.dataset.category || 'all';
 
   const filtered = allInsights.filter(item => {
     const matchCat = cat === 'all' || item.category === cat;
     const text = `${item.title} ${item.summary || ''} ${item.categoryName}`.toLowerCase();
-    const matchQ = !query || text.includes(query);
-    return matchCat && matchQ;
+    return matchCat && (!query || text.includes(query));
   });
 
   if (query) {
