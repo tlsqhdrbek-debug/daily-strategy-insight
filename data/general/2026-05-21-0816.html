@@ -1,0 +1,134 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-opportunity .insight-title{font-size:11px;font-weight:600;color:#0F6E56;margin-bottom:4px;}
+.insight-risk .insight-title{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:4px;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">미 연준 금리 인상 가능성 부상과 생산자물가 <b>28년 만에 최고 상승</b>이 캐피탈사 조달·건전성 전반에 복합 압력으로 작용</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">미 연준 4월 FOMC 의사록, 대다수 위원 <b>금리 인상</b> 가능성 경고</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">4월 생산자물가 전월 대비 <b>2.5%</b> 상승, <b>1998년 2월</b> 이후 최고치</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">중동 전쟁 장기화로 석탄·석유제품 <b>31.9%</b> 급등, 소비자물가 상방 압력 확대</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">미 국채 30년물 금리 한때 <b>5.20%</b> 기록, <b>2007년</b> 이후 최고 수준</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">부천 AI 데이터센터 PF <b>1,590억원</b> 조달 완료, 하나캐피탈 등 대주단 참여</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">AI 데이터센터 등 신규 PF 시장 확대 흐름. 캐피탈사 대주단 참여 기회 지속 가능</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">미 연준 <b>금리 인상</b> 현실화 시 캐피탈사 조달 비용 상승 불가피. 생산자물가 급등이 소비자물가로 전이되면 차주 상환 부담 확대</div>
+  </div>
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">금리 방향성 결정 전망에 따른 단기 시장 변동성 대응 필요</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">금리 방향성 <b>2026년 하반기</b> 내 결정 전망</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content"><b>하나캐피탈</b>이 부천 AI 데이터센터 PF <b>1,590억원</b> 대주단에 참여, 데이터센터 인프라 금융 영역으로 사업 다각화 움직임 확인</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">미 연준 <b>6월 FOMC</b>(6/16~17) 결과에 따른 국내 시장금리 변동성 확대 대비 필요. 회사채·ABS 발행 타이밍 점검 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">글로벌 금리 인상 기조 전환 시 조달 스프레드 확대 시나리오 반영한 ALM 재점검 필요. 원자재발 물가 상승이 차주 연체율에 미치는 영향 모니터링 강화</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 금리 인상 시나리오별 조달 비용 시뮬레이션 및 만기 구조 최적화 검토<br>② AI 데이터센터 등 신규 인프라 PF 참여 가능성 사전 검토</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260521_0003638453" target="_blank">→ 美연준 의사록 "이란전쟁發 高인플레 지속시 금리 인상"</a></div>
+  <div class="source-card"><a href="http://www.edaily.co.kr/news/newspath.asp?newsid=01551446645451216" target="_blank">→ 연준 의사록 "더 많은 위원들, 금리인상 가능성 경고"</a></div>
+  <div class="source-card"><a href="https://www.sedaily.com/article/20046588?ref=naver" target="_blank">→ 美연준 대다수 위원 "인플레 2% 웃돌면 금리 올려야"</a></div>
+  <div class="source-card"><a href="https://www.yna.co.kr/view/AKR20260521008751072?input=1195m" target="_blank">→ 유가·금리 진정에 뉴욕증시 반등…나스닥 1.5%↑(종합)</a></div>
+  <div class="source-card"><a href="https://view.asiae.co.kr/article/2026052021563830789" target="_blank">→ 생산자물가, 28년來 최고 상승률…소비자물가 압박 수위 올랐다</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260520_0003638146" target="_blank">→ 4월 생산자물가 2.5% 급등…IMF 이후 28년 만에 최고치</a></div>
+  <div class="source-card"><a href="https://www.idomin.com/news/articleView.html?idxno=2006173" target="_blank">→ 양산 주남산단, 경기침체 속 제자리걸음</a></div>
+  <div class="source-card"><a href="http://www.edaily.co.kr/news/newspath.asp?newsid=05005286645450888" target="_blank">→ 부천에 'AI 두뇌 공장' 짓는다…동양, PF 1590억 조달 완료</a></div>
+
+</div>
