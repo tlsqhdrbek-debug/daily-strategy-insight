@@ -1,0 +1,135 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">금융당국의 AI 보안 가이드라인·AX 전환 가속과 대안신용평가 혁신이 동시에 진행되며, 캐피탈사의 AI 보안 체계·심사 고도화 대응이 시급</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card"><p class="event-text">금융위, <b>AI 보안 가이드라인</b> 마련 및 망분리 규제 완화 추진</p></div>
+  <div class="event-card"><p class="event-text">KB금융, AI 에이전트+<b>RPA</b> 결합 24시간 보안 모니터링 체계 가동</p></div>
+  <div class="event-card"><p class="event-text">농협금융, 비금융 데이터 기반 <b>대안신용평가 ML 모형</b> 하반기 확정 예정</p></div>
+  <div class="event-card"><p class="event-text">농협 계열사 간 캐피탈·저축은행↔은행 양방향 <b>대환대출</b> 연내 출시</p></div>
+  <div class="event-card"><p class="event-text">토스, 오픈AI 협업 세션 등 전사적 <b>AI 전환(AX)</b> 내재화 가속</p></div>
+  <div class="event-card" style="margin-bottom:16px;"><p class="event-text">금융위, 생산적 금융 실적 <b>팩트북</b> 4분기 공개 체계 구축 제안</p></div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">망분리 완화로 AI 보안·업무자동화 도입 장벽 축소. 대안신용평가 확산 시 캐피탈사 중저신용자 여신 확대 및 은행 연계 <b>금융사다리</b> 역할 강화 가능</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">AI 기반 사이버 공격 고도화로 중소형 캐피탈사 보안 격차 확대 우려. 은행권 대환대출 활성화 시 캐피탈 우량 고객 <b>이탈 리스크</b> 존재</div>
+  </div>
+  <div class="section-title" style="margin-top:4px;">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">AI 보안 가이드라인·망분리 완화 (2025년 하반기 시행 예상)</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">대안신용평가·대환대출 (2026년 연내)</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <p class="competitor-content">KB금융, AI 에이전트 기반 모의해킹·<b>제로트러스트 3단계</b> 구축 완료 및 '그룹 사이버보안센터' 출범으로 금융권 AI 보안 선도 사례 구축. 농협금융, 농협은행·NH농협캐피탈·NH저축은행 <b>3사 양방향 대환대출</b> 연계 체계 구축 및 비금융 데이터 활용 ML 심사전략 하반기 확정 추진.</p>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">금융위 AI 보안 가이드라인 발표에 따른 자사 보안 체계 현황 점검 필요. 중소형 금융사 대상 <b>AI 보안 점검·취약점 분석</b> 지원 제도 활용 검토 요. 은행권 대환대출 확대 시 성실상환 우량 고객 유출 가능성 선제 모니터링 필요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">AI 에이전트·RPA 결합 보안 자동화 및 업무 자동화 로드맵 수립 검토 요. 비금융 대안정보 활용 <b>심사모형 고도화</b> 통한 중저신용자 여신 경쟁력 확보 전략 필요. 생산적 금융 실적 공개 체계 대비 자사 KPI 반영 방안 점검 필요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 자사 보안 인프라 대비 KB금융 수준의 AI 보안 체계(제로트러스트·AI 모의해킹) 도입 가능성 및 투자 규모 사전 검토<br>② 농협 사례를 참고해 BNK그룹 내 은행↔캐피탈 간 <b>양방향 고객 연계</b> 대환대출 상품 설계 타당성 검토</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <p class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</p>
+  <div class="source-card"><a href="http://www.bizwnews.com/news/articleView.html?idxno=137388" target="_blank">→ "해킹도 AI 시대"…금융권, 더 진화된 AI로 보안 '철통 방어'</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260526_0003644465" target="_blank">→ KB금융, AI 사이버 보안 위협에 'AI 방어체계'로 대응</a></div>
+  <div class="source-card"><a href="https://www.cnbnews.com/news/articleView.html?idxno=1002675" target="_blank">→ KB금융그룹, 'AI 대 AI' 통합 보안체계 구축</a></div>
+  <div class="source-card"><a href="https://www.news1.kr/finance/general-finance/6177726" target="_blank">→ 농협금융, 2금융→1금융 '갈아타기 대출' 박차…대안신용평가 혁신</a></div>
+  <div class="source-card"><a href="https://www.mt.co.kr/finance/2026/05/27/2026052614020270495" target="_blank">→ 농협금융, 대안신용평가 혁신…'1금융 갈아타기 대출' 연내 출시</a></div>
+  <div class="source-card"><a href="https://www.bloter.net/news/articleView.html?idxno=663452" target="_blank">→ 토스, 남다른 인공지능 감각…샘 올트먼號 오픈AI와 맞손 잡은 배경</a></div>
+  <div class="source-card"><a href="https://www.yna.co.kr/view/AKR20260526137700002?input=1195m" target="_blank">→ 금융회사, 매년 생산적 금융 실적 공개…평가체계도 구축</a></div>
+  <div class="source-card"><a href="https://biz.chosun.com/stock/finance/2026/05/27/JRVOFEW2VFHFXFZE52URFTS3BY/?utm_source=naver&utm_medium=original&utm_campaign=biz" target="_blank">→ 권대영 "생산적 금융에 5년간 1242조 집행… 올 1분기 92조 공급"</a></div>
+
+</div>
