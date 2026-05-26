@@ -1,0 +1,131 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">기업대출 연체율·부실채권비율 동반 상승 속, PF 경색 장기화와 기업회생 여파가 캐피탈사 건전성 관리 압력을 가중</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card"><div class="event-text">은행 기업대출 연체율 <b>2026년 3월 기준 10년 내 최고치</b> 기록</div></div>
+  <div class="event-card"><div class="event-text">보험사 부실채권비율 <b>1.13%</b>로 전분기 대비 <b>0.10%p 상승</b></div></div>
+  <div class="event-card"><div class="event-text">홈플러스 기업회생 여파, 대기업 대출 고정이하여신 분류 지속</div></div>
+  <div class="event-card"><div class="event-text">정부, 비아파트 전용 <b>PF·분양보증 특례</b> 도입 추진</div></div>
+  <div class="event-card"><div class="event-text">현대캐피탈, 자동차금융 중심 포트폴리오로 <b>연체율 0.87%</b> 선방</div></div>
+  <div class="event-card" style="margin-bottom:16px;"><div class="event-text">증권사 IMA 시장 <b>57조2000억원</b> 규모로 기업자금조달 경쟁 확대</div></div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">비아파트 PF 특례·기금대출 확대로 중소 시행사 대상 <b>브릿지론·PF 참여</b> 기회 확대 가능. 기업자금조달 시장 활성화에 따른 캐피탈사 조달 환경 간접 개선 기대</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">기업대출 연체율·부실채권비율 동반 상승 흐름이 캐피탈사 기업여신 건전성에도 파급 우려. <b>중소기업 부실채권비율 1.36%</b>로 중소기업금융 포트폴리오 점검 필요</div>
+  </div>
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">연체율·건전성 관리</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">PF 특례 효과 반영, 기업부실 확산 여부</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">현대캐피탈은 <b>자동차금융 비중 80% 이상</b>, 부동산 PF 비중 4% 미만의 포트폴리오를 유지하며 2025년 연체율 <b>0.87%</b>를 기록, 업계 내 건전성 최상위권 유지. 2025년 당기순이익 <b>5,114억원</b>(전년 대비 18.2% 증가)으로 해외 법인 성장에 힘입어 실적 개선 흐름 지속.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">기업여신 포트폴리오 내 <b>중소기업·건설업 익스포저</b> 연체율 및 고정이하여신 비율 긴급 점검 필요. 대외 불확실성(중동 정세 등) 확대 시 <b>대손충당금</b> 추가 적립 선제 검토 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">정부 비아파트 PF 특례(보증료 최대 <b>45% 할인</b>, 대지비·자기자본 요건 완화) 시행 시 관련 PF 참여 전략 수립 검토. 기업회생 사례 확산에 대비한 여신심사 기준 재점검 필요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 자사 기업금융 포트폴리오 내 부동산 PF·건설업 관련 익스포저 대비 충당금 적정성 시뮬레이션 실시 ② 현대캐피탈 사례를 벤치마크하여 자동차금융 등 담보 기반 자산 비중 확대 시 건전성 개선 효과 시나리오 분석</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.hankyung.com/article/2026052699241" target="_blank">→ 은행 연체율 10년 만에 최고</a></div>
+  <div class="source-card"><a href="https://www.mt.co.kr/finance/2026/05/27/2026052616215761791" target="_blank">→ 홈플러스 기업회생 여파… 보험사 대기업 대출 연체율 소폭 상승</a></div>
+  <div class="source-card"><a href="https://www.sidae.com/article/2026052615292910386" target="_blank">→ "홈플러스 기업회생 여파 계속"…보험사 부실채권비율 올라</a></div>
+  <div class="source-card"><a href="https://www.newsway.co.kr/news/view?ud=2026052615483005858" target="_blank">→ 1분기 보험사 대출채권 감소세···가계↑·기업↓ '엇갈림'</a></div>
+  <div class="source-card"><a href="https://www.newsfreezone.co.kr/news/articleView.html?idxno=691691" target="_blank">→ 보험사 대출 264조원으로 소폭 감소···가계 늘고 기업 줄어</a></div>
+  <div class="source-card"><a href="https://view.asiae.co.kr/article/2026052617132263087" target="_blank">→ 1분기 말 보험사 부실채권비율 0.1%P ↑…"대손충당금·건전성 지도"</a></div>
+  <div class="source-card"><a href="https://www.news1.kr/realestate/general/6178087" target="_blank">→ PF 위기 속 비아파트 11만 가구 공급 카드…전월세난 '해법' 될까</a></div>
+  <div class="source-card"><a href="https://www.mk.co.kr/article/12057955" target="_blank">→ 캐피탈업계 PF 후폭풍인데…현대캐피탈만 연체율은 0%대 기록</a></div>
+  <div class="source-card"><a href="https://www.ilyoseoul.co.kr/news/articleView.html?idxno=517577" target="_blank">→ 대신증권, '초대형 IB' 승부수… 밸류업 드라이브 속 NCR·PF 건전성 시험대</a></div>
+  <div class="source-card"><a href="https://www.econovill.com/news/articleView.html?idxno=740842" target="_blank">→ 미래에셋증권, IMA3호 출시…기업금융·메자닌 투자 확대</a></div>
+  <div class="source-card"><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=455324" target="_blank">→ 연 4% 내세운 NH투자증권 IMA 2호 출격...1200억 자금 모집 나선다</a></div>
+  <div class="source-card"><a href="https://www.news1.kr/local/jeonbuk/6177671" target="_blank">→ 김관영 "중소기업·소상공인 정책 금융 지원 10조까지 확대"</a></div>
+  <div class="source-card"><a href="https://www.edaily.co.kr/news/newspath.asp?newsid=03417766645452856" target="_blank">→ 동부건설, HUG 신용등급 5단계 상승한 'AA' 획득</a></div>
+
+</div>
