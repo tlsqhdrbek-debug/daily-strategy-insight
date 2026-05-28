@@ -1,0 +1,147 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">금리 인상 신호·신용대출 급증·부실채권 확대가 동시 진행되며, 캐피탈사 소매여신 건전성과 조달비용 관리가 시급한 국면</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">한은 <b>7월 기준금리 인상</b> 사실상 공식화, 연내 2회 인상 전망</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">5대은행 신용대출 <b>월 2.7조원 증가</b>, 코로나 이후 최대 증가폭</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">은행권 부실채권 <b>17.7조원</b>으로 2019년 이후 최대, 대손충당금적립률 <b>150.4%</b>로 하락</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">중금리대출 규제 완화 논의 속 2금융권 공급 여력 제한 지속</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">하나금융 등 은행권 <b>3조원 규모</b> 포용금융 로드맵 본격 가동</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">은행권 총량 규제·금리 인상으로 중·저신용자 대출 수요가 2금융권으로 이전될 가능성. 중금리대출 총량 산입 완화 시 캐피탈사 소매여신 확대 여지 존재</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">기준금리 인상에 따른 <b>조달비용 상승</b> 및 차주 상환부담 가중. 개인사업자·신용대출 부실채권 비율 동반 상승으로 <b>연체율 관리</b> 부담 확대</div>
+  </div>
+  <div class="section-title" style="margin-top:8px;">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">금리 인상 7월 예상</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">2026년 하반기~2027년 상반기 건전성 영향 본격화</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">금일 수집 기사 검토 결과, 현재 부서와 키워드에 실질적으로 관련된 캐피탈사 경쟁사 동향은 별도로 확인되지 않았습니다.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">• <b>7월 기준금리 인상</b> 시 회사채·ABS 등 조달금리 즉시 상승 예상, 소매여신 가산금리 재산정 점검 필요<br>• 빚투 기반 신용대출 급증 후 증시 조정 시 개인 차주 <b>연체율 급등</b> 리스크, 포트폴리오 내 투자목적 대출 비중 모니터링 필요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">• 은행권 총량 규제 지속 및 중금리대출 공급 위축으로 중·저신용자 수요 유입 가능성, 심사 모형 고도화 및 적정 금리 체계 설계 검토 필요<br>• 2026년 1분기 은행 부실채권비율 <b>0.60%</b>, 개인사업자 <b>0.66%</b> 기록 — 캐피탈사 소매·개인사업자 여신 건전성 선제 점검 및 <b>대손충당금</b> 적립 수준 재검토 필요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 기준금리 <b>2.75~3.00%</b> 시나리오별 소매여신 조달원가·마진 시뮬레이션 실시<br>② 자사 개인신용대출 포트폴리오 내 증권투자 목적 차주 비중 및 연체 전이율 분석</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.mk.co.kr/article/12060270" target="_blank">→ "금리 올라도 빚투"…신용대출 한달새 3조↑</a></div>
+  <div class="source-card"><a href="http://web.ubc.co.kr/wp/archives/127871" target="_blank">→ 울산 1분기 기업대출 증가..가계대출 감소</a></div>
+  <div class="source-card"><a href="https://www.m-i.kr/news/articleView.html?idxno=1376782" target="_blank">→ 2금융권 "중금리 대출 늘리라지만 규제 때문에 어렵다"</a></div>
+  <div class="source-card"><a href="https://www.yna.co.kr/view/AKR20260528150500002?input=1195m" target="_blank">→ 서금원-신복위-광주은행, 연내 서민금융 복합지원센터 공동 개소</a></div>
+  <div class="source-card"><a href="https://www.newsway.co.kr/news/view?ud=2026052815354212629" target="_blank">→ 하나금융, '3조원 규모' 포용금융 로드맵 발표···서민·소상공인 구제</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260528_0003648203" target="_blank">→ '7월 금리인상' 신호…대출금리 더 오른다</a></div>
+  <div class="source-card"><a href="https://www.hankyung.com/article/2026052850941" target="_blank">→ 중저신용자 대출 지원책 쏟아내는 은행들</a></div>
+  <div class="source-card"><a href="https://view.asiae.co.kr/article/2026052906041182209" target="_blank">→ 은행 부실채권 17.7조로 껑충…기업·자영업 대출 '경고등'</a></div>
+  <div class="source-card"><a href="https://www.mk.co.kr/article/12060518" target="_blank">→ "몇천씩 벌었다니 안 할 수가"…'빚투' 광풍, 신용대출 2조 급증</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260528_0003647546" target="_blank">→ 2000억 규모 연체채권 소각·대안신용평가 고도화</a></div>
+  <div class="source-card"><a href="https://www.etoday.co.kr/news/view/2588684" target="_blank">→ 은행 부실채권비율 0.60%…중기·개인사업자 대출 '경고등'</a></div>
+
+</div>
