@@ -1,0 +1,151 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">AI 자율 해킹 현실화와 망분리 규제 완화 본격화로, 금융사 보안 거버넌스·복원력 체계 전면 재점검 시점 도래</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">AI 자율형 사이버 공격 현실화, 취약점 악용 시간 <b>24~48시간</b>으로 단축</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">금융위, 총자산 <b>10조원 이상</b> 금융사 대상 망분리 규제 특례 1차 신청 마감</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">금융보안원, <b>178개 기관</b> 대상 보안 종합점검·AI 레드티밍 <b>9개사</b> 시행</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">SW공급망 보안 플랫폼 가동, 버그바운티 참여 사원사 전년 대비 <b>119%</b> 증가</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">마이데이터 2.0 전환 가속, 데이터 이동권 기반 산업 간 연계 확대 흐름</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">망분리 완화로 AI 기반 보안 도구 도입 가능성 확대. 금융보안원 SW공급망 플랫폼·ASAP 등 공동 인프라 활용 시 중소 금융사도 보안 역량 보강 가능</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">AI 자율 해킹으로 공격 대응 시간 급감, 캐피탈사 규모 기준 망분리 특례 대상 제외 가능성. 앤트로픽 미토스 <b>7월</b> 취약점 대량 공개 시 보안 혼란 우려</div>
+  </div>
+  <div class="section-title" style="margin-top:8px;">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">망분리 특례·미토스 공개 <b>2026년 7월</b></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">보안 거버넌스·복원력 체계 구축</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">금일 수집 기사 검토 결과, 현재 부서와 키워드에 실질적으로 관련된 경쟁사 동향은 별도로 확인되지 않았습니다.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">총자산 <b>10조원</b> 미만 시 망분리 특례 대상 제외 → 금융보안원 외부 공격표면 점검·보안점검 지원 적극 활용 필요. <b>7월</b> 미토스 취약점 공개 전 자사 IT 자산 전수 파악 및 패치 우선순위 수립 점검 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">보안을 CISO 전담이 아닌 경영진 핵심 안건으로 격상하는 거버넌스 재편 검토 필요. 사이버 복원력(MTTR·RTO) 지표 기반 장애 대응 체계 고도화 및 금융보안원 SW공급망 플랫폼·SBOM 관리 체계 도입 검토 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 자사 운영 시스템·외주 보안 SW의 취약점 현황 긴급 점검 및 공격 표면 최소화 방안 수립 ② 마이데이터 2.0 확대에 따른 데이터 연계 보안 요건 사전 검토(표준 API·상호운용성 대응)</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card">
+    <a href="https://weekly.khan.co.kr/article/202606010600011" target="_blank">→ AI 슈퍼 해커의 역습…'버그마겟돈' 공포에 보안 패러다임이 바뀐다</a>
+  </div>
+  <div class="source-card">
+    <a href="https://zdnet.co.kr/view/?no=20260531171554" target="_blank">→ [보안리더] 박상원 금보원장 "보안, IT이슈 아냐...'장애 제로' 혼신"</a>
+  </div>
+  <div class="source-card">
+    <a href="http://www.itdaily.kr/news/articleView.html?idxno=239562" target="_blank">→ [미토스③] "보안은 CISO 혼자 몫 아냐"…경영진 차원 거버넌스 재편 시급</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.dt.co.kr/article/12065127?ref=naver" target="_blank">→ AI 해킹 위협은 상대 안 가리는데…망분리 완화 소외된 중소·핀테크</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.sedaily.com/article/20050198?ref=naver" target="_blank">→ 2.0 시대 열리는 마이데이터</a>
+  </div>
+
+</div>
