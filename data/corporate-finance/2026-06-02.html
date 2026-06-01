@@ -1,0 +1,147 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">부동산PF 유동화 시장 회복·기업 도산 급증·자금조달 구조 변화가 동시 진행되며 캐피탈사 기업여신 전략 재점검 필요</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">법인 파산 신청 <b>2026년 1~4월 859건</b>, 사상 최대 경신 전망</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">PF 유동화증권 발행 <b>2026년 1~5월 약 80조원</b>, 건설사 조달 축 이동</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">저축은행 3곳 PF발 부실로 <b>장기신용등급 하향</b> 조정</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">2026년 4월 기업 직접금융 조달 <b>22조6157억원</b>, 전월 대비 13.2% 증가</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">중소기업 <b>66%</b> 승계 계획 미수립, 기업승계 금융 수요 부상</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">PF 유동화 금리 하락으로 구조화 금융 참여 여건 개선. 중소기업 승계 관련 MBO·EBO 인수금융 수요 확대 흐름</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">중소기업 도산 급증에 따른 기업여신 <b>연체율·대손비용</b> 상승 압력. PF 익스포저 보유 금융사 건전성 악화 사례 확산</div>
+  </div>
+
+  <div class="section-title" style="margin-bottom:8px;">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">기업부실·연체율 관리</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">PF 구조화 참여·승계금융 상품 검토</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">금일 수집 기사 검토 결과, 현재 부서와 키워드에 실질적으로 관련된 캐피탈사 경쟁사 동향은 별도로 확인되지 않았습니다.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content"><b>2026년 1분기</b> 5대 은행 기업대출 연체율 <b>0.46%</b>로 상승 추세 확인. 자사 기업여신 포트폴리오 내 건설·부동산 관련 익스포저 및 중소기업 연체 추이 긴급 점검 필요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">PF ABSTB 유통금리 <b>A1등급 3.5%</b> 수준 하락으로 우량 사업장 중심 구조화 참여 검토 가능. 중소기업 승계 시장 확대에 따른 인수금융·메자닌 상품 개발 여지 탐색 필요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 자사 기업여신 중 업력 20년 이상·대표자 60세 이상 차주 리스트 추출 후 승계 리스크·연체 가능성 사전 스크리닝 실시<br>② PF 관련 보유 자산의 브릿지론 vs 본PF 비중 점검 및 부실 전이 시나리오별 대손충당금 시뮬레이션 수행</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.mk.co.kr/article/12063350" target="_blank">→ "버텨봤자 빚만 늘어나겠죠"...이자 못 갚아 파산하는 중소기업 폭증</a></div>
+  <div class="source-card"><a href="https://www.investchosun.com/site/data/html_dir/2026/06/01/2026060180156.html" target="_blank">→ "회사채 찍을 이유 없다"…건설사, PF 유동화로 이동</a></div>
+  <div class="source-card"><a href="https://www.g-enews.com/view.php?ud=202606011534393555a6e8311f64_1" target="_blank">→ '부동산PF 악몽' 부실 우려… 한국투자·하나·한화저축은행 신용등급 하락</a></div>
+  <div class="source-card"><a href="https://www.bloter.net/news/articleView.html?idxno=664070" target="_blank">→ 현대건설, 'PF 우발부채 14조' 우량 사업 체질개선</a></div>
+  <div class="source-card"><a href="https://www.sidae.com/article/2026060115445727145" target="_blank">→ 은행채 늘고 주식 줄었다...4월 기업 자금조달 22조6000억</a></div>
+  <div class="source-card"><a href="https://www.hankyung.com/article/2026060108416" target="_blank">→ 4월 기업 직접금융 조달 22.6조…전월비 13%↑</a></div>
+  <div class="source-card"><a href="https://www.hankyung.com/article/2026060113801" target="_blank">→ 中企 늙어가는데…66% "승계 계획 못 정해"</a></div>
+  <div class="source-card"><a href="https://www.segye.com/newsView/20260601510278?OutUrl=naver" target="_blank">→ 회생 터널 끝낸 한국피자헛…'PH코리아' 체제로 시장 지배자 재탈환 의지</a></div>
+  <div class="source-card"><a href="https://www.mk.co.kr/article/12063244" target="_blank">→ "전쟁 피해기업 보험료 인하" 신용보증기금, 특례보험 출시</a></div>
+  <div class="source-card"><a href="https://zdnet.co.kr/view/?no=20260601223339" target="_blank">→ 산단공, HUG와 산업단지 기반 지역균형발전 실현 손잡아</a></div>
+
+</div>
