@@ -1,0 +1,143 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">중고차 허위매물 규제 강화와 KB캐피탈 플랫폼 금융 연계 확대로 중고차금융 시장 신뢰도·경쟁 구도 동시 변화</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">중고차 허위·미끼 매물 규제 <b>6월 3일</b> 시행</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">KB캐피탈, 'KB차차차' 10주년 금융 연계 이벤트 전개</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">내연기관→전기차 전환 가속, 부품사 구조조정 압력 확대</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">중고차 시장 투명성 제고로 <b>인증중고차 금융</b> 수요 확대 가능. 플랫폼 기반 할부·대출 연계 상품 경쟁력 부각 기회</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">KB캐피탈의 플랫폼+금융 결합 모델 고도화로 중고차금융 점유율 경쟁 심화. 전기차 전환에 따른 <b>잔존가치 산정</b> 불확실성 지속</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">중고차 규제 즉시 시행</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">전기차 전환 구조 변화</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">KB캐피탈이 중고차 플랫폼 'KB차차차' <b>출시 10주년</b> 기념으로 인증중고차 'KB스타픽' 차량 대상 금융상품 이용 시 <b>최대 30만원</b> 주유상품권 지급 이벤트를 <b>2026년 6월</b> 한 달간 진행, 플랫폼-금융 연계 고객 유입 전략 강화 흐름</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content"><b>자동차관리법 개정</b>(6월 3일 시행)으로 허위매물 감소 시, 정상 매물 중심 중고차 할부·대출 전환율 상승 기대. KB캐피탈 프로모션에 대응한 자사 중고차금융 혜택 점검 필요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">내연기관차 비중 축소·전기차 확대 추세에 따른 중고 전기차 유통량 증가 대비, <b>EV 잔존가치 평가 모델</b> 고도화 및 중고 EV 전용 금융상품 설계 검토 필요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 주요 중고차 플랫폼(KB차차차·엔카·케이카 등)별 금융 연계 프로모션 현황 비교 분석 후 자사 제휴·혜택 경쟁력 점검<br>② 중고차 허위매물 규제 시행 후 인증중고차 거래 비중 변화 모니터링 및 자사 중고차 할부 취급액 추이 연동 분석</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card">
+    <a href="http://www.00news.co.kr/news/articleView.html?idxno=104167" target="_blank">→ 미끼·가짜 중고차 매물 꼼짝마</a>
+  </div>
+  <div class="source-card">
+    <a href="http://www.enewstoday.co.kr/news/articleView.html?idxno=2434954" target="_blank">→ KB캐피탈, 중고차 플랫폼 'KB차차차' 10주년 이벤트 진행</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.g-enews.com/view.php?ud=202606011606541823e30fcb1ba8_1" target="_blank">→ KB캐피탈, 중고차 사면 최대 30만원 주유상품권 지급</a>
+  </div>
+  <div class="source-card">
+    <a href="http://www.newstomato.com/ReadNews.aspx?no=1302670&inflow=N" target="_blank">→ 엔진이 사라진다…자동차 고용시장 '양극화'</a>
+  </div>
+
+</div>
