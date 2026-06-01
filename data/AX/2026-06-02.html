@@ -1,0 +1,137 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">금융권 AX 가속화 흐름 속 AI 연구환경 구축·보안 대응·업무자동화가 동시 전개되며, 캐피탈사 AI 전환 전략 수립 시점 도래</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card"><div class="event-text">우리금융, AWS 기반 독립형 AI 연구환경 구축 착수</div></div>
+  <div class="event-card"><div class="event-text">금융위, 고성능 AI 보안위협 대응 민간 기술자문단 발족</div></div>
+  <div class="event-card"><div class="event-text">망분리 규제 완화 세부 방안 검토 본격화</div></div>
+  <div class="event-card"><div class="event-text">IBK기업은행, AI 불완전판매 탐지 시스템 도입</div></div>
+  <div class="event-card" style="margin-bottom:16px;"><div class="event-text">코스콤, 현업 AI 활용 사례 공유 및 AX 확산 추진</div></div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content"><b>망분리 규제 완화</b> 진행 시 캐피탈사도 AI 도입 장벽 완화 기대. 금융지주·은행권 AI 연구환경 사례를 벤치마킹해 자체 <b>AI 에이전트</b> 및 업무자동화 조기 적용 가능</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">고성능 AI 기반 <b>사이버 보안위협</b> 확대로 캐피탈사 보안체계 재점검 필요. 은행·카드사 대비 AX 투자 격차 확대 시 디지털 경쟁력 열위 리스크 존재</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">망분리 완화 세부방안 <b>2025년 12월</b>까지 자문단 운영</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">AI 연구환경·자동화 시스템 확산</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">우리금융그룹이 베스핀글로벌과 협력해 <b>AWS 기반 독립형 AI 연구환경</b>을 구축하며 금융지주 차원의 AX 사업을 본격 추진. IBK기업은행은 <b>AI 불완전판매 탐지 시스템</b>을 도입해 투자상품 사후관리를 AI 자동화 체계로 전환, 기존 수작업 점검 방식을 대체.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">금융위 <b>민간 기술자문단</b> 운영(<b>2025년 12월</b>까지)에 따른 망분리 완화 세부 가이드라인 확정 전 자사 보안 현황 점검 필요. 고성능 AI 보안위협 대응 체계 사전 수립 검토 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">금융지주·은행권의 <b>AI 에이전트·LLM 연구환경</b> 구축 확산에 대응해 BNK캐피탈 자체 AI 활용 로드맵 수립 필요. 여신심사·리스크관리·고객응대 등 핵심 업무 영역별 <b>AI 자동화</b> 적용 우선순위 설정 검토 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 우리금융 AI 연구환경 모델(AWS 독립형 아키텍처 + AI 에이전트 거버넌스)을 참고해 BNK그룹 차원의 캐피탈사 적용 가능성 사전 검토<br>② IBK 사례처럼 여신 사후관리(불완전판매·연체징후 탐지) 영역에 AI 자동화 파일럿 도입 타당성 분석</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://zdnet.co.kr/view/?no=20260601141840" target="_blank">→ 베스핀글로벌, 금융권 AI 영토 넓힌다…우리금융 연구환경 운영</a></div>
+  <div class="source-card"><a href="https://it.chosun.com/news/articleView.html?idxno=2023092163123" target="_blank">→ "망분리 금융권도 AX 지원"… 베스핀글로벌, 우리금융 AI 연구환경 운영한다</a></div>
+  <div class="source-card"><a href="https://www.venturesquare.net/1088051/" target="_blank">→ 베스핀글로벌, 우리금융 AI 연구환경 운영 맡는다… 금융권 AX 사업 확대</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260601_0003651927" target="_blank">→ AI 위협 대응 등 보안기술 정책 자문 수행</a></div>
+  <div class="source-card"><a href="https://zdnet.co.kr/view/?no=20260601145937" target="_blank">→ 금융위 AI 보안 목적 망분리 시행 '첫 걸음'</a></div>
+  <div class="source-card"><a href="https://www.yna.co.kr/view/AKR20260601064800002?input=1195m" target="_blank">→ "AI공격은 AI로 방어"…고성능 AI 대응 민간자문단 출범</a></div>
+  <div class="source-card"><a href="https://www.news1.kr/finance/general-finance/6183532" target="_blank">→ 금융당국, 미토스發 해킹 위협에 '민간 기술자문단' 본격 출범</a></div>
+  <div class="source-card"><a href="https://www.etnews.com/20260601000422" target="_blank">→ IBK기업은행, 'AI 불완전판매 탐지 시스템' 도입…금융소비자 보호 강화</a></div>
+  <div class="source-card"><a href="https://daily.hankooki.com/news/articleView.html?idxno=1372537" target="_blank">→ 기업은행, 'AI 불완전판매 탐지 시스템' 도입…금융소비자 보호 강화</a></div>
+  <div class="source-card"><a href="https://www.viva100.com/article/20260601500983" target="_blank">→ 코스콤 금융사업본부, 'AI Insight Day' 개최…현업 AI 활용 사례 공유</a></div>
+
+</div>
