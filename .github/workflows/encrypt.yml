@@ -1,0 +1,51 @@
+ name: Auto-encrypt data files
+
+  on:
+    push:
+      paths:
+        - 'data/**/*.html'
+        - 'tools/encrypt.py'
+        - 'tools/auth-config.json'
+        - '.github/workflows/encrypt.yml'
+    workflow_dispatch:
+
+  permissions:
+    contents: write
+
+  concurrency:
+    group: encrypt-${{ github.ref }}
+    cancel-in-progress: false
+
+  jobs:
+    encrypt:
+      if: github.actor != 'github-actions[bot]'
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+          with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            persist-credentials: true
+
+        - uses: actions/setup-python@v5
+          with:
+            python-version: '3.11'
+
+        - name: Install cryptography
+          run: pip install --quiet cryptography
+
+        - name: Encrypt plaintext HTML under data/
+          env:
+            INSIGHT_PASSWORD: ${{ secrets.INSIGHT_PASSWORD || '0714' }}
+          run: python tools/encrypt.py --all
+
+        - name: Commit encrypted files
+          run: |
+            git config user.name  'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            if git diff --quiet; then
+              echo 'No changes to commit.'
+              exit 0
+            fi
+            git add data/
+            git commit -m 'chore: auto-encrypt data files [skip ci]'
+            git push
