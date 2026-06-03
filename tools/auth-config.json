@@ -1,0 +1,8 @@
+{
+  "v": 1,
+  "alg": "AES-GCM",
+  "kdf": "PBKDF2-SHA256",
+  "iter": 600000,
+  "keyLen": 256,
+  "saltB64": "F2IlBCLu4SYAC7yTSCTsLw=="
+}
