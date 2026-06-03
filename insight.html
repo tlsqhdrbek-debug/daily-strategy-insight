@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
@@ -58,10 +58,13 @@
     본 인사이트는 AI 도구를 활용하여 작성되었습니다. AI는 실수가 포함될 수 있으므로, 참고 자료로만 활용하시기 바랍니다.
   </footer>
 
-  <script src="assets/js/app.js?v=20260514b"></script>
+  <script src="assets/js/auth.js?v=20260603a"></script>
+  <script src="assets/js/app.js?v=20260603a"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', async () => {
       setCurrentDate();
+      const key = await DSIAuth.requireAuth();
+      if (!key) return;
       loadDetail();
     });
 
@@ -70,9 +73,9 @@
       if (!file) { showError('잘못된 접근입니다.'); return; }
 
       try {
-        const [insightsRes, contentRes] = await Promise.all([
+        const [insightsRes, plaintext] = await Promise.all([
           fetch('data/insights.json'),
-          fetch(file)
+          DSIAuth.fetchEncrypted(file)
         ]);
 
         if (!insightsRes.ok) throw new Error('insights.json 로드 실패');
@@ -82,8 +85,7 @@
         if (item) renderMeta(item);
         else document.getElementById('meta-card').style.display = 'none';
 
-        if (!contentRes.ok) throw new Error(`파일 로드 실패 (${contentRes.status})`);
-        document.getElementById('insight-body').innerHTML = await contentRes.text();
+        document.getElementById('insight-body').innerHTML = plaintext;
 
         if (item) document.title = `${item.categoryName} 전략인사이트 · ${item.date}`;
       } catch (e) {
@@ -114,4 +116,3 @@
   </script>
 </body>
 </html>
-
