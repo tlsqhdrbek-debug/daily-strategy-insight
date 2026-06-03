@@ -1,6 +1,6 @@
- name: Auto-encrypt data files
+name: Auto-encrypt data files
 
-  on:
+on:
     push:
       paths:
         - 'data/**/*.html'
