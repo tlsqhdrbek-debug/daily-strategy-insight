@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>인증 · BNK 캐피탈 전략 인사이트</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:'Noto Sans KR',sans-serif; background:#f5f6fa; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:20px; -webkit-tap-highlight-color:transparent; }
+    .login-card { background:#fff; border-radius:18px; padding:32px 24px 28px; width:100%; max-width:360px; box-shadow:0 6px 24px rgba(0,0,0,0.08); }
+    .login-brand { display:flex; flex-direction:column; align-items:center; gap:14px; margin-bottom:24px; text-align:center; }
+    .login-icon { width:54px; height:54px; }
+    .login-title { font-size:18px; font-weight:700; color:#1a1a1a; }
+    .login-sub { font-size:13px; color:#888; margin-top:4px; }
+    .login-form { display:flex; flex-direction:column; gap:12px; }
+    .pin-input { font-size:22px; text-align:center; letter-spacing:10px; padding:14px; border:2px solid #e3e3e8; border-radius:12px; font-family:inherit; outline:none; transition:border-color .15s, box-shadow .15s; background:#fafafb; }
+    .pin-input:focus { border-color:#C41313; box-shadow:0 0 0 3px rgba(196,19,19,0.08); background:#fff; }
+    .submit-btn { background:#C41313; color:#fff; border:none; padding:14px; border-radius:12px; font-size:15px; font-weight:600; font-family:inherit; cursor:pointer; transition:opacity .15s, transform .05s; }
+    .submit-btn:disabled { opacity:.55; cursor:wait; }
+    .submit-btn:not(:disabled):active { transform:scale(0.98); }
+    .login-error { color:#C41313; font-size:13px; text-align:center; min-height:18px; font-weight:500; }
+    .login-foot { margin-top:18px; font-size:11px; color:#a8a8b0; text-align:center; line-height:1.7; }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <div class="login-brand">
+      <svg class="login-icon" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+        <rect width="38" height="38" rx="9" fill="#C41313"/>
+        <path d="M0 26H38V29C38 33.9706 33.9706 38 29 38H9C4.02944 38 0 33.9706 0 29V26Z" fill="#720000"/>
+        <text x="19" y="23" font-family="'Arial Black',sans-serif" font-weight="900" font-size="16" fill="white" text-anchor="middle">BNK</text>
+        <text x="19" y="34" font-family="Arial,sans-serif" font-weight="700" font-size="5.5" fill="white" text-anchor="middle" letter-spacing="1.5">CAPITAL</text>
+      </svg>
+      <div>
+        <div class="login-title">전략 인사이트</div>
+        <div class="login-sub">디바이스 인증이 필요합니다</div>
+      </div>
+    </div>
+    <form class="login-form" id="login-form" autocomplete="off">
+      <input id="pin" class="pin-input" type="password" inputmode="numeric" autocomplete="one-time-code" placeholder="••••" required>
+      <div class="login-error" id="err"></div>
+      <button class="submit-btn" id="submit" type="submit">인증</button>
+    </form>
+    <div class="login-foot">인증된 디바이스는 다음부터 자동 로그인됩니다.<br>BNK캐피탈 임직원 전용</div>
+  </div>
+  <script src="assets/js/auth.js?v=20260603a"></script>
+  <script>
+    (async () => {
+      try {
+        const key = await DSIAuth.getCachedKey();
+        if (!key) return;
+        const ok = await DSIAuth.verifySentinel(key).catch(() => false);
+        if (!ok) { DSIAuth.clearKey(); return; }
+        const params = new URLSearchParams(location.search);
+        const ret = params.get('return');
+        location.replace(ret ? decodeURIComponent(ret) : 'index.html');
+      } catch (e) { console.warn(e); }
+    })();
+
+    const form = document.getElementById('login-form');
+    const pinEl = document.getElementById('pin');
+    const errEl = document.getElementById('err');
+    const submitBtn = document.getElementById('submit');
+
+    setTimeout(() => pinEl.focus(), 100);
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errEl.textContent = '';
+      submitBtn.disabled = true;
+      submitBtn.textContent = '인증 중...';
+      try {
+        const ok = await DSIAuth.login(pinEl.value);
+        if (!ok) {
+          errEl.textContent = '비밀번호가 올바르지 않습니다.';
+          submitBtn.disabled = false;
+          submitBtn.textContent = '인증';
+          pinEl.value = '';
+          pinEl.focus();
+          return;
+        }
+        const params = new URLSearchParams(location.search);
+        const ret = params.get('return');
+        location.replace(ret ? decodeURIComponent(ret) : 'index.html');
+      } catch (err) {
+        console.error(err);
+        errEl.textContent = '오류: ' + err.message;
+        submitBtn.disabled = false;
+        submitBtn.textContent = '인증';
+      }
+    });
+  </script>
+</body>
+</html>
