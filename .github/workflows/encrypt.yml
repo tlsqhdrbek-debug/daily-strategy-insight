@@ -9,14 +9,14 @@ on:
         - '.github/workflows/encrypt.yml'
     workflow_dispatch:
 
-  permissions:
+permissions:
     contents: write
 
-  concurrency:
+concurrency:
     group: encrypt-${{ github.ref }}
     cancel-in-progress: false
 
-  jobs:
+jobs:
     encrypt:
       if: github.actor != 'github-actions[bot]'
       runs-on: ubuntu-latest
