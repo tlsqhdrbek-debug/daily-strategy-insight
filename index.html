@@ -114,13 +114,24 @@
     </div>
   </div>
 
-  <script src="assets/js/auth.js?v=20260603a"></script>
+  <script src="assets/js/auth.js?v=20260603b"></script>
   <script>
     (async () => {
       const key = await DSIAuth.requireAuth();
       if (!key) return;
       const s = document.createElement('script');
-      s.src = 'assets/js/app.js?v=20260603a';
+      s.src = 'assets/js/app.js?v=20260603b';
+      s.onload = () => {
+        // app.js's own DOMContentLoaded listener won't fire (event already passed),
+        // so we replicate its init here.
+        setCurrentDate();
+        if (document.getElementById('snapshot-grid')) {
+          loadInsights();
+          setupSearch();
+          setupTabs();
+          setupPanel();
+        }
+      };
       document.body.appendChild(s);
     })();
   </script>
