@@ -123,17 +123,30 @@
     return null;
   }
 
+  function looksLikeEncrypted(text) {
+    const t = text.trimStart();
+    if (!t.startsWith('{')) return null;
+    try {
+      const obj = JSON.parse(text);
+      if (obj && obj.v === 1 && typeof obj.iv === 'string' && typeof obj.ct === 'string') {
+        return obj;
+      }
+    } catch (e) { /* fall through */ }
+    return null;
+  }
+
   async function fetchEncrypted(url) {
-    const key = await getCachedKey();
-    if (!key) throw new Error('not authenticated');
     const r = await fetch(url, { cache: 'no-cache' });
     if (!r.ok) throw new Error('파일 로드 실패 (' + r.status + ')');
     const text = await r.text();
-    let blob;
-    try { blob = JSON.parse(text); } catch (e) {
-      throw new Error('파일 형식 오류 (암호화 안 됨?)');
+    const blob = looksLikeEncrypted(text);
+    if (!blob) {
+      // Transition fallback: file not yet encrypted by the CI workflow.
+      // Once the workflow has processed every data/ file, this path is never taken.
+      return text;
     }
-    if (!blob || !blob.iv || !blob.ct) throw new Error('파일 형식 오류');
+    const key = await getCachedKey();
+    if (!key) throw new Error('not authenticated');
     return decryptBlob(blob, key);
   }
 
