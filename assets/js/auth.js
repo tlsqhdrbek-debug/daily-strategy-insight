@@ -5,7 +5,7 @@
 
   const STORAGE_KEY = 'dsi_key_b64';
   const CONFIG_URL  = 'tools/auth-config.json';
-  const VERIFY_URL  = 'data/.verify.json';
+  const VERIFY_URL  = 'data/verify.json';
   const SENTINEL    = 'DSI_OK';
 
   let _config = null;
