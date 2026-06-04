@@ -1,0 +1,132 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-opportunity .insight-title{font-size:11px;font-weight:600;color:#0F6E56;margin-bottom:4px;}
+.insight-risk .insight-title{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:4px;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+<div class="wrap">
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">부동산PF 금리 인상 리스크 재부각, 기업회생·부실 확산 속 2금융권 건전성 관리 긴장 고조</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">기준금리 인상 전망에 부동산PF 연체율 재상승 우려 확대</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">상호금융 PF 매각 사업장 <b>113곳·2조7000억원</b>으로 급증</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">홈플러스 회생 가결 시한 <b>7월 3일</b>, 37개 점포 폐점·희망퇴직 착수</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">글로벌 사모대출 펀드 환매 제한 확산, 기업부실 우려 지속</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">기보·기업은행 <b>총 7,500억원</b> 규모 중소기업 자금조달 지원 협약</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">정책금융 확대로 미래전략산업 중소기업 여신 수요 증가 흐름. 저축은행 PF 정리 진전에 따른 우량 사업장 선별 투자 기회 존재</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content"><b>기준금리 인상</b>·고유가 동시 작용 시 PF 브리지론 차환 부담 급증. 토지담보대출 <b>연체율 29.3%</b> 등 악성 사업장 부실 전이 리스크</div>
+  </div>
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">PF 연체율·금리 변동</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">기업회생 결과·부동산PF 규제 시행</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">토스뱅크가 기업신용평가팀장·기업솔루션 PM 채용에 나서며 중소기업 디지털 기업금융 인프라 구축에 착수. 기업대출 잔액은 <b>2023년 말 1조7,502억원→2025년 말 1조3,975억원</b>으로 축소하며 건전성 우선 기조 유지 중</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">보유 PF·브리지론 익스포저의 금리 민감도 및 만기 도래 일정 긴급 점검 필요. 홈플러스 등 회생기업 관련 채권·보증 잔액 확인 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content"><b>2027년 시행</b> 목표 부동산PF 규제 세부안 모니터링 필요. 글로벌 사모대출 부실 확산이 국내 기업 자금조달 경색으로 파급될 가능성 대비</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 자사 PF 포트폴리오 대상 금리 인상 시나리오별 연체율 스트레스 테스트 실시 검토 ② 기업여신 중 건설·부동산 업종 집중도 및 차환 리스크 모니터링 체계 점검</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.mt.co.kr/finance/2026/06/05/2026060419394990199" target="_blank">→ 기준금리 인상 가능성에… 부동산PF 걱정 커지는 2금융권</a></div>
+  <div class="source-card"><a href="https://www.newsway.co.kr/news/view?ud=2026060415454402400" target="_blank">→ 폐점·희망퇴직 꺼낸 홈플러스···회생시한 한 달 앞두고 '생존 승부수'</a></div>
+  <div class="source-card"><a href="https://www.koreaittimes.com/news/articleView.html?idxno=154217" target="_blank">→ 홈플러스, 회생 과정서 37개 점포 폐점·희망퇴직 추진… 구조조정 속도전</a></div>
+  <div class="source-card"><a href="http://www.newsian.co.kr/news/articleView.html?idxno=90515" target="_blank">→ '회생 기로' 홈플러스, 37개 매장 결국 문 닫는다…직원 대상 희망퇴직</a></div>
+  <div class="source-card"><a href="https://www.bloter.net/news/articleView.html?idxno=664495" target="_blank">→ 블랙스톤, 사모대출펀드 환매 5%로 제한…부실화 우려 지속</a></div>
+  <div class="source-card"><a href="https://news.mtn.co.kr/news-detail/2026060413331192258" target="_blank">→ 토스뱅크, 기업금융 확장 채비</a></div>
+  <div class="source-card"><a href="https://www.ajunews.com/view/20260604140102190" target="_blank">→ 기보, 기업은행과 총 '7500억 원' 규모 中企 자금조달 지원</a></div>
+  <div class="source-card"><a href="https://www.dnews.co.kr/uhtml/view.jsp?idxno=202606041157106690059" target="_blank">→ [언주로칼럼] 정부의 부동산 대출 자충수</a></div>
+</div>
