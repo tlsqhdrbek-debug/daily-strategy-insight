@@ -1,0 +1,150 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">정책금융 지방공급 대폭 확대와 PF시장 위축 속 기업 자금조달 경로가 은행 대출로 집중되는 구조적 전환 진행</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">정책금융 지방공급 <b>2028년 164조원</b>으로 확대 계획</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">모험자본 플랫폼 <b>2026년 7월</b> 시범운영 출범</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">회사채 순발행액 전년 동기 대비 <b>99.8%</b> 급감, 은행 대출 쏠림</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">부동산 PF 시장 위축·공사비 상승으로 착공 지연 지속</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">홈플러스 회생 DIP <b>2,000억원</b> 확보 여부가 분수령</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">건설업 취업자 <b>25개월 연속</b> 감소, 제조업도 <b>14만명</b> 급감</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">정책금융 비수도권 공급 확대로 지방 중소기업 여신 수요 증가 전망. 제2금융권 비수도권 대출한도 상향·예대율 우대 등 캐피탈사 영업 기반 확대 가능</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">회사채 시장 경색으로 기업 자금조달이 은행 대출에 집중, 캐피탈사 기업여신 경쟁 심화. 건설업·제조업 고용 급감과 PF 시장 위축이 기업부실·연체율 상승 리스크로 연결</div>
+  </div>
+  <div class="section-title" style="margin-top:8px;">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">PF 건전성·기업 연체율 점검</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">정책금융 확대에 따른 영업전략 재편</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">금일 수집 기사 검토 결과, 현재 부서와 키워드에 실질적으로 관련된 경쟁사 동향은 별도로 확인되지 않았습니다.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">건설업 <b>25개월 연속</b> 고용 감소·PF 시장 경색 지속에 따른 부동산PF 익스포저 건전성 긴급 점검 필요. <b>BBB- 회사채 금리 10% 상회</b> 환경에서 기업 차주의 차환 리스크·상환 부담 모니터링 강화 필요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">정부의 제2금융권 비수도권 대출한도 상향·예대율 우대 정책 구체화 시 지방 기업금융 영업 확대 전략 수립 검토. HUG 비아파트 특례 PF보증 확대에 연계한 도시형생활주택·오피스텔 PF 참여 기회 탐색</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 기업금융 포트폴리오 내 건설·제조업 비중 및 연체 추이를 업종별로 세분화 점검하여 선제적 충당금 적립 시나리오 수립 검토<br>② 비수도권 정책금융 확대 로드맵에 맞춰 충청·영남권 중소기업 여신 타깃 영업 파이프라인 점검</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202606110468&t=NN" target="_blank">→ 정책금융 지방으로...이억원 "2028년 164조 공급"</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260611_0003665780" target="_blank">→ 금융위, 대전서 첫 '정책금융 동행' 개최…수은·무보 합류해 기관 6곳 확대</a></div>
+  <div class="source-card"><a href="https://economist.co.kr/article/view/ecn202606110067" target="_blank">→ 증권사·VC·벤처기업 한곳에…'모험자본 플랫폼' 내달 출범</a></div>
+  <div class="source-card"><a href="https://www.nocutnews.co.kr/news/6531573?utm_source=naver&utm_medium=article&utm_campaign=20260611030106" target="_blank">→ 금감원·네이버페이, 중소기업 자금연결 돕는 플랫폼 7월 출범</a></div>
+  <div class="source-card"><a href="https://www.etoday.co.kr/news/view/2592733" target="_blank">→ 與 "MBK 답했다, 이제 메리츠 차례"…홈플러스 회생 지원 압박</a></div>
+  <div class="source-card"><a href="https://www.hankookilbo.com/news/article/A2026061114570002782?did=NA" target="_blank">→ 민주당 을지로위 면담 후 "보증 조건 확인" 회생법원, 2000억 DIP 전제로 회생 연장</a></div>
+  <div class="source-card"><a href="http://www.fnnews.com/news/202606111504282896" target="_blank">→ 최인호 HUG 사장, 평택 브레인시티 PF 사업장 점검</a></div>
+  <div class="source-card"><a href="https://www.newscj.com/news/articleView.html?idxno=3408645" target="_blank">→ HUG, PF시장 위축 대응…주택공급 '정책금융' 강화</a></div>
+  <div class="source-card"><a href="https://www.mt.co.kr/stock/2026/06/12/2026061116211095300" target="_blank">→ 회사채·IPO·유증 다 쪼그라들었다…기업, 결국 은행 창구 줄 섰다</a></div>
+  <div class="source-card"><a href="https://www.hankyung.com/article/2026061115531" target="_blank">→ 역대급 수출에도 일자리 줄었다…뜻밖의 '고용 쇼크'에 경고</a></div>
+  <div class="source-card"><a href="https://www.segye.com/newsView/20260611516218?OutUrl=naver" target="_blank">→ 중동사태 장기화로 주력산업 제조·건설업 '고용 쇼크'</a></div>
+
+</div>
