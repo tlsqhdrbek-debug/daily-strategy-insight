@@ -1,0 +1,139 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-opportunity .insight-title{font-size:11px;font-weight:600;color:#0F6E56;margin-bottom:4px;}
+.insight-risk .insight-title{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:4px;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">2026년 5월 가계대출 <b>9.3조원</b> 급증에 금융당국 비상관리 체계 가동, 대출금리 <b>4년래 최고</b> 상승과 맞물려 캐피탈사 소매여신 환경 급변</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card"><div class="event-text">5월 금융권 가계대출 <b>9.3조원</b> 증가, 1년 9개월 만에 최대</div></div>
+  <div class="event-card"><div class="event-text">신용대출 <b>3.4조원</b> 급증, 빚투·마이너스통장 중심 확대</div></div>
+  <div class="event-card"><div class="event-text">2금융권 가계대출도 <b>2.3조원</b> 증가, 여신전문금융사 <b>6,000억원</b> 증가 전환</div></div>
+  <div class="event-card"><div class="event-text">금융당국, 가계부채 비상관리 체계 가동 및 매주 점검 돌입</div></div>
+  <div class="event-card"><div class="event-text">전세대출 보증비율 <b>70%</b> 하향·고액 전세 DSR 적용 등 3중 규제 검토</div></div>
+  <div class="event-card"><div class="event-text">주담대 고정금리 상단 <b>연 7.51%</b>, 2022년 이후 4년래 최고 수준</div></div>
+  <div class="event-card"><div class="event-text">한국은행 기준금리 인상 전환 예고, 연내 <b>3.00%</b> 도달 전망</div></div>
+  <div class="event-card" style="margin-bottom:16px;"><div class="event-text">성인 <b>25%</b>가 신 파일러, 대안 신용평가 체계 개편 본격화</div></div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">은행권 신용대출 축소로 2금융권 여신 수요 유입 가능성 확대. 신 파일러 <b>1,246만명</b> 대상 대안 신용평가 기반 중저신용자 여신 시장 선점 기회 존재</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">가계부채 총량 규제 강화가 캐피탈사까지 확대될 리스크. 금리 상승기 차주 상환부담 증가에 따른 <b>연체율</b> 상승 우려</div>
+  </div>
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">비상관리 체계 즉시 가동</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">하반기 기준금리 인상 본격화</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">금일 수집 기사 검토 결과, 현재 부서와 키워드에 실질적으로 관련된 경쟁사 동향은 별도로 확인되지 않았습니다.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">은행권 비대면 신용대출·대환대출 중단 확산으로 캐피탈사 개인신용대출 유입 증가 가능성 점검 필요. 동시에 금융당국의 <b>여신전문금융사</b> 대상 총량 점검 확대 가능성에 대비한 자체 관리목표 재점검 필요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">하반기 기준금리 <b>연 3.00%</b> 이상 인상 시 조달비용 상승과 차주 상환부담 동시 확대 예상. 전세대출 <b>DSR 적용</b> 확대 시 가계여신 심사 기준 전반 재조정 검토 필요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 빚투 수요 유입 차주의 신용등급·상환능력 분포 분석을 통한 리스크 선별 심사 기준 마련 검토<br>② 신 파일러 대상 대안 신용평가 데이터(통신·공과금 등) 활용 가능성 및 중저신용자 여신 상품 경쟁력 점검</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.hankyung.com/article/2026061115551" target="_blank">→ 고액 연봉자 '마통' 한도 줄어든다</a></div>
+  <div class="source-card"><a href="https://www.etoday.co.kr/news/view/2592702" target="_blank">→ 부동산 영끌에 주식 빚투까지…가계부채 경고음 커졌다 [영끌 2.0]</a></div>
+  <div class="source-card"><a href="https://www.ajunews.com/view/20260611134416507" target="_blank">→ 부동산·빚투 질주에 가계대출 9.3조 급증…가계부채 관리 '경고음'</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260611_0003665982" target="_blank">→ 우리은행, 12일부터 대출비교 플랫폼서 가계신용대출 중단</a></div>
+  <div class="source-card"><a href="https://www.joongang.co.kr/article/25436022" target="_blank">→ [단독] '집값 주범' 전세대출 옥죈다…금융위, 3중 규제 카드 검토</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260611_0003665698" target="_blank">→ 긴축 들어가기 전인데…은행 대출금리 4년래 최고치</a></div>
+  <div class="source-card"><a href="http://www.fnnews.com/news/202606111121224421" target="_blank">→ "3억 주담대 이자 월 199만원"...7% 뚫은 대출금리, 영끌·빚투족 '비명'</a></div>
+  <div class="source-card"><a href="https://view.asiae.co.kr/article/2026061118224863559" target="_blank">→ 우리은행, 비대면 대환대출 중단…'빚투' 급증에 신용대출 죈다</a></div>
+  <div class="source-card"><a href="https://www.mk.co.kr/article/12071703" target="_blank">→ "빚투' 광풍 이 정도였나"…5월 가계대출 9조3000억 급증 '역대급'</a></div>
+  <div class="source-card"><a href="https://www.chosun.com/economy/economy_general/2026/06/12/ZFJ3DCKQ7BBCFKTJHROAF4BX2E/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news" target="_blank">→ [단독] 금융 이력 부족한 성인 25%, 돈 빌리기 어렵다</a></div>
+  <div class="source-card"><a href="https://www.edaily.co.kr/news/newspath.asp?newsid=05166006645480736" target="_blank">→ 김은경 신용회복위원장, 국민기초금융보장법 입법 추진</a></div>
+
+</div>
