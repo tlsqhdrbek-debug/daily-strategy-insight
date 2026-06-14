@@ -1,0 +1,154 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-opportunity .insight-title{font-size:11px;font-weight:600;color:#0F6E56;margin-bottom:4px;}
+.insight-risk .insight-title{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:4px;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+.competitor-content p+p{margin-top:8px;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">기준금리 인상 임박에 따른 조달비용 상승 압력 속, 캐피탈사 외화 조달 다각화와 포트폴리오 재편이 가속화되는 흐름</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">한국은행 <b>7월 기준금리 인상</b> 가능성 급부상, 빅스텝 시나리오까지 거론</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">여전채 금리 반등으로 캐피탈사 <b>조달비용 상승</b> 압력 확대</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">우리금융캐피탈·IBK캐피탈, <b>외화 신디케이션론</b>으로 조달 다각화 성과</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">가계부채 <b>2,000조원</b> 근접, 금융당국 비상관리체계 가동</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">신종 금융사기 비중 <b>56%</b> 도달, 소비자보호 대응 강화 필요성 부각</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">외화 조달·녹색채권 등 채널 다변화 시 <b>원화 대비 최대 49bp</b> 비용 절감 가능. 금리 인상기 예금금리 상승으로 수신 경쟁력 있는 그룹사 연계 조달 유리</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">기준금리 인상 시 여전채 금리 추가 상승으로 <b>조달비용 부담 확대</b>. 취약차주 연체율 상승 및 <b>자산건전성 악화</b> 리스크 병존</div>
+  </div>
+  <div class="section-title" style="font-size:11px;font-weight:600;color:#2C2C2A;margin-bottom:6px;">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">7월 금통위 전후 금리 변동 즉시 반영</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">하반기 연속 인상 시 조달·건전성 동시 압박</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">
+      <p>우리금융캐피탈, 2026년 3월 <b>3억 달러</b> 규모 외화 신디케이션론 차입 완료, 오토금융 비중 <b>61.7%</b> 중심 포트폴리오 재편 및 1분기 ROA <b>1.3%</b>로 수익성 개선. 조달비용률은 2025년 1분기 4%에서 2026년 1분기 <b>3.54%</b>로 하락 관리.</p>
+      <p>IBK캐피탈, 창립 이래 첫 <b>1억 5,000만 달러</b> 외화 신디케이션론 성공. 동일 만기 원화채 대비 최대 <b>49bp</b> 낮은 금리 확보, 아시아 금융기관으로부터 목표 대비 <b>2배 이상</b> 수요 확인.</p>
+    </div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content"><b>7월 금통위</b> 전 회사채 발행 타이밍 점검 필요. 고금리 확정 발행 최소화 위한 단기 CP 활용 비중 재검토. 가계대출 규제 강화에 따른 개인금융 취급 전략 조정 점검 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">하반기 연속 금리 인상 시나리오 대비 외화 조달 채널 확보 검토. 금리 상승기 취약차주 <b>연체율</b> 상승 선제 모니터링 및 충당금 적립 수준 재점검 필요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 기준금리 0.25%p·0.50%p 인상 시나리오별 조달비용·NIM 영향 시뮬레이션 실시<br>② 경쟁사 외화 조달 사례(신디케이션론·김치본드) 대비 BNK캐피탈 조달 다각화 가능성 내부 검토</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card">
+    <a href="https://www.busan.com/view/busan/view.php?code=2026061417522663972" target="_blank">→ [김진호의 금융포커스] 긴축의 시대가 온다</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.kmib.co.kr/article/view.asp?arcid=1781425187&code=11151300&cp=nv" target="_blank">→ 신용대출 조이고 금리 올린다… 주담대 8%대 눈앞</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.bloter.net/news/articleView.html?idxno=665335" target="_blank">→ 우리금융캐피탈, 오토금융 중심 포트폴리오 재편…과제는 조달·건전성 관리</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.thebell.co.kr/free/content/ArticleView.asp?key=202606121538395120109462" target="_blank">→ IBK캐피탈, 첫 외화 신디케이션론 성공…조달 다각화 '성과'</a>
+  </div>
+  <div class="source-card">
+    <a href="http://www.fntimes.com/html/view.php?ud=202606122227011680dd55077bc2_18" target="_blank">→ 기동호 우리금융캐피탈 대표, 외화 조달·고금리 확정 발행 최소화</a>
+  </div>
+
+</div>
