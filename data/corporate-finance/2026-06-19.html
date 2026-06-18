@@ -1,0 +1,146 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">중소기업·소상공인 부실이 빠르게 확산되는 가운데, 기업자금조달 경로 다변화와 건전성 선제 관리가 캐피탈사 핵심 과제로 부상</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">2026년 4월 은행 원화대출 연체율 <b>0.61%</b>, 중소기업 <b>0.90%</b>로 급등</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">2026년 5월 기보·신보 대위변제 순증액 <b>1조3,903억원</b> 돌파</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">홈플러스 회생 DIP금융 공방 격화, 대형 기업회생 리스크 가시화</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">기보, 2026년 상반기 P-CBO <b>2,389억원</b> 발행으로 중기 직접금융 지원</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">신한은행·산업은행, 영광 태양광 PF <b>2,410억원</b> 공동 주선</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">P-CBO·전환금융 등 직접금융 확대 흐름 속 캐피탈사 중기 여신·유동화 상품 수요 증가 가능. 재생에너지 PF 시장 확대로 인프라금융 참여 기회 확대 흐름</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">중소법인 연체율 <b>0.98%</b>로 1%대 진입 임박, 캐피탈사 기업여신 포트폴리오 건전성 압박. 대위변제 급증은 보증 연계 여신의 회수율 하락 리스크 시사</div>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">연체율 상승·대위변제 확대</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">전환금융·PF 시장 재편</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">금일 수집 기사 검토 결과, 현재 부서와 키워드에 실질적으로 관련된 경쟁사 동향은 별도로 확인되지 않았습니다.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">중소기업·개인사업자 여신 포트폴리오 연체율 긴급 점검 필요. 2026년 4월 기준 <b>신규연체율 0.12%</b> 상승 추세 감안, 취약업종 조기경보 기준 재점검 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">전환금융·녹색자산유동화(G-ABS) 등 정책금융 연계 상품 참여 전략 수립 검토. 홈플러스 회생 결과에 따른 대형 유통기업 여신 리스크 파급효과 시나리오 분석 필요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 자사 중소기업·개인사업자 여신 중 보증기관 대위변제 이력 차주 대상 선제적 <b>대손충당금</b> 적정성 시뮬레이션 실시 ② 재생에너지·전환금융 PF 딜 파이프라인 현황 점검 및 참여 가능 규모 산정</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260618_0003675021" target="_blank">→ 속절없이 무너지는 중기…대위변제 벌써 1.3조원</a></div>
+  <div class="source-card"><a href="https://www.dt.co.kr/article/12068398?ref=naver" target="_blank">→ "신규연체 다시 늘었다"…은행권, 중기·신용대출發 건전성 빨간불</a></div>
+  <div class="source-card"><a href="https://www.ddaily.co.kr/page/view/2026061817161462766" target="_blank">→ 국내은행 연체율 0.61%…중소기업·신용대출 중심 상승</a></div>
+  <div class="source-card"><a href="https://www.econovill.com/news/articleView.html?idxno=742831" target="_blank">→ 은행 연체율 다시 0.6%대…중기대출·신용대출 부실 확대</a></div>
+  <div class="source-card"><a href="https://www.busan.com/view/busan/view.php?code=2026061817063263669" target="_blank">→ 기보, 상반기 2389억 원 P-CBO 발행… 129개 기업 자금조달 지원</a></div>
+  <div class="source-card"><a href="https://www.gokorea.kr/news/articleView.html?idxno=869546" target="_blank">→ 신한은행과 산업은행, 전남 영광 태양광 프로젝트에 2,410억 투자</a></div>
+  <div class="source-card"><a href="https://news.tf.co.kr/read/economy/2334287.htm" target="_blank">→ MBK "홈플러스는 담보물 아닌 기업…메리츠, 회생 동참해달라"</a></div>
+  <div class="source-card"><a href="https://www.news1.kr/finance/general-stock/6201893" target="_blank">→ MBK "홈플러스는 담보물 아닌 기업…메리츠, 회생 동참해야"</a></div>
+  <div class="source-card"><a href="https://www.sedaily.com/article/20057538?ref=naver" target="_blank">→ MBK "홈플러스는 담보물 아닌 기업…메리츠, 회생 동참해야"</a></div>
+  <div class="source-card"><a href="https://www.mt.co.kr/finance/2026/06/19/2026061813590231010" target="_blank">→ 국민은행·경남은행, 기술금융 평가 대형·소형리그 1위</a></div>
+  <div class="source-card"><a href="https://www.e-science.co.kr/news/articleView.html?idxno=130784" target="_blank">→ ESG 넘어 전환금융 시대…탄소중립 자금조달 논의 본격화</a></div>
+
+</div>
