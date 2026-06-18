@@ -1,0 +1,146 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">미 연준 매파적 동결로 한은 <b>7월 기준금리 인상</b> 기정사실화, 캐피탈사 조달비용 상승 압력 속 외화 조달 다변화 움직임 가속</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">미 연준 금리 동결, 연내 인상 가능성 시사</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">한은 <b>7월 금통위 0.25%p 인상</b> 확실시</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">영란은행 기준금리 <b>연 3.75%</b> 4연속 동결</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">MG캐피탈, 창사 첫 외화채 <b>5,000만 달러</b> 발행</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">외화채 등 조달 다변화 시 원화 공모채 대비 <b>낮은 금리</b> 확보 가능성 존재. 금리 인상기 선제적 조달 전략 수립 시 경쟁 우위 확보 기회</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">기준금리 인상 → 회사채·ABS 등 원화 조달비용 상승 불가피. 여신금리 인상 시 차주 상환부담 증가로 <b>연체율 상승</b> 리스크 확대</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">2026년 7월 금통위 인상 반영 즉시</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">연내 추가 인상 가능성에 따른 조달·여신 전략 재조정</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">MG캐피탈이 2026년 6월 창사 최초 외화 사모채 <b>5,000만 달러</b>(<b>SOFR+80bp</b>, 2년 만기)를 발행하며 조달 다변화에 착수. KDB Asia 주관, 산업은행 보증 구조로 원화 대비 낮은 금리 조달 및 신용평가 긍정 신호 확보 추진</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content"><b>7월 기준금리 인상</b> 확정 시 회사채 발행금리 즉시 상승 예상. 인상 전 조달 물량 선제 확보 여부 점검 필요. 원·달러 환율 <b>1,527원</b> 수준 급등에 따른 외화 조달 환리스크 관리 병행 필요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">연내 <b>2회 인상</b> 시나리오 대비 조달 만기 분산 및 외화채·ABS 등 채널 다변화 전략 수립 검토 필요. 금리 인상 장기화 시 여신 포트폴리오 건전성 스트레스 테스트 필요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 기준금리 <b>0.25~0.50%p</b> 인상 시나리오별 조달비용·NIM 영향 시뮬레이션 실시<br>② MG캐피탈 사례 참고, BNK캐피탈 외화 조달 가능성 및 비용 절감 효과 사전 검토</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card">
+    <a href="https://www.segye.com/newsView/20260618516137?OutUrl=naver" target="_blank">→ 美 연준 금리 동결… 한국은행, 기준금리 인상 불가피</a>
+  </div>
+  <div class="source-card">
+    <a href="https://biz.chosun.com/international/international_economy/2026/06/18/UJBEIDYRDFFSLLE6CS2F3KSE2A/?utm_source=naver&utm_medium=original&utm_campaign=biz" target="_blank">→ 영란은행, 기준금리 4연속 동결… 연 3.75% 유지</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.dailian.co.kr/news/view/1657441/?sc=Naver" target="_blank">→ MG캐피탈, 창사 첫 외화 조달…자금조달 다변화 속도</a>
+  </div>
+  <div class="source-card">
+    <a href="https://weekly.hankooki.com/news/articleView.html?idxno=7170321" target="_blank">→ MG캐피탈, 외화채 발행…5000만 달러 조달</a>
+  </div>
+
+</div>
