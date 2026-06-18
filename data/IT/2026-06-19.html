@@ -1,0 +1,142 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">금융당국의 망분리 규제 완화·AI 가이드라인 시행과 정부 플랫폼 개인정보 유출 사고가 동시 발생, 보안과 혁신의 균형이 핵심 과제로 부상</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">금융위, 망분리 규제 긴급 완화 및 AI 가이드라인 <b>6월 22일</b> 시행 발표</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">AI 에이전트 시대 대비 금융 규율 체계 전면 재편 착수</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">정부 '모두의 창업' 플랫폼에서 합격자 개인정보 유출 사고 발생</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">과기정통부·앤트로픽, AI 안전성·사이버보안 협력 MOU 체결</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">망분리 완화로 AI·SaaS 기반 여신심사·업무자동화 도입 속도 확보 가능. 가이드라인 <b>7대 원칙</b> 기반 자율적 적용으로 캐피탈사 규모에 맞는 단계적 AX 추진 여건 조성</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">망분리 해제 시 사이버 공격 노출면 확대, <b>CEO 책임</b>까지 확장 논의 진행 중. 개인정보 유출 사고 빈발로 금융사 정보보호 감독 강화 가능성 상존</div>
+  </div>
+  <div class="section-title" style="margin-top:4px;">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">망분리 완화·가이드라인 <b>6월 22일</b> 시행</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">하반기 TF 구성, 전자금융거래법 개정 추진</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">금일 수집 기사 검토 결과, 현재 부서와 키워드에 실질적으로 관련된 경쟁사 동향은 별도로 확인되지 않았습니다.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content"><b>6월 22일</b> 시행 AI 가이드라인 내 보조수단성·보안성 원칙 자사 적용 범위 즉시 점검 필요. 망분리 완화 전 <b>클라우드 보안인증</b> 등 대체 통제 수단 준비 상태 확인 필요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">하반기 금융위 TF 참여·샌드박스 시범사업 활용 검토. <b>전자금융감독규정</b> 개정 시 CISO→CEO 보안 책임 확대 대비 내부통제 체계 재설계 검토</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 자사 개인신용정보 동의 체계·가명처리 현황 점검 후 AI 학습 데이터 활용 가능 범위 사전 정리. ② 망분리 완화 이후 도입 가능한 AI 기반 여신심사·이상거래탐지 솔루션 PoC 계획 수립</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.edaily.co.kr/news/newspath.asp?newsid=04683846645483032" target="_blank">→ 금융 AI 에이전트 시대 연다…망분리·데이터 규제 손질</a></div>
+  <div class="source-card"><a href="https://biz.chosun.com/stock/finance/2026/06/18/XWI3LLIDD5AF3AIQZ2IV456SDY/?utm_source=naver&utm_medium=original&utm_campaign=biz" target="_blank">→ 금융 당국, 금융권 AI 확대 정책 추진… 망분리·신용정보 규제 개선</a></div>
+  <div class="source-card"><a href="https://www.nocutnews.co.kr/news/6534884?utm_source=naver&utm_medium=article&utm_campaign=20260618030027" target="_blank">→ 금융권 망분리 허물고 AI 속도 낸다…'AI 7대 원칙' 시행</a></div>
+  <div class="source-card"><a href="https://www.bloter.net/news/articleView.html?idxno=665796" target="_blank">→ [데스크시각] 망분리 해제 앞둔 금융권…하인리히 법칙 되새길 때</a></div>
+  <div class="source-card"><a href="https://www.sidae.com/article/2026061809101774084" target="_blank">→ 금융권 AI 활용 넓힌다...금융당국, 망분리·신용정보 규제 손질</a></div>
+  <div class="source-card"><a href="https://www.yna.co.kr/view/AKR20260618163100030?input=1195m" target="_blank">→ 6만명 몰린 정부 초대 창업 프로젝트…개인정보 유출로 '오점'</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260618_0003674434" target="_blank">→ "심사평도 털렸다"…'모두의창업' 개인정보 유출</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260618_0003674519" target="_blank">→ 과기정통부·앤트로픽, AI 안전성 확보·사이버보안 업무협약</a></div>
+  <div class="source-card"><a href="https://www.yna.co.kr/view/AKR20260617153051017?input=1195m" target="_blank">→ 앤트로픽 "미토스 문제 해결 노력"…한국과 AI보안 협력(종합)</a></div>
+
+</div>
