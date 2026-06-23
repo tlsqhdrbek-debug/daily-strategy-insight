@@ -1,0 +1,151 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">건설업 자금난·기업회생 리스크 확대 속 PF 조달 다변화 움직임, 캐피탈사 기업여신 건전성 점검 시급</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">홈플러스 회생계획 인가시한 <b>7월 3일</b> 임박, <b>2,000억원</b> 추가 자금 미확보로 파산 위기 고조</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">중앙그룹 계열사 5곳 회생절차 심리 착수, 대형 기업회생 사례 연쇄 발생</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">대구 건설업 대출 전년 대비 <b>36.3%</b> 급증, 수주는 <b>96.5%</b> 급감 — 운영자금 목적 차입 확대</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">프로젝트 리츠 설립 <b>14건</b> 돌파, PF 의존 조달구조 다변화 시도 본격화</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">부동산 PF 공매·사업주체 변경 관련 법적 쟁점 부각</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">IBK기업은행, 중신용 기술기업 대상 <b>2,000억원</b> 전용대출 출시</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">프로젝트 리츠 등 PF 조달 다변화 흐름에 캐피탈사 참여 기회 확대 가능. 중신용 기술기업 여신 수요 증가에 따른 틈새시장 공략 여지 존재</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">건설업 <b>연체율</b> 상승 및 기업회생 연쇄 확산 시 PF·기업여신 부실 전이 리스크. 홈플러스 파산 현실화 시 관련 채권·보증 손실 우려</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">홈플러스 <b>7월 초</b> 결론</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">건설업 구조조정 <b>2025년 하반기~2026년</b> 지속 전망</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">금일 수집 기사 검토 결과, 현재 부서와 키워드에 실질적으로 관련된 경쟁사 동향은 별도로 확인되지 않았습니다.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">건설업·유통업 관련 기업여신 포트폴리오 <b>연체율</b> 및 <b>대손충당금</b> 적정성 긴급 점검 필요. 홈플러스·중앙그룹 등 회생기업 익스포저 유무 확인 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">대구·지방 건설업 수주 절벽 장기화 시 PF 브릿지론 부실 확대 대비 필요. 프로젝트 리츠 연계 신규 조달구조 참여 방안 검토 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 자사 기업여신 중 건설·유통업종 차주의 현금흐름 악화 징후 조기경보 모니터링 강화 ② PF 포트폴리오 내 <b>미분양</b> 연동 사업장 리스크 등급 재산정 실시</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260623_0003680405" target="_blank">→ 2000억 조달 난항 홈플러스, 회생 '빨간불'…존폐 여부 운명의 일주일</a></div>
+  <div class="source-card"><a href="https://www.yna.co.kr/view/AKR20260622118851030?input=1195m" target="_blank">→ 홈플러스 회생시한 D-10…'벼랑 끝'서 MBK·메리츠는 공방만(종합)</a></div>
+  <div class="source-card"><a href="https://www.hankyung.com/article/2026062331457" target="_blank">→ [속보] 법원, 홈플러스에 "2000억 조달 계획 이달 내로 제출"</a></div>
+  <div class="source-card"><a href="https://www.yna.co.kr/view/AKR20260623124251030?input=1195m" target="_blank">→ 법원, 홈플에 회생절차폐지 의견조회…"30일까지 자금계획 제출"</a></div>
+  <div class="source-card"><a href="https://www.segye.com/newsView/20260623515308?OutUrl=naver" target="_blank">→ 법원, 중앙그룹 5곳 심리 착수… 회생절차 본격화</a></div>
+  <div class="source-card"><a href="https://www.idaegu.com/news/articleView.html?idxno=663811" target="_blank">→ 수주 절벽 속 건설업 대출 급증…대구 건설업계 '버티기'</a></div>
+  <div class="source-card"><a href="http://www.fnnews.com/news/202606231815127810" target="_blank">→ '프로젝트 리츠' 두자릿수 넘었다… 오피스·호텔 등 도입 활발</a></div>
+  <div class="source-card"><a href="https://dealsite.co.kr/articles/164012" target="_blank">→ 장기 지연 고기동 노인주택, 900억 PF로 본궤도</a></div>
+  <div class="source-card"><a href="https://www.dnews.co.kr/uhtml/view.jsp?idxno=202606231133189570403" target="_blank">→ [법률라운지] 부동산 PF사업의 공매 절차와 사업주체 변경 관련 법적 쟁점</a></div>
+  <div class="source-card"><a href="http://www.fnnews.com/news/202606231509569401" target="_blank">→ 기업은행, 첨단·혁신산업 중소기업에 2천억 금융지원</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260623_0003679982" target="_blank">→ 韓 저평가 기업, 日의 2.5배…OECD "지배구조 개선해야"</a></div>
+
+</div>
