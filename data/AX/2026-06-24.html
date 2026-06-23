@@ -1,0 +1,152 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">금융권 AX 가속화 속 AI 거버넌스·망분리 규제 완화·디지털 플랫폼 제휴가 동시 전개되며 캐피탈사 AI 전환 전략 재점검 시점 도래</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">신한은행, AI 업무 플랫폼·외환 심사 AI 등 AX 확대와 동시에 <b>AX 운영위원회</b> 기반 위험등급별 통제체계 정비</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">국회 포럼에서 금융 AI 혁신 위한 <b>망분리 규제 완화</b>·상시 검증 감독체계 전환 논의 본격화</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">금융위, <b>AI 전용 감독 방안</b> 검토 및 데이터 활용 규제 정비 계획 공식 언급</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">광주은행·케이뱅크, 비대면 플랫폼과 지역 금융 결합한 <b>중저신용자 공동 대출상품</b> 개발 착수</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">우리은행, 금융권 최초 <b>AI 평판리스크 지수</b> 활용 ESG 보고서 발간</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">망분리 규제 완화 시 캐피탈사도 외부 AI 모델·클라우드 활용 가능성 확대. 중저신용자 대상 <b>AI 기반 대안신용평가</b> 도입으로 여신 확대 기회 존재</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">은행권 AX 속도 대비 캐피탈사 AI 거버넌스 체계 미비 시 감독 리스크 확대. <b>AI 가이드라인</b> 시행에 따른 고위험 AI 서비스 심의·책임 체계 구축 부담</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">AI 가이드라인 대응</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">망분리 완화·AI 감독체계 정비</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">금일 수집 기사 검토 결과, 현재 부서와 키워드에 실질적으로 관련된 경쟁사 동향은 별도로 확인되지 않았습니다.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">금융위 <b>AI 가이드라인</b> 시행 중으로, AI 활용 서비스의 위험등급 분류·인간 개입 기준·긴급정지 절차 등 자체 거버넌스 체계 점검 필요. 여신심사·FDS 등 고위험 영역 AI 적용 시 소비자 설명·이의제기 절차 마련 시급</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">망분리 규제 완화 진행 시 외부 AI 클라우드·최신 모델 도입 로드맵 수립 검토 필요. 은행·핀테크 간 <b>디지털 플랫폼 제휴</b> 확산에 대응한 캐피탈사 비대면 채널 고도화 전략 수립 검토</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 신한은행 AX 운영위원회 모델을 참고하여 BNK캐피탈 내 AI 서비스 위험등급 분류 기준 및 배포 심의 프로세스 초안 마련 검토<br>② 중저신용자 여신 영역에서 <b>AI 대안신용평가 모형</b> 도입 가능성 및 기대 효과 사전 분석 착수 검토</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card">
+    <a href="https://www.bloter.net/news/articleView.html?idxno=666254" target="_blank">→ [AI 책임지도]② 신한은행, AX 가속도에 비례한 통제 체계</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=677628" target="_blank">→ "금융권 AI 혁신 속도 내려면 망분리·인프라 장벽 낮춰야"</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.mt.co.kr/finance/2026/06/23/2026062314134055762" target="_blank">→ 케이뱅크·광주은행, 씬파일러 금융지원 위해 손잡는다</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.yna.co.kr/view/AKR20260623104400054?input=1195m" target="_blank">→ 광주은행·케이뱅크, 중저신용자 금융지원 마케팅 협약</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.businesspost.co.kr/BP?command=article_view&num=440683" target="_blank">→ 우리은행 2025년 ESG금융에 10조6천억 공급, AI 활용한 'ESG보고서' 발간</a>
+  </div>
+
+</div>
