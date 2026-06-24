@@ -1,0 +1,132 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">인터넷은행의 비대면 기업금융 플랫폼 확장과 AI 기반 보안·업무 자동화가 금융업계 디지털 전환을 가속화하는 흐름</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card"><p class="event-text">인터넷은행 3사, 비대면 기업금융 플랫폼 구축·진입 본격화</p></div>
+  <div class="event-card"><p class="event-text">카카오뱅크-BNK부산은행, 중소기업 공동대출 혁신금융서비스 신청 완료</p></div>
+  <div class="event-card"><p class="event-text">금융보안원·인터넷은행 3사, 연합학습 기반 보이스피싱 탐지 AI 공동모델 <b>7월</b> 현장 적용</p></div>
+  <div class="event-card"><p class="event-text">카카오, AI 에이전트 기반 보안 운영 자동화 체계 <b>2025년 내</b> 구축 추진</p></div>
+  <div class="event-card" style="margin-bottom:16px;"><p class="event-text">BC카드, 에이전틱 AI 기반 업무 자동화·생성형 AI 혁신금융서비스 <b>7건</b> 지정</p></div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">연합학습·에이전틱 AI 등 금융 특화 AI 기술이 보안·업무자동화 영역에서 실증 단계 진입, 캐피탈사 적용 가능성 확대 흐름. 비대면 여신 플랫폼 고도화 사례를 벤치마킹하여 자사 디지털 여신 프로세스 효율화 기회 존재.</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">인터넷은행이 중소법인·중소기업 여신까지 영역 확장 시 캐피탈사 기업금융 고객층과 경합 가능성 증대. 금융보안원 AI 공동모델이 <b>4분기</b> 제2금융권 확대 적용 예정으로, 자체 FDS·사기탐지 체계 정비 필요.</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">보이스피싱 탐지 AI 공동모델 <b>7월</b> 적용, 제2금융권 확대 <b>4분기</b></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">인터넷은행 기업금융 플랫폼 <b>2027년</b> 오픈 목표</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <p class="competitor-content">BC카드가 에이전틱 AI 기반 업무 자동화 솔루션 '모아이'와 금융 특화 생성형 AI 플랫폼 'BCGPT'를 운영하며, 생성형 AI 기반 혁신금융서비스 <b>7건</b>을 지정받아 국내 카드사 중 최다 기록. 카카오는 AI 에이전트 기반 보안 운영 자동화 체계를 연내 구축 추진하며, AI 도입 후 분석 리드타임 <b>90% 이상</b> 단축·오탐률 <b>1% 미만</b> 달성 사례 공개.</p>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">금융보안원 보이스피싱 탐지 AI 공동모델의 <b>4분기</b> 제2금융권 확대 적용 대비, 자사 FDS 시스템 연계 방안 사전 점검 필요. 에이전틱 AI 기반 내부 업무 자동화(심사 보조·보안 관제) 파일럿 도입 검토 시점.</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">인터넷은행의 비대면 중소법인 여신 진입이 본격화될 경우, 캐피탈사 기업금융 경쟁력 차별화 전략 재정비 필요. 카카오뱅크-BNK부산은행 공동대출 모델이 그룹사 연계 시너지로 작용할 가능성도 모니터링 대상.</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 금융보안원 ASAP 플랫폼 탑재 예정인 보이스피싱 탐지 AI 공동모델 참여·연계 가능성 내부 검토 착수. ② BC카드 사례처럼 자사 반복 업무(여신 서류 분석·가맹점 정보 갱신 등)에 생성형 AI 자동화 적용 우선순위 도출.</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <p class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</p>
+  <div class="source-card"><a href="https://view.asiae.co.kr/article/2026062416302639518" target="_blank">→ 케이뱅크, 비대면 기업금융 플랫폼 구축…내년 오픈 목표</a></div>
+  <div class="source-card"><a href="http://www.fnnews.com/news/202606241806507086" target="_blank">→ 인터넷은행 기업금융 영토 확장</a></div>
+  <div class="source-card"><a href="https://zdnet.co.kr/view/?no=20260624204729" target="_blank">→ 금보원-인터넷은행 3사, 보이스피싱 탐지 AI 개발 7월 적용</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260624_0003682323" target="_blank">→ AI 에이전트 기반 보안 운영 자동화 체계 연내 구축 추진</a></div>
+  <div class="source-card"><a href="https://www.donga.com/news/Economy/article/all/20260624/134168032/2" target="_blank">→ BC카드, 생성형 AI 혁신 금융 최다 지정</a></div>
+
+</div>
