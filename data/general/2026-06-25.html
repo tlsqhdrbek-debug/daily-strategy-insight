@@ -1,0 +1,155 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">한은 기준금리 인상 시사와 미 연준 스트레스 테스트 통과 속, 캐피탈업계 M&A 경쟁 가속화로 조달·경쟁 환경 동시 변화</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">한은, 금융안정보고서에 <b>기준금리 인상</b> 필요성 명시</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">금융채 1년물 금리 <b>연 3.653%</b>로 연초 대비 <b>0.87%p</b> 상승</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">미 연준, 대형은행 32곳 스트레스 테스트 전원 통과 발표</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">카카오뱅크, '카뱅캐피탈' 상표 출원 및 연내 캐피탈사 M&A 추진</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">할부·리스 차량 담보 불법사금융 피해 확산으로 금감원 소비자경보 발령</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">미 대형은행 건전성 확인으로 글로벌 금융 불안 완화, 캐피탈사 조달 환경 안정 기대. 카카오뱅크 등 신규 진입자의 M&A 과정에서 <b>BNK캐피탈</b> 브랜드·자산 가치 재평가 가능성 존재</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content"><b>기준금리 인상</b> 시 회사채·ABS 등 캐피탈 조달비용 상승 불가피. 시장금리 상승에 따른 취약차주 연체율 확대 및 할부·리스 자산 건전성 악화 우려</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">조달금리 상승 즉시 반영</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">업계 M&A 재편 효과 <b>2025년 하반기~2026년</b></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">카카오뱅크가 '카뱅캐피탈' 상표를 출원하고 연내 캐피탈사 인수를 공식 추진 중이며, 자동차금융·리스·할부 등 비은행 여신시장 진출을 목표로 <b>ROE 15%</b> 달성 전략 구체화. 한화생명·메리츠증권도 <b>애큐온캐피탈</b> 매각 본입찰에 참여하며 캐피탈업 인수 경쟁 가속화 흐름</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">금융채 금리 급등에 따른 신규 조달 타이밍·만기 구조 점검 필요. <b>2025년 5월</b> 기준 가계대출 월 <b>9.3조 원</b> 증가 등 빚투 확산 속 취약차주 여신 모니터링 강화 검토 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">카카오뱅크 등 플랫폼 기반 사업자의 캐피탈업 진입 시 자동차금융·할부 시장 경쟁 심화 대비 필요. 금리 인상 사이클 장기화 시 조달 다변화 및 고정금리 비중 확대 전략 검토 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 기준금리 <b>25bp 인상</b> 시나리오별 조달비용·NIM 변동 시뮬레이션 실시 검토. ② 할부·리스 자산 중 취약차주 비중 및 연체 전이율 추이 분석을 통한 선제적 충당금 적정성 점검</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card">
+    <a href="https://www.joongang.co.kr/article/25439514" target="_blank">→ 빚투에 경고 날린 한은..."기준금리 올린다" 문서에 명시</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.mk.co.kr/article/12081969" target="_blank">→ "마통 뚫어 주식 샀다가 깜짝"…고신용자 금리도 5% 넘었다</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.edaily.co.kr/news/newspath.asp?newsid=02391126645485328" target="_blank">→ 연준 "美대형 은행들, 심각한 경기 침체 충분히 견뎌"</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.yna.co.kr/view/AKR20260625007900072?input=1195m" target="_blank">→ 美연준 "미 대형은행들, 심각한 경기침체 견딜 체력 갖춰"</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.sidae.com/article/2026062409375066405" target="_blank">→ 카카오뱅크, 캐피탈 품는 이유는…'ROE 15%' 승부수</a>
+  </div>
+  <div class="source-card">
+    <a href="https://news.sbs.co.kr/news/endPage.do?news_id=N1008626540&plink=ORI&cooper=NAVER" target="_blank">→ "할부·리스차 담보 대출하면 형사처벌"…금감원 소비자경보</a>
+  </div>
+
+</div>
