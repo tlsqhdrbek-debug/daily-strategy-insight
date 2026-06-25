@@ -1,0 +1,131 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">부동산PF 부실 여파가 비은행권 전반으로 확산되는 가운데, 중소기업 건전성 악화와 PF 규제 강화가 캐피탈사 기업금융 전략에 복합 리스크로 작용</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card"><p class="event-text">부동산PF 부실로 저축은행 신용등급 잇달아 하향</p></div>
+  <div class="event-card"><p class="event-text">HUG 전액보증 재건축 대출도 PF 규제 편입 움직임</p></div>
+  <div class="event-card"><p class="event-text">고환율 장기화로 중소기업 원가 부담 심화</p></div>
+  <div class="event-card"><p class="event-text">인터넷은행, 가계대출 규제 속 기업금융 진출 가속</p></div>
+  <div class="event-card" style="margin-bottom:16px;"><p class="event-text">중소기업 부실여신 <b>17조 7000억원</b>까지 증가</p></div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">상호금융권 PF 규제 강화로 재건축 사업비 조달 수요가 캐피탈사 등 대체 금융채널로 이동 가능성 존재. 인터넷은행의 기업금융 진출이 가속되나 심사 역량 한계가 있어, 기존 캐피탈사의 중소기업 여신 심사 노하우가 차별화 요소로 작용 가능.</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">비은행권 전반의 PF 부실 확산으로 캐피탈사 PF 익스포저 건전성 점검 압력 확대. 고환율·경기 둔화에 따른 중소기업 상환능력 저하로 기업여신 연체율 상승 리스크 존재.</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">PF 규제 즉시 적용</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">중소기업 건전성 악화는 <b>2026년 하반기</b>까지 지속 전망</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <p class="competitor-content">금일 수집 기사 검토 결과, 현재 부서와 키워드에 실질적으로 관련된 경쟁사 동향은 별도로 확인되지 않았습니다.</p>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">자사 PF 익스포저 중 브릿지론·중도금대출 잔액 및 사업성 등급 재점검 필요. 중소기업 여신 포트폴리오 내 고환율 민감 업종(원자재 수입 제조업) 연체 모니터링 강화 필요. 은행 부실여신이 <b>2022년 9월 9조 7000억원</b>에서 <b>2026년 3월 17조 7000억원</b>으로 증가한 흐름을 감안, 자사 기업여신 건전성 선제 점검 요.</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">PF 모범규준 적용 범위 확대 추세에 따라 캐피탈사 PF 관리체계 정비 및 충당금 적립 기준 재검토 필요. 인터넷은행 기업금융 진출 가속(기업대출 잔액 <b>2022년 말~2025년 말 352.3% 증가</b>)에 따른 중소기업 여신 시장 경쟁 심화 대비 차별화 전략 수립 검토 요.</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 자사 기업여신 포트폴리오 중 환율 민감도 높은 수입 제조업 차주 리스트를 추출하여 스트레스 테스트 실시 검토. ② PF 관련 익스포저 사업장별 사업성 등급·충당금 적립 현황을 모범규준 기준으로 재매핑하여 잠재 추가 적립 규모 시뮬레이션 검토.</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <p class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</p>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260625_0003683674" target="_blank">→ 한신평, 최근 KB·NH·IBK저축은행 신용등급 'A'에서 'A-'로 하향 조정</a></div>
+  <div class="source-card"><a href="https://www.sedaily.com/article/20060181?ref=naver" target="_blank">→ HUG 전액보증 재건축 대출도 PF 규제</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260625_0003684158" target="_blank">→ "수천만원씩 환차손"…중기, 고환율에 '원가 폭탄'</a></div>
+  <div class="source-card"><a href="http://www.inews24.com/view/1979656" target="_blank">→ 인뱅, 가계·신용대출 규제에 기업금융 속도 낸다</a></div>
+
+</div>
