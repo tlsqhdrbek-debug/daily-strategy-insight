@@ -1,0 +1,141 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">KOFR 지표금리 전환 본격화와 빚투발 신용대출 급증 속, 캐피탈사 조달·여신 전략 재점검 시점 도래</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">금감원, <b>7월</b>부터 KOFR 기반 변동금리채권·이자율스왑 행정지도 본격 시행</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">6월 5대 은행 신용대출 <b>5년 2개월 만에 최대 증가</b>, 빚투 자금 <b>15조4,000억 원</b> 유입</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">하나캐피탈, 조달 듀레이션 확대·ESG채권 연 <b>3,000억 원</b> 발행 등 조달 다변화 추진</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">미국-이란 전쟁 후 캐피탈사 신규조달금리 <b>40~44bp</b> 상승, 평균조달금리 상승 전환 임박</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">KOFR 전환 초기 단계에서 선제적 준거금리 대응 시 조달 경쟁력 확보 가능. 신용대출 수요 확대 국면에서 소비자금융 취급 확대 여지 존재</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">금리 상승 전환으로 조달비용 증가 불가피. 빚투 과열 시 당국 대출 규제 강화 및 자산건전성 악화 리스크 확대</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">KOFR 행정지도 <b>2026년 7월</b> 시행</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid"><b>2031년</b>까지 단계적 확대</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">하나캐피탈, 2026년 2분기부터 신규조달금리가 평균조달금리를 상회하는 가운데 ESG채권 연 <b>3,000억 원</b> 발행·단기차입비중 <b>10% 이하</b> 관리·해외조달 하반기 재검토 등 조달 다변화 전략 추진 중. 영업자산 약 <b>18조 원</b> 규모에서 자동차금융 <b>46%</b> 비중으로 안정적 포트폴리오 유지</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">금리 상승기 조달비용 증가분의 여신금리 전가 속도 점검 필요. 금융위 카드론 한도 축소 시 캐피탈 소비자금융 대체 수요 유입 가능성 모니터링 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">KOFR 준거 조달 확대 로드맵 수립 검토 필요. 빚투 과열 후 주가 조정 시 개인여신 연체율 상승 시나리오 대비 대손충당금 적정성 재검토 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① CD금리→KOFR 전환 시 자사 조달구조(회사채·CP·은행차입) 비용 변동 시뮬레이션 실시 검토<br>② 신용대출·카드론 규제 강화 시나리오별 소비자금융 취급액·연체율 영향 분석 검토</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.donga.com/news/Economy/article/all/20260628/134194977/1" target="_blank">→ 신용대출 5년 2개월만에 최대 증가…빚투 열풍에 금융 불안 우려</a></div>
+  <div class="source-card"><a href="https://view.asiae.co.kr/article/2026062619393578038" target="_blank">→ CD금리 비중 줄인다…금감원, 내달부터 KOFR 활용 유도</a></div>
+  <div class="source-card"><a href="https://www.etoday.co.kr/news/view/2597944" target="_blank">→ 금감원, KOFR 거래 확대⋯은행 변동금리채권 발행기준 개편</a></div>
+  <div class="source-card"><a href="https://www.mt.co.kr/stock/2026/06/29/2026062800074115731" target="_blank">→ 변동금리채권 10% 이상 KOFR로 발행해야…내달부터 행정지도</a></div>
+  <div class="source-card"><a href="https://www.ebn.co.kr/news/articleView.html?idxno=1714145" target="_blank">→ CD금리 줄이고 KOFR 키운다…지표금리 전환 본격화</a></div>
+  <div class="source-card"><a href="http://www.fntimes.com/html/view.php?ud=202606262138058839dd55077bc2_18" target="_blank">→ 김용석 하나캐피탈 대표, ESG채권 발행·차입 듀레이션 확대 [캐피탈 조달 돋보기 (7)]</a></div>
+  <div class="source-card"><a href="https://www.sedaily.com/article/20061112?ref=naver" target="_blank">→ BIS의 경고 "AI 낙관론, 장기 투자 침체로 이어질 수도"</a></div>
+
+</div>
