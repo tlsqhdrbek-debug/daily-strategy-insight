@@ -1,0 +1,137 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">제조업 부실 확대·PF 정리 가속·단기사채 쏠림 속 기업금융 건전성 관리와 조달 전략 재점검 시급</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">5대 은행 <b>2026년 1분기</b> 제조업 부실대출 전년 동기 대비 <b>16.5%</b> 급증</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text"><b>2026년 5월</b> 단기사채 발행 전월 대비 <b>25.4%</b> 증가, 회사채 발행은 <b>15.4%</b> 감소</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">홈플러스 수정 회생계획안 제출, 인가 시한 <b>7월 3일</b></div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">PF 부실채권 시장 확대 속 PEF의 NPL·부동산 개발 영역 진출 가속</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">메가프로젝트 <b>2,000조원</b> 투자 발표로 지방 부동산·건설 시장 기대감 부상</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">PF 구조조정·NPL 시장 확대로 캐피탈사 부실채권 매입·재구조화 참여 기회 확대. 메가프로젝트 관련 PF 신규 딜 발생 가능성 존재</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">제조업 K자형 양극화로 중소 제조업체 여신 건전성 악화 우려. 금리 인상 전환 시 기업 연체율 추가 상승 리스크</div>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">건전성 점검</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">PF 딜·조달 전략 재편</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">상상인증권이 PF 부실 정리를 마무리하고 <b>2026년 1분기</b> 전 부문 흑자 전환에 성공, IB 부문 영업이익 전년 동기 대비 <b>52%</b> 성장 기록. 한앤컴퍼니가 자산운용 자회사 에이치캠(HCAM)을 설립하여 PF 부실채권 인수 후 개발·시행까지 일괄 수행하는 종합 대체투자 모델 구축 중</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">중소 제조업체 여신 포트폴리오 내 화학·철강·섬유 등 취약 업종 <b>연체율</b> 선제 점검 필요. <b>7월</b> 기준금리 인상 가능성 대비 기업여신 스트레스 테스트 실시 검토 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">장단기 금리차 확대 국면에서 자체 조달 만기 구조 재검토 필요. PF 구조조정 본격화에 따른 NPL 매입·재구조화 참여 여부 전략적 판단 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 기업여신 포트폴리오 내 업종별 BSI·연체율 연동 조기경보 모니터링 체계 구축 검토 ② 메가프로젝트 관련 인프라·건설 PF 참여 가능 딜 파이프라인 사전 조사 착수</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.ddaily.co.kr/page/view/2026062914171555979" target="_blank">→ 반도체 훈풍에도 5대銀 제조업 부실대출 '먹구름'</a></div>
+  <div class="source-card"><a href="https://www.mt.co.kr/stock/2026/06/30/2026062910281142281" target="_blank">→ 기업들, 신용평가 앞두고 회사채 아닌 단기사채로 조달…5월중 43조↑</a></div>
+  <div class="source-card"><a href="https://biz.chosun.com/stock/stock_general/2026/06/30/OF7K2XJSFNCHZIEIDE3XEWICBE/?utm_source=naver&utm_medium=original&utm_campaign=biz" target="_blank">→ 장·단기 금리차 확대에…기업 CP·단기사채 발행액 5개월 연속 증가</a></div>
+  <div class="source-card"><a href="https://www.newspim.com/news/view/20260629001035" target="_blank">→ 5월 주식·회사채 조달 10.9% 감소</a></div>
+  <div class="source-card"><a href="https://www.news1.kr/finance/general-stock/6211467" target="_blank">→ 5월 기업 주식·회사채 발행 20.1조원 …전월比 10.9% 감소</a></div>
+  <div class="source-card"><a href="https://www.nocutnews.co.kr/news/6540047?utm_source=naver&utm_medium=article&utm_campaign=20260629021421" target="_blank">→ 홈플러스, 수정 회생계획 변경안 제출…"1조2천억원 절감"</a></div>
+  <div class="source-card"><a href="https://dealsite.co.kr/articles/164114" target="_blank">→ 한앤코, 바이아웃 넘어 부동산·NPL으로 영토 확장</a></div>
+  <div class="source-card"><a href="http://www.finomy.com/news/articleView.html?idxno=256509" target="_blank">→ 부동산 PF 털어낸 상상인증권 "이제 숫자로 말한다"</a></div>
+  <div class="source-card"><a href="https://www.sedaily.com/article/20061491?ref=naver" target="_blank">→ 광주 첨단3지구 '마피' 실종…2000조 투자에 지방 부동산 들썩</a></div>
+  <div class="source-card"><a href="https://www.mt.co.kr/tech/2026/06/29/2026062916420469010" target="_blank">→ SKT, '메가 프로젝트' 주춧돌 놓는다…2030년까지 15GW AIDC 구축</a></div>
+
+</div>
