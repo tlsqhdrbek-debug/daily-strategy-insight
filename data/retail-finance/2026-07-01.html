@@ -1,0 +1,140 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">수도권 규제지역 확대로 대출규제 강화되는 가운데, 가계대출 <b>2분기 8조 원</b> 급증 및 연체율 상방 리스크 병존</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">동탄·기흥·구리 규제지역 지정, <b>LTV 70%→40%</b> 즉시 적용</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">5대 은행 가계대출 <b>2026년 6월 기준 월 3.7조 원</b> 증가, 신용대출 주도</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">한은 분석: 주택시장 침체 시 기업대출 연체율 <b>0.89%</b>까지 상승 전망</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">지방 주담대 <b>스트레스 DSR 2단계</b> 2026년 하반기 유지 결정</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">은행권 <b>LTV·DSR</b> 규제 강화로 은행 대출 문턱 상승, 캐피탈사 소매여신 수요 유입 가능성 확대. 지방 스트레스 DSR 2단계 유지로 지방 소재 BNK캐피탈의 여신 경쟁력 상대적 유지 흐름.</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">신용대출 중심 가계대출 급증세 지속 시 당국의 <b>2금융권 관리 강화</b> 가능성. 주택시장 침체 시나리오에서 가계 연체율 <b>0.51%</b> 상승 전망, 캐피탈사 개인여신 건전성 압력 확대 우려.</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">2026년 7월 규제지역 대출규제 즉시 시행</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">가계부채 관리목표 미준수 금융사 현장점검 확대 예고</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">금일 수집 기사 검토 결과, 현재 부서와 키워드에 실질적으로 관련된 경쟁사 동향은 별도로 확인되지 않았습니다.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">수도권 규제지역 확대에 따른 은행 대출 한도 축소로, 캐피탈사 <b>개인신용대출·생활자금대출</b> 수요 이전 가능성 점검 필요. 동시에 당국이 가계부채 관리목표 미준수 금융사 <b>현장점검</b>을 예고한 만큼, 자체 가계여신 증가율 관리 강화 필요.</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">한은 시나리오 분석상 대외 충격(환율·금융시장 변동성) 시 <b>가계 신용위험</b>이 기업보다 크게 확대되는 구조 확인. 캐피탈사 소매 포트폴리오 내 중저신용 차주 비중·연체율 추이에 대한 스트레스 테스트 재점검 검토 요.</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① BNK캐피탈 개인여신 차주 중 수도권 규제지역 거주 비중 및 <b>DSR 여력 분포</b> 분석을 통해 유입 수요 규모·리스크 사전 추정. ② 주택가격 하락·환율 급등 등 복합 시나리오별 소매 포트폴리오 <b>연체율 민감도 시뮬레이션</b> 실시.</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.kmib.co.kr/article/view.asp?arcid=0030045138&code=61141111&cp=nv" target="_blank">→ 한국은행 "집값 떨어지면 가계보다 기업대출이 더 위험"</a></div>
+  <div class="source-card"><a href="https://www.yna.co.kr/view/AKR20260630086951002?input=1195m" target="_blank">→ 동탄·기흥·구리도 '영끌투자' 막혀…당국, 가계부채 점검회의(종합)</a></div>
+  <div class="source-card"><a href="https://news.tvchosun.com/site/data/html_dir/2026/06/30/2026063090174.html" target="_blank">→ 지방 주담대 스트레스 DSR 2단계 유지…하반기 가계대출 숨통</a></div>
+  <div class="source-card"><a href="https://www.news1.kr/photos/7983249" target="_blank">→ 2분기 '가계대출' 8조 급증</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260630_0003689513" target="_blank">→ 동탄·기흥·구리 '3중 규제'…대출 줄고 갭투자 막힌다</a></div>
+  <div class="source-card"><a href="http://www.fnnews.com/news/202606301612308224" target="_blank">→ 동탄·기흥·구리에 LTV 70→40% 대출규제 즉시 적용</a></div>
+
+</div>
