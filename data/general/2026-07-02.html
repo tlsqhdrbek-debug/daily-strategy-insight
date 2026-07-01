@@ -1,0 +1,134 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">기준금리 인상 기대 속 조달비용 상승 압력과 캐피탈업계 M&A 재편이 동시 진행되는 복합 국면</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card"><p class="event-text">기준금리 인상 가능성에 대출·조달 금리 동반 상승 흐름</p></div>
+  <div class="event-card"><p class="event-text">보금자리론 금리 <b>7월 7일</b>부터 <b>0.3%p 인상</b>, 상단 <b>5%대</b> 진입</p></div>
+  <div class="event-card"><p class="event-text">원·달러 환율 종가 <b>1,554.9원</b>, <b>17년 만</b> 최고 수준 기록</p></div>
+  <div class="event-card"><p class="event-text">한화생명, 애큐온캐피탈 매각 우협 선정…매각가 약 <b>1조원</b> 수준</p></div>
+  <div class="event-card"><p class="event-text">애큐온캐피탈 신용등급 <b>와치리스트 상향검토</b> 등록</p></div>
+  <div class="event-card" style="margin-bottom:16px;"><p class="event-text">건설경기 침체 장기화 속 관련 기관 비용 절감 경영 강화</p></div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">금리 상승기 여신 마진 확대 가능성 존재. 업계 M&A 재편 과정에서 경쟁 구도 변화에 따른 포지셔닝 기회</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">회사채·ABS 등 캐피탈 조달비용 상승 불가피. 고환율·고금리 복합 환경에서 차주 상환부담 증가로 <b>연체율</b> 상승 리스크</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">조달금리 즉시 반영</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">업계 재편·건전성 영향 <b>3~12개월</b></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <p class="competitor-content">한화생명이 애큐온캐피탈 지분 <b>96.06%</b> 매각 우선협상대상자로 선정되어, 캐피탈·저축은행 동시 인수를 통한 종합금융그룹 확장에 착수. 한국신용평가는 한화생명 편입 시 유사시 지원 가능성을 반영해 애큐온캐피탈 회사채·기업어음·단기사채 신용등급을 <b>와치리스트 상향검토</b>에 등록.</p>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content"><b>7월 금통위</b> 기준금리 인상 여부에 따른 조달 스프레드 변동 즉시 점검 필요. 예대금리차 중 가계대출 금리가 예금 금리 대비 <b>3배</b> 빠르게 상승하는 흐름 속 여신 가격 정책 재조정 검토 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">한화생명의 애큐온캐피탈 인수 확정 시 캐피탈업계 경쟁 구도 재편 본격화. 보험사 주도 M&A 확산에 따른 자금력·신용등급 기반 경쟁 심화 대비 필요. 건설경기 침체 장기화에 따른 PF·기업여신 건전성 모니터링 강화 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 기준금리 <b>0.25%p</b> 인상 시나리오별 회사채·ABS 조달비용 및 NIM 영향 시뮬레이션 실시 ② 애큐온캐피탈 인수 확정 후 동사의 상품·금리·채널 전략 변화 추적 체계 마련</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <p class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</p>
+  <div class="source-card"><a href="https://www.edaily.co.kr/news/newspath.asp?newsid=01669526645510584" target="_blank">→ 치솟는 환율, 금리 올리면 진정?…이번엔 글쎄</a></div>
+  <div class="source-card"><a href="https://biz.sbs.co.kr/article_hub/20000320130?division=NAVER" target="_blank">→ 예금 금리 오른다는데…대출이자는 더 많이 오른다</a></div>
+  <div class="source-card"><a href="https://www.mk.co.kr/article/12088009" target="_blank">→ 보금자리론 금리 또 오른다 … 7일부터 0.3%P 인상</a></div>
+  <div class="source-card"><a href="https://www.womaneconomy.co.kr/news/articleView.html?idxno=255688" target="_blank">→ 애큐온 캐피탈·저은 노리는 한화생명···교보 이어 종합금융그룹 도약</a></div>
+  <div class="source-card"><a href="https://news.einfomax.co.kr/news/articleView.html?idxno=4422900" target="_blank">→ 한신평 "한화생명 품에 안기는 애큐온캐피탈 신용등급 상향검토"</a></div>
+  <div class="source-card"><a href="https://www.newspim.com/news/view/20260701001011" target="_blank">→ K-FINCO, 건설경기 침체에 예산 고삐…올해 105억 절감 목표</a></div>
+
+</div>
