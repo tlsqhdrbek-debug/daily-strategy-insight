@@ -1,0 +1,147 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">금융권 AX 가속화·AI 보안 면책 제도화·혁신금융서비스 확대가 동시 진행되며 캐피탈사 디지털 전환 환경이 빠르게 재편 중</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">금융위, AI 보안테스트 중 경미한 전산장애 <b>면책 제도</b> 신설 및 6개 분야 대응 가이드라인 배포</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">JB우리캐피탈 등 <b>20개사</b> 생성형 AI 활용 서비스 혁신금융서비스 신규 지정(<b>24건</b>)</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">NH농협금융, 그룹 차원 <b>AI 거버넌스</b> 수립 착수 및 에이전트 AI 체계 본격 구축</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">BNK금융그룹, BNK캐피탈 공동 출자 <b>500억 원</b> 규모 생산적금융 전략펀드 결성·투자 착수</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">갤럭시아머니트리, AI 에이전트 결제 표준 재단(AAIF·x402) 국내 최초 동시 가입</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">한국은행, 토큰화 금융 인프라 '프로젝트 한강' ECB 대비 <b>약 2년</b> 선도 평가</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">AI 보안테스트 <b>면책 제도</b> 도입으로 캐피탈사도 AI 기반 취약점 점검·보안패치 적극 추진 가능. 혁신금융서비스 지정 확대로 생성형 AI 활용 서비스 도입 속도 가속화 기대</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">경쟁 캐피탈사·금융그룹의 AI 거버넌스·에이전트 AI 체계 구축 가속화 시 BNK캐피탈 대응 지연 리스크. 프런티어 AI 보안위협 고도화에 따른 사이버 리스크 상시 존재</div>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">면책 제도·혁신금융서비스 즉시 적용</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">AI 거버넌스·에이전트 AI·토큰화 인프라 <b>1~2년</b> 내 확산</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content"><b>JB우리캐피탈</b> 등 20개사가 내부 임직원·고객 대상 생성형 AI 활용 서비스 <b>24건</b>을 혁신금융서비스로 신규 지정받아 AI 서비스 도입 기반 확보. NH농협금융은 그룹 공통 AI 거버넌스 수립에 착수하고 캐피탈·저축은행 등 계열사 단계적 내재화를 추진 중</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">AI 보안테스트 면책 기준(<b>금전피해 1억 원 미만·장애 4시간 이내</b>) 충족 전제 하 보안 점검 적극 실행 검토 필요. 생성형 AI 혁신금융서비스 지정 사례 참고해 BNK캐피탈 자체 AI 서비스 혁신금융 신청 가능성 점검 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">BNK금융그룹 <b>500억 원</b> 전략펀드 출자사로서 그룹 AX 전략과 연계한 디지털 역량 고도화 로드맵 수립 필요. AI 에이전트 결제·토큰화 금융 인프라 등 차세대 디지털 금융 환경 변화에 대한 중기 대응 전략 마련 검토</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① JB우리캐피탈 등 경쟁사의 혁신금융서비스 지정 AI 활용 서비스 유형 분석 후 BNK캐피탈 적용 가능 영역(심사·상담·내부 업무 자동화) 우선순위 도출 ② 금융위 프런티어 AI 보안 가이드라인 6개 분야 기준으로 자사 보안 체계 갭 분석 실시</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://dealsite.co.kr/articles/164420" target="_blank">→ AI도 원칙부터 세운다…농협금융, AX 시동</a></div>
+  <div class="source-card"><a href="https://view.asiae.co.kr/article/2026070116161484350" target="_blank">→ 금융위, 혁신금융서비스 31건 신규 지정…특정보험사 판매 '25%룰' 완화</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260701_0003692153" target="_blank">→ AI 보안테스트 중 경미한 장애 면책…금융권 보안 강화 유도</a></div>
+  <div class="source-card"><a href="https://www.news1.kr/finance/general-finance/6214856" target="_blank">→ 미토스'發 AI 보안위협 대응…금융위, AI 보안테스트 전산장애 '면책'</a></div>
+  <div class="source-card"><a href="https://www.mt.co.kr/finance/2026/07/02/2026070116363524417" target="_blank">→ AI 보안패치 중 장애 나도 면책…금융권 대응 가이드라인 배포</a></div>
+  <div class="source-card"><a href="https://www.busan.com/view/busan/view.php?code=2026070115525728377" target="_blank">→ BNK금융, 500억 규모 '생산적금융 전략펀드' 결성… 동남권 전략산업 투자 나선다</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260701_0003691635" target="_blank">→ 갤럭시아머니트리, AAIF∙x402 가입…"AI 에이전트 결제 선점"</a></div>
+  <div class="source-card"><a href="https://www.sidae.com/article/2026070118052284275" target="_blank">→ "한국, 토큰화 금융 인프라 유럽보다 2년 앞서"</a></div>
+
+</div>
