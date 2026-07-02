@@ -1,0 +1,161 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">금융권 AI 에이전트·자체 모델 개발 가속화와 보안 면책 제도 정비로 AX 실행 환경이 본격 조성되는 흐름</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">금융 AI 에이전트 스타트업, <b>340억 원</b> 규모 투자 유치 완료</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">BC카드, 금융 특화 AI 임베딩 모델 자체 개발·글로벌 <b>SOTA 1위</b> 기록</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">KB국민은행, AI 기반 서비스 개발 전담 조직 <b>'AI Dev 센터'</b> 출범</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">금융위, AI 보안테스트 과정 경미한 전산장애에 <b>제재 면책</b> 적용 결정</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">핀테크 오픈이노베이션 프로그램서 AI·디지털금융 스타트업 <b>6개사</b> 선정</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">디지털자산·블록체인 기반 금융 인프라 정비 필요성 업계 공론화</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">AI 보안 면책 제도로 캐피탈사도 보안테스트·패치 부담 없이 AI 도입 가속 가능. 금융 특화 임베딩 모델 오픈소스 공개로 자체 AI 검색·심사 시스템 구축 비용 절감 기대</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">은행·카드사 중심 AI 개발 조직 확대로 캐피탈사와의 기술 격차 심화 우려. AI 에이전트 투자 확대 흐름에서 대응 지연 시 디지털 경쟁력 열위 고착 리스크</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">면책 제도 즉시 적용</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">AI 개발 체계·모델 도입 <b>3개월~1년</b></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">BC카드가 <b>182만 건</b> 데이터셋 기반 금융 특화 임베딩 모델을 자체 개발, 허깅페이스 공개 및 KT그룹사·금융기관 대상 AI 검색 플랫폼 사업 확대 추진. KB국민은행은 <b>'AI Dev 센터'</b>를 출범해 Claude Code 등 글로벌 AI 코드 에이전트를 실무 개발에 연계하는 패스트트랙 체계 도입</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">금융위 <b>AI 보안 면책</b> 요건(금전피해 <b>1억 원 미만</b>, 장애 <b>4시간 이내</b>) 충족 여부 사전 점검 필요. 보안테스트·긴급패치 실행 시 롤백·킬스위치 등 복구 수단 정비 검토 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">오픈소스 금융 특화 임베딩 모델 활용한 여신심사·고객상담 AI 검색 고도화 검토 필요. AI 에이전트 기반 업무 자동화(리서치·심사·문서분석) 로드맵 수립 검토 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① BC카드 공개 예정 금융 임베딩 모델의 캐피탈 여신 서류 검색·심사 적용 가능성 PoC 검토<br>② AI 보안 면책 제도 활용한 내부 AI 보안테스트 파일럿 일정 수립</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card">
+    <a href="https://www.sedaily.com/article/20063016?ref=naver" target="_blank">→ 금융 AI 에이전트 링크알파, 340억 투자 유치</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.newsis.com/view/NISX20260702_0003693905" target="_blank">→ BC카드, 금융 특화 AI '검색 모델' 공개…문맥 이해도 높여</a>
+  </div>
+  <div class="source-card">
+    <a href="https://view.asiae.co.kr/article/2026070217322114001" target="_blank">→ BC카드, 금융 특화 AI검색 모델공개…정확도 제고</a>
+  </div>
+  <div class="source-card">
+    <a href="https://economist.co.kr/article/view/ecn202607020029" target="_blank">→ 금융서비스 개발도 AI 시대…국민은행 'AI Dev 센터' 가동</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.ajunews.com/view/20260702174823231" target="_blank">→ AI 보안 강화하다 장애 나도…금융당국 "제재 면책"</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.sedaily.com/article/20063289?ref=naver" target="_blank">→ 혁신 기술, 금융 현장서 실증…핀테크 스타트업 6개사 선정</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.hankyung.com/article/2026070227141" target="_blank">→ "디지털자산이 국가 경쟁력 좌우…블록체인 인프라 구축 서둘러야"</a>
+  </div>
+
+</div>
