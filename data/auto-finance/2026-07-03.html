@@ -1,0 +1,149 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">전기차 보조금 체계 개편·완성차 금융 프로그램 강화로 자동차금융 경쟁 구도 재편 가속</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">2025년 하반기 전기차 보조금서 BYD 제외, 테슬라 최대 <b>700만원</b> 가격 인상</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">현대차·기아, 리스·할부 금융 조건 개선 통한 가격 부담 완화 전략 본격화</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">기아 K5 연식변경 출시와 함께 <b>잔가보장 유예형 할부 3.6%</b> 금융 프로그램 투입</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">BMW, 스마트 리스·운용리스·렌트·할부 결합 최대 <b>1,200만원</b> 금융 혜택 제공</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">카카오뱅크, 마스턴캐피탈 인수로 자동차 할부금융·리스 시장 진출 추진</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">전기차 보조금 축소·가격 인상으로 소비자 금융 의존도 상승, 캐피탈사 <b>EV 할부·리스</b> 수요 확대 기회. 완성차사의 잔가보장·유예형 할부 확산은 캐피탈사 제휴 금융 참여 여지 확대 흐름.</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">카카오뱅크의 캐피탈사 인수를 통한 <b>자동차 할부·리스</b> 시장 진입은 기존 캐피탈사 점유율 위협 요인. 완성차 캡티브 금융사(BMW 파이낸셜 등)의 공격적 프로모션으로 독립 캐피탈사 경쟁력 압박 심화.</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">하반기 전기차 보조금 개편에 따른 EV 금융 수요 변동 즉시 반영</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">인터넷은행 자동차금융 진출 본격화에 따른 경쟁 구도 재편(3개월~1년)</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">카카오뱅크가 마스턴캐피탈 인수를 결정, 여신전문금융업 라이선스 기반으로 <b>자동차 할부금융·리스</b> 사업 진출을 추진 중인 것으로 확인.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">하반기 전기차 보조금 개편으로 BYD 제외·테슬라 가격 인상 → 국산 전기차 중심 <b>EV 할부·리스</b> 상품 문의 증가 예상, 금리·잔가 조건 경쟁력 점검 필요. 완성차사 <b>잔가보장 유예형 할부</b>(기아 3.6%) 등 제조사 금융 프로그램과의 금리·조건 비교 모니터링 필요.</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">카카오뱅크의 캐피탈사 인수를 통한 자동차금융 시장 진입은 디지털 채널 기반 고객 유입 경쟁 심화 요인. 수입차 캡티브 금융사의 <b>리스·렌트·할부</b> 통합 프로모션 확대 추세에 대응한 BNK캐피탈 자동차금융 상품 차별화 전략 검토 필요.</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 하반기 전기차 보조금 변동에 따른 EV 모델별 잔존가치 재산정 및 리스·할부 조건 시뮬레이션 실시 검토. ② 카카오뱅크-마스턴캐피탈 통합 후 자동차금융 상품 출시 시점·조건 모니터링 체계 구축 검토.</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card">
+    <a href="https://www.newsis.com/view/NISX20260702_0003693658" target="_blank">→ 하반기 전기차 보조금서 BYD 제외…테슬라는 최대 700만원 인상</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.econovill.com/news/articleView.html?idxno=744131" target="_blank">→ "기아 The 2027 K5 등판" 신차 대신 상품성으로 세단 자존심 지킨다</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.newspim.com/news/view/20260702001113" target="_blank">→ BMW코리아, 7시리즈 역대급 혜택…금융 지원부터 '칸 영화제' 초대까지</a>
+  </div>
+  <div class="source-card">
+    <a href="http://www.enewstoday.co.kr/news/articleView.html?idxno=2444861" target="_blank">→ 대면 허용 넓힌 금융위···인뱅 기업금융 본격화 신호탄</a>
+  </div>
+
+</div>
