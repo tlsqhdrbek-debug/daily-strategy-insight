@@ -1,0 +1,136 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+.summary-body b{color:#A32D2D;}
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-opportunity .insight-title{font-size:11px;font-weight:600;color:#0F6E56;margin-bottom:4px;}
+.insight-risk .insight-title{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:4px;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+.tl-content b{color:#A32D2D;}
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">기업 회생·파산 신청이 <b>3년 새 2배</b> 급증하며 기업부실 리스크 확대, 캐피탈사 여신 건전성 점검 시급</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text"><b>2025년</b> 기업 회생신청 <b>1,321건</b>, 파산신청 <b>2,282건</b>으로 역대 최고치 기록</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text"><b>2026년 1~5월</b> 회생 622건·파산 1,060건, 전년 동기 대비 각각 <b>16.7%·15.0%</b> 증가</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">홈플러스 회생절차 폐지 결정, <b>2주 내 2,000억 원</b> 미조달 시 파산 수순 전망</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">건설업 양극화 심화 — PF 경색·미분양 증가로 중견·중소 건설사 생존 위기 지속</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">신한금융, <b>2030년까지 110조 원</b> 생산적·포용금융 공급 계획 발표 — 기업대출 확대 기조</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">정부 생산적 금융 기조에 따른 중소기업 여신 수요 확대 가능성. 반도체 메가 프로젝트 등 대형 인프라 투자에 연계한 기업금융 참여 기회 존재</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">고환율·고금리 장기화로 기업 부실·연체율 상승 리스크 확대. 건설업 PF 경색 지속에 따른 관련 여신 건전성 악화 우려</div>
+  </div>
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">기업 부실 확산 징후 가시화 — 회생·파산 건수 증가세 지속</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">기업 부실 확산 <b>2026년 하반기</b> 본격화 전망</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">금일 수집 기사 검토 결과, 현재 부서와 키워드에 실질적으로 관련된 경쟁사 동향은 별도로 확인되지 않았습니다.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">기업 회생·파산 급증에 따른 기업여신 포트폴리오 <b>연체율·부실채권</b> 점검 필요. 건설업·유통업 관련 익스포저 재점검 시급</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">생산적 금융 정책 기조에 맞춘 중소기업 여신 상품 확대 전략 검토. 반도체·첨단산업 클러스터 관련 설비금융·시설자금 대출 기회 탐색</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 기업여신 포트폴리오 내 건설·유통 업종 비중 및 <b>대손충당금</b> 적정성 시뮬레이션 실시<br>② 회생·파산 급증 업종별 조기경보 지표 모니터링 체계 강화 검토</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.donga.com/news/Economy/article/all/20260706/134240846/2" target="_blank">→ 기업 회생신청 급증… 3년새 2배로 늘었다</a></div>
+  <div class="source-card"><a href="http://www.fnnews.com/news/202607051119230717" target="_blank">→ '골든타임 2주' 홈플러스, 이대로 무너질까..실낱같은 2000억 기적은</a></div>
+  <div class="source-card"><a href="https://www.donga.com/news/Society/article/all/20260705/134238128/1" target="_blank">→ 홈플러스부터 티몬까지…회생절차 기업들 어떻게 됐나</a></div>
+  <div class="source-card"><a href="https://www.donga.com/news/Society/article/all/20260706/134240855/2" target="_blank">→ 홈플러스 20일이 데드라인… 2000억 조달 못하면 파산</a></div>
+  <div class="source-card"><a href="https://www.busan.com/view/busan/view.php?code=2026070518141454142" target="_blank">→ 홈플러스, 2주 내 자금 조달 희박… 사실상 파산 수순</a></div>
+  <div class="source-card"><a href="https://www.koscaj.com/news/articleView.html?idxno=325052" target="_blank">→ [보라매칼럼] 반도체 메가 프로젝트, 지역건설 참여폭 넓혀야</a></div>
+  <div class="source-card"><a href="https://www.labortoday.co.kr/news/articleView.html?idxno=235529" target="_blank">→ 건설업 청년 유입? "일자리 질 개선에 답"</a></div>
+  <div class="source-card"><a href="https://www.mt.co.kr/stock/2026/07/06/2026070519482380753" target="_blank">→ IPO시장 칼바람… 상장기업 수·공모금액 절반 싹둑</a></div>
+
+</div>
