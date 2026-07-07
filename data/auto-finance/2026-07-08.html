@@ -1,0 +1,152 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">전기차 구매 검토 급증과 리스·렌트 비중 확대로 자동차금융 상품 전략 재편 필요성 대두</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">2026년 상반기 전기차 견적 비중 <b>17.4%</b>, 전년 동기 대비 약 2배 증가</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">리스·렌트 견적 비중 <b>24.0%</b>로 전년 동기 대비 <b>6.6%p</b> 상승</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">할부 평균 계약기간 <b>51.8개월</b>, 리스·렌트 <b>50.5개월</b>로 장기화 정착</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">BMW 7시리즈 등 프리미엄 브랜드, 리스·할부 연계 금융 프로모션 강화</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">허위 렌털 계약 활용 <b>414억원</b> 규모 신종 금융사기 검찰 적발</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">전기차 구매 검토 급증에 따른 EV 할부·리스 상품 수요 확대 흐름. 리스·렌트 장기 계약 선호 확산으로 캐피탈사 안정적 수익 기반 확보 가능성 증대</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">허위 렌털 계약 통한 여신금융회사 대상 금융사기 발생, 부실률 <b>54.5%</b> 기록. 완성차·플랫폼사의 자체 금융 프로모션 강화로 캐피탈사 경쟁 심화 우려</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">EV금융 수요 확대는 즉시 반영. 허위 렌털 사기 리스크 점검 시급</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">자동차금융 상품 전략 재편 필요</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">BMW 파이낸셜 서비스가 7시리즈 전 모델 대상 스마트 리스 월 <b>100만원×10개월</b> 지원, 운용리스·렌트 법인 고객 최대 <b>200만원</b> 추가 지원 등 금융 프로모션을 적극 운영 중. 완성차 캡티브 금융사의 공격적 혜택 제공으로 독립 캐피탈사의 프리미엄 차량 금융 경쟁력 점검 필요</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">렌털·팩토링 채권 매입 심사 프로세스 긴급 점검 필요. 허위 렌털 사기 유형(백렌털·공렌털) 대응 체크리스트 수립 및 <b>4,000만원 이하</b> 소액 계약 심사 강화 검토 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">EV 전용 리스·할부 상품 라인업 확대 및 잔존가치 산정 모델 고도화 검토. 리스·렌트 <b>48~60개월</b> 장기 계약 트렌드에 맞춘 금리·수수료 구조 재설계 필요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 렌털·팩토링 채권 매입 시 물품 실재 여부 검증 자동화 시스템(현장 사진·GPS 매칭 등) 도입 타당성 검토 ② EV 모델별 잔존가치 변동 데이터 축적 및 리스 잔가 리스크 시뮬레이션 체계 구축 검토</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card">
+    <a href="https://economist.co.kr/article/view/ecn202607070048" target="_blank">→ 상반기 수입 대형차 1위 오른 BMW 7시리즈</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.mt.co.kr/future/2026/07/07/2026070711200874878" target="_blank">→ 고유가에 전기차 견적문의, 2배 껑충…인기 차종 1위는 'OOO'</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.joongang.co.kr/article/25443172" target="_blank">→ 경찰이 넘긴 3000만원 사기, 검찰 파보니 400억대 '렌털 금융사기'</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.seoul.co.kr/news/society/law/2026/07/07/20260707500154?wlog_tag3=naver" target="_blank">→ 물건도 없이 허위 렌털 계약으로 141억 '꿀꺽'…檢, 신종 금융사기 조직 적발</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.venturesquare.net/1096675/" target="_blank">→ 전기차는 사고, 비용은 나눈다…차봇 데이터로 본 2026 상반기 신차 소비 변화</a>
+  </div>
+
+</div>
