@@ -1,0 +1,134 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">전통 부동산 PF 구조조정이 지속되는 가운데, 테크·인프라 메가딜 중심 구조화 금융과 중소기업 위기 선제 대응 체계가 기업금융의 새로운 축으로 부상</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card"><p class="event-text">반도체·AI 데이터센터 등 메가프로젝트 PF 시장 본격 개화</p></div>
+  <div class="event-card"><p class="event-text">프로젝트리츠 투자 대상 확대로 PF 의존도 완화 대안 제도화</p></div>
+  <div class="event-card"><p class="event-text">롯데건설 <b>1년 내 PF 만기 2.4조원</b>, 브릿지→본PF 전환 가속</p></div>
+  <div class="event-card"><p class="event-text">한계 중소기업 비중 <b>2024년 8.8%</b>로 상승, AI 위기경보 체계 도입</p></div>
+  <div class="event-card"><p class="event-text">메가박스중앙 기업회생 절차 개시, 연쇄 정산 지연 확산</p></div>
+  <div class="event-card" style="margin-bottom:16px;"><p class="event-text">DL이앤씨 건설업 최고 신용등급 <b>AA-(안정적)</b> 유지</p></div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">테크·인프라 메가프로젝트 확대로 <b>구조화 금융</b> 참여 기회 증가. 프로젝트리츠 제도 개선에 따른 PF 대안 조달 구조 다변화 가능</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">전통 부동산 PF 만기 집중에 따른 <b>차환·건전성 리스크</b> 지속. 한계 중소기업 증가 및 기업회생 확산으로 여신 부실 전이 우려</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">PF 만기 차환·연체율 관리</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">메가프로젝트 금융 참여 전략 수립</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">기업여신 포트폴리오 구조 전환</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <p class="competitor-content">금일 수집 기사 검토 결과, 현재 부서와 키워드에 실질적으로 관련된 경쟁사 동향은 별도로 확인되지 않았습니다.</p>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">부동산 PF 익스포저 내 <b>브릿지론 만기 집중</b> 사업장 점검 필요. 건설사·중소기업 차주 신용등급 변동 모니터링 강화 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">정부 AI 위기경보 시스템 연계 활용 검토로 중소기업 여신 <b>조기경보 체계</b> 고도화 필요. 메가프로젝트 구조화 금융 참여 가능 영역 탐색 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 기업여신 포트폴리오 내 한계기업(이자보상배율 <b>1 미만</b> 3년 연속) 비중 자체 점검 및 선제 충당금 시뮬레이션 실시<br>② 프로젝트리츠·인프라 PF 등 신규 구조화 금융 상품 참여 시 자본 소요·리스크 가중치 사전 분석</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <p class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</p>
+  <div class="source-card"><a href="https://www.etoday.co.kr/news/view/2601536" target="_blank">→ 전통 PF 가고 '테크·인프라 메가딜' 온다…구조화 설계 역량이 승부처 [메가프로젝트 IB 전쟁]①</a></div>
+  <div class="source-card"><a href="https://www.hankyung.com/article/2026070835141" target="_blank">→ 데이터센터·시니어 주택 운영…프로젝트리츠 활용도 높인다</a></div>
+  <div class="source-card"><a href="http://www.inews24.com/view/1983551" target="_blank">→ 롯데건설, 6000억 현금 확보했지만…'1년내 PF만기 2.4조' 시험대</a></div>
+  <div class="source-card"><a href="https://www.etnews.com/20260708000322" target="_blank">→ "AI로 중소기업 위기 조기 포착"…25만개사 '재도약 경보망' 구축</a></div>
+  <div class="source-card"><a href="https://www.hani.co.kr/arti/culture/culture_general/1267267.html" target="_blank">→ 메가박스중앙 회생절차로 영화계 '비상'…정산금 미지급 줄줄이 타격</a></div>
+  <div class="source-card"><a href="https://www.starnewskorea.com/business-life/2026/07/08/2026070815054916966" target="_blank">→ DL이앤씨, 신용등급·기업어음 건설업 최고</a></div>
+
+</div>
