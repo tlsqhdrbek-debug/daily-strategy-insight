@@ -1,0 +1,142 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-opportunity .insight-title{font-size:11px;font-weight:600;color:#0F6E56;margin-bottom:4px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk .insight-title{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:4px;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-content b{color:#A32D2D;}
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">금융권 AX 조직 신설·AI 에이전트 업무자동화 본격화, 캐피탈사 AI 전환 전략 점검 시점 도래</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">IBK기업은행, <b>AX 컨트롤타워</b> 신설 및 디지털그룹→AX그룹 전환 추진</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">KB국민은행, AI 에이전트 활용 <b>AML·KYB 업무자동화</b> PoC 착수</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">토스, 원화 기반 <b>블록체인 디지털 금융 인프라</b> 기술검증 개시</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">금감원장, <b>AX 시대</b> 지역 금융인재·핀테크 스타트업 육성 강조</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">LG, 금융 특화 <b>AI 에이전트 '엑사원 BI'</b> ICML 2026에서 시연</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">AI 에이전트 기반 <b>AML·KYB 자동화</b> 모델이 캐피탈사 여신심사·규제준수 업무에 적용 가능한 선례 확보 흐름. AX 전담 조직 신설 트렌드에 맞춰 BNK캐피탈도 AI 내재화 로드맵 수립 기회 존재</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">은행권 중심 <b>AX 조직·예산 집중</b> 가속 시 캐피탈사와의 디지털 역량 격차 확대 우려. AI 에이전트 도입 지연 시 규제 대응 효율·고객 경험 측면에서 경쟁 열위 리스크</div>
+  </div>
+  <div class="section-title" style="margin-top:8px;">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">AX 조직 재편 <b>2025년 하반기</b> 본격화</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">AI 에이전트 PoC 결과 <b>3개월 내</b> 도출 예정</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">IBK기업은행이 <b>2025년 7월 14일</b> 디지털그룹을 AX그룹으로 전환하고, AI 사업 우선순위·예산·승인을 총괄하는 AX 컨트롤타워를 신설하여 AI 전환 체계를 조직 차원에서 공식화. KB국민은행은 오픈이노베이션 프로그램을 통해 아르고스 아이덴티티와 <b>AI 에이전트 기반 AML·KYB 자동화 PoC</b>를 개시, 글로벌 법인 고객 온보딩 규제 업무의 반복 검토 과정을 자동화하는 실증에 착수</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">KB국민은행 <b>AML·KYB PoC</b> 결과가 금융권 전반 AI 에이전트 도입 기준점으로 작용 가능. BNK캐피탈 내 여신심사·자금세탁방지 업무 중 AI 자동화 적용 가능 영역 즉시 점검 필요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">은행권 AX 전담 조직 확산에 대응해 BNK캐피탈 자체 <b>AI 전환 거버넌스</b> 체계 수립 검토 필요. 그룹사(BNK금융) 차원 AX 전략과의 정합성 확보 및 캐피탈 특화 AI 활용 과제 발굴 병행 검토 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① BNK캐피탈 여신심사·AML·고객확인 업무 중 반복 검토 프로세스를 대상으로 <b>AI 에이전트 자동화 PoC 과제</b> 선정 및 타당성 검토 착수<br>② 기업은행 AX 컨트롤타워 모델을 벤치마킹하여 BNK캐피탈 내 <b>AI 사업 우선순위·예산 조율 체계</b> 설계 방안 검토</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card">
+    <a href="https://www.edaily.co.kr/news/newspath.asp?newsid=02027046645512880" target="_blank">→ [단독] 기업은행, 다음주 AX 컨트롤타워 신설…부행장 인사도</a>
+  </div>
+  <div class="source-card">
+    <a href="http://www.hansbiz.co.kr/news/articleView.html?idxno=849097" target="_blank">→ 아르고스, AML·KYB 자동화 PoC 추진</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.mk.co.kr/article/12093510" target="_blank">→ 토스, 글로벌 기업들과 원화 기반 디지털 금융 인프라 검증 나서</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.etnews.com/20260708000349" target="_blank">→ 이찬진 금감원장 "AX 시대 금융 경쟁력, 지역 인재·벤처 육성에 달렸다"</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.donga.com/news/Economy/article/all/20260708/134262083/2" target="_blank">→ LG, 세계 3대 AI학회서 '엑사원' 혁신 소개</a>
+  </div>
+
+</div>
