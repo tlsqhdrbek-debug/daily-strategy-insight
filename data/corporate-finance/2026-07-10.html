@@ -1,0 +1,145 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">PF 연체율 역대 최고 수준 속 중소기업 자금조달 지원 인프라는 확대, 건전성 관리와 기회 포착의 균형이 핵심</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">PF대출 연체율 <b>4.65%</b>로 2023년 이후 최고치 기록</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">중기특화 증권사 <b>7개사</b> 지정, 모험자본 공급 인프라 확대</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">한은, <b>기준금리 인상</b> 필요성 공식 재확인</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">홈플러스 회생 폐지 결정, 대형 기업회생 불확실성 지속</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">지방 건설업 폐업 <b>3년 연속 증가</b>, 기업부실 리스크 확산</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">중기특화 증권사 전용펀드·출자 확대로 중소기업 여신 연계 협업 기회 증가. 기업은행 출자 <b>265억→1,000억 원</b> 확대 등 정책금융 자금 유입 확대 흐름</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">2025년 1분기 PF대출 연체율 <b>4.65%</b>, 유의·부실우려 여신 <b>16.4조 원</b>으로 확대. 기준금리 인상 시 취약 차주·PF 부실 가중 우려</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">PF 건전성 리스크 / 금리 인상 영향</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">PF 건전성 리스크 지속 / 중소기업 자금조달 인프라 확대</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">한국투자증권은 선순위 중심 PF 투자 기조로 2025년 IB부문 순영업수익 <b>7,052억 원</b>(전년 대비 14.9% 증가)을 기록하며, 골드만삭스와 <b>5,000억 원</b> 규모 부동산 대출 공동투자계약을 체결해 글로벌 자본 연계 PF 플랫폼을 확대 중.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">PF 익스포저 내 유의·부실우려 등급 여신 비중 및 지방 사업장 연체율 긴급 점검 필요. 기준금리 인상 현실화 시 기업여신 차주 상환능력 재평가 필요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">중기특화 증권사 제도 확대에 따른 중소·벤처기업 대출 수요 증가 대비 협업 채널 구축 검토. 건설업 구조조정 장기화에 따른 <b>대손충당금</b> 적립 수준 재점검 필요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 자사 PF 포트폴리오 내 지방 사업장 비중·연체 추이를 선순위/중·후순위별로 세분화 점검<br>② 중기특화 증권사 전용펀드 출자 확대 흐름에 맞춰 BNK투자증권 연계 중소기업 공동 여신 파이프라인 발굴 가능성 검토</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.etoday.co.kr/news/view/2597375" target="_blank">→ PF 지표마저 흔들린다…지방 건설 살릴 길은 [멈춘 현장, 다음은 어디 下 ③]</a></div>
+  <div class="source-card"><a href="https://www.sisaon.co.kr/news/articleView.html?idxno=202571" target="_blank">→ 집값·가계대출 다시 들썩…한은 "기준금리 인상 필요"</a></div>
+  <div class="source-card"><a href="https://www.news1.kr/finance/general-stock/6223680" target="_blank">→ 금융위, 중소기업 특화 금융투자회사 7개사 지정</a></div>
+  <div class="source-card"><a href="https://www.yna.co.kr/view/AKR20260709171800002?input=1195m" target="_blank">→ 중소기업 특화 금융사 7개 지정…중소·벤처에 모험자본 공급</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260709_0003703192" target="_blank">→ 금융위 "3년 내 최대 3곳 추가 지정 방안 검토"</a></div>
+  <div class="source-card"><a href="https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003250103&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news" target="_blank">→ "MBK·메리츠 지뢰밭 됐다"… 홈플러스 회생 '빨간불'</a></div>
+  <div class="source-card"><a href="https://www.etoday.co.kr/news/view/2602155" target="_blank">→ 'PF 선구자' 김성환 한국투자證 대표, 글로벌 공조로 부동산 판 키운다</a></div>
+  <div class="source-card"><a href="https://www.hani.co.kr/arti/economy/finance/1267516.html" target="_blank">→ "JTBC·중앙일보, 부실 상태서도 채권 팔아"…대리인은 '이복현 변호사'</a></div>
+
+</div>
