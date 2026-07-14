@@ -1,0 +1,143 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">렌터카 본업비율 규제 완화 논의와 경쟁사 오토금융 리밸런싱이 캐피탈사 자동차금융 전략 재점검을 요구</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">캐피탈사 렌터카 <b>본업비율 규제 완화</b> 검토에 업계 반발 확산</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">KB캐피탈, 신차 비중 축소·<b>중고차·렌터카 중심</b> 오토금융 리밸런싱 추진</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text"><b>2030년 자동차 온실가스 기준 강화</b>(54g/km) 행정예고로 전기차 금융 수요 변화 예고</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">고금리·고환율로 <b>리스 비용 상승</b>, 슈퍼카·고가 차량 리스 수요 위축</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">모빌리티 딜러사, 신차·중고차·금융 연결 <b>생태계 전환</b> 본격화</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">본업비율 완화 시 장기렌터카 취급 확대 가능성 존재. 온실가스 규제 강화로 <b>전기차 할부·리스·잔가보장</b> 상품 수요 확대 전망</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">경쟁사의 중고차·렌터카 집중 공략으로 시장 경쟁 심화. 고금리·고환율 지속 시 <b>오토리스 조달비용 상승</b>에 따른 수익성 압박</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">본업비율 규제 논의·리스비용 영향</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">온실가스 규제 2030년 시행 대비 상품 설계</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">KB캐피탈, 오토금융 자산 <b>9조 4,134억 원</b>(2025년 1분기 기준 전년 동기 대비 <b>4.8%</b> 증가) 유지하면서 신차 비중 축소·중고차·렌터카 중심으로 질적 전환 추진 및 'KB차차차' 플랫폼 기반 준캡티브 전략 강화. 오토금융·리테일 <b>65%</b>, 기업·투자금융 <b>35%</b> 비중의 포트폴리오 리밸런싱 목표 수립</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">금융위 <b>본업비율 완화</b> 검토 동향 모니터링 및 렌터카 사업 확대 시나리오 점검 필요. 고금리 지속에 따른 오토리스·할부 <b>조달금리 전가 구조</b> 재점검 필요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">온실가스 기준 <b>54g/km</b> 강화에 따른 완성차사 전기차 판매 확대 시 EV금융·잔가보장 상품 라인업 선제 설계 검토. 모빌리티 딜러사의 신차-중고차-금융 통합 생태계 확산에 대응한 <b>제휴 채널 다변화</b> 전략 수립 검토</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 자사 오토금융 포트폴리오(신차·중고차·리스·렌터카) 수익성 비교 분석 후 KB캐피탈 리밸런싱 방향 대비 자사 최적 비중 시뮬레이션 실시<br>② 2030년 온실가스 규제 시행 시 전기차 판매 비중 시나리오별 EV금융 취급액 추정 및 잔가보장 리스크 모델링 검토</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://view.asiae.co.kr/article/2026071415075945880" target="_blank">→ "금융사 렌터카 규제 완화 반대…중소업체 생존 기반 위협"</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260714_0003708959" target="_blank">→ 렌터카업계 "금융사 렌탈 취급한도 완화 철회를"</a></div>
+  <div class="source-card"><a href="https://www.bloter.net/news/articleView.html?idxno=668077" target="_blank">→ KB캐피탈, 오토 기반 투자금융 '리밸런싱'…5% 순익 성장 이룰까</a></div>
+  <div class="source-card"><a href="https://www.autodaily.co.kr/news/articleView.html?idxno=545742" target="_blank">→ 전기차 안 팔리면 과징금, 자동차 온실가스 기준 확 바뀐다</a></div>
+  <div class="source-card"><a href="https://www.news1.kr/industry/auto-industry/6226696" target="_blank">→ 수입차 시장 활황인데 슈퍼카 판매 24%↓…리스비↑·세무조사 '부담'</a></div>
+  <div class="source-card"><a href="https://www.dailian.co.kr/news/view/1667111/?sc=Naver" target="_blank">→ 코오롱모빌리티, 신차·AS·중고차 잇는다…'라이프사이클 파트너' 전환</a></div>
+
+</div>
