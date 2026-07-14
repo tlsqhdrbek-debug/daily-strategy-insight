@@ -1,0 +1,138 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">기준금리 인상·가계대출 총량 규제 강화 속 은행권 대출 문턱 급등, 캐피탈사 대환·서민금융 수요 유입 가능성 확대</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card"><div class="event-text">은행권 MCI·MCG 중단, 주담대 한도 대폭 축소 확산</div></div>
+  <div class="event-card"><div class="event-text"><b>기준금리 인상</b> 전망에 예금·대출금리 동반 상승세</div></div>
+  <div class="event-card"><div class="event-text">가계대출 증가율 목표치 <b>1.5%</b> 중 <b>80%</b> 상반기 소진</div></div>
+  <div class="event-card"><div class="event-text">서민금융진흥원, 비금융 대안신용평가 <b>연내 개발</b> 추진</div></div>
+  <div class="event-card" style="margin-bottom:16px;"><div class="event-text">BNK경남은행, 수도권 풍선효과 차단 위해 선제 대출 제한</div></div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">은행권 대출 조이기로 중저신용·서민 차주의 <b>2금융권 유입</b> 확대 전망. 대안신용평가 활성화 시 캐피탈사 심사 고도화·신규 고객층 확보 기회</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content"><b>기준금리 인상</b> 시 조달비용 상승 불가피, 캐피탈사 예대마진 압박. 취약차주 연체율 급등에 따른 <b>자산건전성</b> 악화 리스크</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">금리 인상·대출 규제 즉시 영향</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">대안CB 도입·건전성 변화</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">BNK경남은행이 수도권 풍선효과 차단을 위해 <b>MCI·MCG 신규 취급 중단</b> 및 주담대 한도 축소를 선제 시행. 애큐온저축은행은 토스와 협업해 상권 데이터 기반 <b>개인사업자 대안신용평가 대출</b>을 출시, 비금융 데이터 활용 심사 차별화에 나선 흐름</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">은행권 대출 축소에 따른 <b>풍선효과</b> 유입 수요 대응 체계 점검 필요. <b>7월 금통위</b> 금리 인상 시 신규 여신 금리 체계·조달 스프레드 즉시 재산정 검토 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">대안신용평가 모형 자체 개발·도입 검토로 중저신용 차주 심사 변별력 강화 필요. 금리 상승기 다중채무·취약차주 포트폴리오 <b>연체율 시나리오 분석</b> 및 충당금 적정성 재점검 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 금리 <b>0.25~0.75%p</b> 인상 시나리오별 기존 차주 이자부담·연체 전이율 시뮬레이션 실시<br>② 비금융 대안데이터(통신·공공·이커머스) 활용 신용평가 모형 파일럿 도입 타당성 검토</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://dealsite.co.kr/articles/165252" target="_blank">→ 생산적 금융 밀고 가계부채 조이고…엇갈린 은행 대출금리</a></div>
+  <div class="source-card"><a href="https://www.yna.co.kr/view/AKR20260714167900002?input=1195m" target="_blank">→ 대출 금리 오르면 '영끌·빚투' 이자 부담도 눈덩이</a></div>
+  <div class="source-card"><a href="https://www.sedaily.com/article/20067817?ref=naver" target="_blank">→ 예금금리 다시 꿈틀...대출금리도 상승예고</a></div>
+  <div class="source-card"><a href="https://daily.hankooki.com/news/articleView.html?idxno=1385932" target="_blank">→ 가계대출 관리…우리은행도 지점당 주담대 한도 30억원→10억원 축소</a></div>
+  <div class="source-card"><a href="http://www.knnews.co.kr/news/articleView.php?idxno=1546427" target="_blank">→ 경남은행, 수도권 '풍선효과' 차단… 대출 문턱 높였다</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260714_0003709227" target="_blank">→ 올해 5대 은행 대기업대출 17.5조↑</a></div>
+  <div class="source-card"><a href="https://biz.heraldcorp.com/article/10808563?ref=naver" target="_blank">→ 서금원, 비금융 서민 대안신용평가 개발…연내 개발 목표</a></div>
+  <div class="source-card"><a href="https://www.sedaily.com/article/20067607?ref=naver" target="_blank">→ 신한은행 '신용평가모형' 효과…서민 642명에 추가 대출</a></div>
+  <div class="source-card"><a href="https://www.donga.com/news/Economy/article/all/20260714/134298595/1" target="_blank">→ "주택공급 늘리려면 재건축 활성화…대출규제 풀어야"</a></div>
+  <div class="source-card"><a href="https://www.hankyung.com/article/202607144805i" target="_blank">→ 전문가들 "비아파트 대출규제 풀어야 주택시장 안정"…공급 제언 쏟아져</a></div>
+  <div class="source-card"><a href="https://view.asiae.co.kr/article/2026071417282631692" target="_blank">→ 애큐온저축銀, 토스 전용 '개인사업자 모두On 대출' 출시</a></div>
+
+</div>
