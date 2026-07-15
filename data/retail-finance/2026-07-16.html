@@ -1,0 +1,155 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">가계대출 총량규제·금리 인상·대출 절벽이 동시 진행되며, 은행권 실수요자 자금이 <b>2금융권</b>으로 이동할 가능성 확대</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">금융위, 가계대출 증가율 <b>1.5% 이내</b> 총량규제 유지 재확인</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">시중은행·지방은행 동시 대출 한도 축소 및 MCI·MCG 신규 가입 중단 확산</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">6월 코픽스 <b>3.05%</b> 기록, 1년 5개월 만에 3%대 진입</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">한국은행, <b>3년 6개월 만</b> 기준금리 인상 전망(연 <b>2.50%→2.75%</b>)</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">BNK부산은행·경남은행·BNK캐피탈, 취약계층 부실채권 <b>1,500억원</b> 소각 추진</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">DSR 성과급 반영 기간 <b>2년→3년</b> 확대, 주담대 자본규제 강화 예고</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">은행권 대출 절벽으로 <b>2금융권</b> 여신 수요 유입 가능성 확대. 서민금융 복합지원센터 등 정책서민금융 연계 통한 캐피탈사 포용금융 역할 강화 기회</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">기준금리 인상 시 캐피탈사 조달비용 상승 불가피. 은행에서 밀려난 차주의 신용 리스크가 캐피탈사로 전이될 우려</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">대출 절벽에 따른 수요 유입 즉시</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">금리 인상 사이클 지속 시 건전성 영향</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">금일 수집 기사 검토 결과, 현재 부서와 키워드에 실질적으로 관련된 경쟁사 동향은 별도로 확인되지 않았습니다.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">BNK부산은행·경남은행의 대출모집인 중단·MCI 중단에 따른 풍선효과로 BNK캐피탈 개인여신 문의 증가 예상. 유입 차주의 <b>DSR·신용등급</b> 사전 심사 강화 점검 필요. 코픽스 <b>3.05%</b> 반영에 따른 자체 여신금리 재산정 검토 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">기준금리 <b>추가 인상</b> 가능성에 대비한 조달비용 시나리오 수립 필요. 가계대출 총량규제 장기화 시 캐피탈사 개인여신 포트폴리오 건전성 모니터링 강화 검토. BNK그룹 포용금융지원단 연계 서민금융 상품 확대 전략 수립 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 은행권 대출 축소 시점별 BNK캐피탈 개인여신 신규 접수량·차주 신용등급 분포 변화 추이 분석<br>② 기준금리 인상 시나리오(<b>2.75%~3.00%</b>)별 조달금리·여신금리 스프레드 시뮬레이션 실시</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.mk.co.kr/article/12099636" target="_blank">→ "대출총량제 때문에 거리 나앉을판 … 무주택자는 규제 풀어달라"</a></div>
+  <div class="source-card"><a href="https://news.bizwatch.co.kr/article/finance/2026/07/15/0040" target="_blank">→ "가계대출 총량규제 풀어달라"…한 주택판매업자의 하소연</a></div>
+  <div class="source-card"><a href="http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202607150610&t=NN" target="_blank">→ "주거사다리" vs "집값만 자극"…청년 대출규제 완화 놓고 격론</a></div>
+  <div class="source-card"><a href="https://www.sedaily.com/article/20068222?ref=naver" target="_blank">→ "2030, 대출제한 불평등하게 생각…금융 규제는 단기간으로 해야"</a></div>
+  <div class="source-card"><a href="https://www.pressian.com/pages/articles/2026071518223707581?utm_source=naver&utm_medium=search" target="_blank">→ "가족·사내 대출로 집 산다"…집값 안정 위한 '그림자 금융' 규제론 부상</a></div>
+  <div class="source-card"><a href="https://www.edaily.co.kr/news/newspath.asp?newsid=05254566645514848" target="_blank">→ 서울 집값 잡으려다 지방까지 번진 대출 한파</a></div>
+  <div class="source-card"><a href="https://www.dt.co.kr/article/12073087?ref=naver" target="_blank">→ "대출 막혀 잔금 어쩌나"…시중은행에 이어 지방은행까지 대출 '꽁꽁'</a></div>
+  <div class="source-card"><a href="https://www.mt.co.kr/finance/2026/07/16/2026071515171558451" target="_blank">→ 1년5개월만에 3% 넘은 코픽스…대출문턱 높아지고, 금리도 오른다</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260715_0003710871" target="_blank">→ 한은, 오늘 고물가 우려 속 기준금리 인상 나설 듯…3년 6개월만</a></div>
+  <div class="source-card"><a href="https://news.tvchosun.com/site/data/html_dir/2026/07/15/2026071590274.html" target="_blank">→ 대출 절벽에 금리 상승까지 '첩첩산중'…주담대 변동금리 석달째 상승</a></div>
+  <div class="source-card"><a href="http://www.fnnews.com/news/202607151818159821" target="_blank">→ 주식 살 돈 빌렸나...신용대출 이달 1조4천억 증가</a></div>
+  <div class="source-card"><a href="https://www.mk.co.kr/article/12099715" target="_blank">→ 요즘 빚투족 'P2P 대출'로 영끌…당국, 스톡론 한도 10억 제한</a></div>
+  <div class="source-card"><a href="https://www.hankyung.com/article/2026071562101" target="_blank">→ BNK금융그룹, 부산 서민금융복합지원센터 문 열어…취약계층 자립·재기 돕는다</a></div>
+  <div class="source-card"><a href="https://www.joongang.co.kr/article/25445503" target="_blank">→ [새로운 출발 부울경] 대출부터 고용까지 … 첫 '서민금융 복합지원'</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260715_0003710694" target="_blank">→ 이억원 "가계부채 관리하면서 주거사다리 보호 방법, 현장서 듣겠다"</a></div>
+
+</div>
