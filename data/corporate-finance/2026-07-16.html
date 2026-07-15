@@ -1,0 +1,150 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-opportunity .insight-title{font-size:11px;font-weight:600;color:#0F6E56;margin-bottom:4px;}
+.insight-risk .insight-title{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:4px;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">BNK그룹 지역산업금융 체계 재편, 홈플러스 회생·PF 규제 완화 논의 속 기업금융 리스크·기회 동시 부각</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">BNK금융, 부울경 산업금융·해양금융 조직 대폭 신설</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">홈플러스 <b>DIP 2,000억원</b> 자금지원 합의, 회생 재개 가능성</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">PF·브릿지론 규제 완화 요구, 부동산 대토론회서 본격 논의</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">건설업 취업자 <b>26개월 연속 감소</b>, 업황 부진 장기화</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">AI 데이터센터 투자 급증, 대규모 PF 조달 수요 확대</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">BNK그룹 산업금융 조직 강화로 캐피탈사 기업여신 연계 확대 가능. AI DC 등 대형 인프라 PF 조달 수요 증가, 참여 기회 모색 여지 존재</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">건설업 장기 부진·PF 경색으로 기업여신 건전성 악화 우려. 홈플러스 등 대형 회생 사례 확산 시 유통·협력업체 연쇄 부실 리스크</div>
+  </div>
+
+  <div class="section-title" style="margin-bottom:8px;">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">홈플러스 회생 결정·PF 규제 논의</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">건설업 고용·업황 회복 여부, AI 인프라 PF 본격화</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">부동산 대토론회에서 캐피탈사 실무자가 <b>PF대출·브릿지론 규제 완화</b>를 직접 요구, 업계 공통 애로사항으로 부각. iM뱅크는 기술보증기금과 <b>738억원</b> 규모 미래산업 금융지원 협약 체결, 중소기업 생산적 금융 경쟁 심화 흐름</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">건설업 <b>26개월 연속 고용 감소</b> 속 기업여신 포트폴리오 내 건설·부동산 익스포저 점검 필요. 홈플러스 DIP 대출 구조(개인보증+금융그룹 집행) 사례를 통해 회생기업 여신 심사 기준 재점검 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">BNK그룹 산업금융전략팀·해양금융추진단 신설에 맞춰 캐피탈사 기업금융 연계 전략 수립 검토. PF 규제 완화 시 비아파트·소규모 사업장 PF 참여 기회 확대 가능성 대비</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 기업여신 포트폴리오 중 건설·부동산 PF 관련 연체율·대손충당금 적정성 긴급 점검 실시 ② BNK그룹 산업금융 조직 재편에 따른 캐피탈사 기업금융 협업 모델(중소기업 승계금융·지역 전략산업 여신 등) 구체화 검토</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.etnews.com/20260715000314" target="_blank">→ BNK금융, '부울경' 특화 전략 가동…지주·은행 조직개편 단행</a></div>
+  <div class="source-card"><a href="https://dealsite.co.kr/articles/165393" target="_blank">→ BNK금융, 부울경 전략산업 지원 강화…AX·디지털자산 조직 신설</a></div>
+  <div class="source-card"><a href="https://www.busan.com/view/busan/view.php?code=2026071511103668959" target="_blank">→ BNK금융, 하반기 조직 개편 단행… "지역 금융 역할 강화·미래금융 대응"</a></div>
+  <div class="source-card"><a href="https://www.edaily.co.kr/news/newspath.asp?newsid=06589526645514848" target="_blank">→ iM뱅크-기술보증기금, 738억원 규모 미래산업 금융지원</a></div>
+  <div class="source-card"><a href="http://www.fnnews.com/news/202607152119421772" target="_blank">→ 홈플러스 회생 불씨 살리나…MBK·메리츠, 자금지원 합의</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260715_0003710560" target="_blank">→ 홈플러스 운명의 날 임박…MBK·메리츠·노조 대면한다</a></div>
+  <div class="source-card"><a href="https://www.mt.co.kr/finance/2026/07/16/2026071519004465598" target="_blank">→ "청년대출 규제완화 필요" vs "또다른 집값 상승 유발"</a></div>
+  <div class="source-card"><a href="https://www.yna.co.kr/view/AKR20260715171000002?input=1195m" target="_blank">→ "공급차질"vs"소수특혜"…이주비부터 청년·전세대출 갑론을박</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260715_0003710279" target="_blank">→ 비아파트 인허가 비중 10% 아래로…"건축·대출·세제 규제 함께 풀어야"</a></div>
+  <div class="source-card"><a href="https://www.bloter.net/news/articleView.html?idxno=668107" target="_blank">→ [부동산 PF 점검] IPARK현산, '강동 더리버' 2940억 회수 과제</a></div>
+  <div class="source-card"><a href="https://www.hani.co.kr/arti/economy/economy_general/1268407.html" target="_blank">→ 취업자수 4만명 줄더니 6월에 반등…제조·건설업 2년 연속 감소세</a></div>
+  <div class="source-card"><a href="https://www.mk.co.kr/article/12099458" target="_blank">→ 청년 고용률 2년2개월째 뒷걸음쳤다</a></div>
+  <div class="source-card"><a href="http://www.fnnews.com/news/202607152121460406" target="_blank">→ SKT, 15GW AIDC 구축 메가프로젝트 속도</a></div>
+  <div class="source-card"><a href="https://www.chosun.com/economy/tech_it/2026/07/16/2NK77VBXEJDD3CP5H7NJZGD5TE/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news" target="_blank">→ 기업 투자 구조, 조직 운영방식까지 바꾸는 AI</a></div>
+
+</div>
