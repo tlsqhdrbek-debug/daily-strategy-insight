@@ -1,0 +1,143 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">금융 AI 신뢰성 검증·망분리 규제 완화 흐름 속, 개인정보 유출 제재 강화와 사이버 공격 위협이 금융IT 리스크 관리의 시급성을 높이는 국면</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">금융위, <b>2026년 5월</b> 망분리 규제 완화 시행으로 금융사 AI 활용 확대 지원</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">금융 AI 오답변·불완전판매 리스크 대응 위한 신뢰성 검증 솔루션 수요 급증</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">KT 개인정보 유출 사고 제재 결과 <b>7월 29일</b> 확정 예정, 최대 과징금 <b>약 2,000억원</b> 추산</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">친팔레스타인 해킹조직, 이스라엘 금융 인프라 대상 <b>120TB</b> 데이터 삭제 주장</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">망분리 규제 완화로 AI 기반 여신심사·고객상담 등 업무 고도화 가능 구간 진입. 신뢰성 검증 모델 도입 시 <b>금소법</b> 위반 리스크 선제 차단 및 감독기관 대응력 확보 가능</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">개인정보 유출 시 매출액 대비 <b>최대 3%</b> 과징금 부과 가능, 금융사 정보보호 관리 부실 시 대형 제재 리스크 현실화. 금융권 대상 사이버 공격 고도화로 백업 시스템까지 위협받는 양상 확대</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">망분리 완화 후속 조치·정보보호 점검</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">AI 신뢰성 검증 체계 구축</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">KB금융이 AI 스타트업 티냅스와 협업하여 금융상담 에이전트 신뢰성 검증 모델을 개발, <b>금융위원장상</b> 수상. AI센터에 <b>100명 이상</b> 전문인력을 배치하고 여·수신·연금 부서까지 연계한 실전 적용 체계 구축 중</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">KT 과징금 확정 사례를 참고하여 자사 개인정보 관리 체계·펨토셀 등 통신 설비 연계 보안 취약점 긴급 점검 필요. AI 챗봇·상담 시스템 운영 시 오답변 감사 기록(Audit Trail) 체계 구비 여부 확인 필요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">망분리 규제 완화에 따른 AI 활용 확대 로드맵 수립 검토. 금융 AI 신뢰성 검증 솔루션 도입을 통한 불완전판매·금소법 위반 리스크 사전 차단 체계 마련 검토</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 자사 AI 기반 고객 응대 채널(챗봇·상담 등)의 오답변 발생 빈도 및 실시간 검증 체계 현황 진단 실시<br>② 개인정보보호법 위반 시 과징금 시뮬레이션(매출액 대비 3% 기준) 및 정보보호 투자 수준 벤치마킹 점검</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card">
+    <a href="https://biz.chosun.com/stock/finance/2026/07/20/LQB723U625GQRJFO5USKUCSBPI/?utm_source=naver&utm_medium=original&utm_campaign=biz" target="_blank">→ [인터뷰] 강민승 티냅스 대표 "금융 AI는 빠른 답보다 안전한 답변 해야"</a>
+  </div>
+  <div class="source-card">
+    <a href="http://www.fnnews.com/news/202607191603039075" target="_blank">→ KT 개인정보 유출 제재, 이르면 29일 결론</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.news2day.co.kr/article/20260720500004" target="_blank">→ 친팔레스타인 해킹조직 "이스라엘 금융·국방 데이터 120TB 삭제"</a>
+  </div>
+
+</div>
