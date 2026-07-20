@@ -1,0 +1,152 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">금융권 망분리 전면 해제·보안규제 확대·양자암호 전환이 동시 진행되며, IT 보안·인프라 전략 재설계 시점 도래</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">금융위, <b>2026년 12월</b> 망분리 규제 전면 해제 추진 착수</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">자산운용사·GA·클라우드업체까지 <b>전금법 적용 대상 확대</b> 검토</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text"><b>디지털금융안전법</b> 제정 추진으로 보안규제 체계 전면 재편 예고</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">금융권 <b>양자내성암호(PQC)</b> 도입 본격화, 주요 금융사 수주 확대</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">따릉이 <b>462만명</b> 개인정보 유출 사고 후속 조치 진행</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">망분리 해제 시 AI 기반 여신심사·리스크관리 고도화 가능. 선제적 보안투자로 규제 대응력 차별화 기회 확보</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">전금법 적용 범위 확대 시 위수탁 클라우드 보안 의무 강화 예상. 대형 금융사 대비 보안 인프라·인력 격차 리스크 존재</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">망분리 해제 기획형 샌드박스 <b>2026년 12월</b> 착수</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">디지털금융안전법 제정·PQC 전환 <b>2027년</b> 이후</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">KB·신한·하나·우리 <b>4대 금융지주</b>가 하반기 경영전략에서 AI 전환(AX)을 핵심 과제로 제시하고, 망분리 해제에 선제 대응하는 속도전 돌입. 금융보안원 회원사 중 운용사는 전무하나 <b>미래에셋자산운용</b>이 최초 가입 협의 중으로, 비은행 업권의 보안 체계 강화 흐름 확산</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">기획형 혁신금융 망분리 해제 대상 선정 기준 확정 전, 자사 AI 활용 역량·보안 대체조치 수준 사전 점검 필요. 전금법 적용 확대 시 외부 클라우드 위수탁 계약의 보안 조항 재검토 필요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content"><b>디지털금융안전법</b> 제정에 따른 캐피탈사 보안 투자 의무 범위 파악 필요. <b>PQC</b> 전환 로드맵 수립 및 인증·전자서명 구간 암호체계 업그레이드 검토 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 망분리 전면 해제 기획형 샌드박스 참여 요건 대비, 자사 보안 인프라·AI 활용 현황 갭 분석 실시 검토<br>② 현행 고객정보 암호화 체계의 양자내성암호(PQC) 전환 필요 구간 식별 및 우선순위 도출 검토</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card">
+    <a href="http://www.fnnews.com/news/202607201825559642" target="_blank">→ AI 보안역량 갖춘 금융사 선별… 연내 망분리 전면해제</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.businesspost.co.kr/BP?command=article_view&num=442665" target="_blank">→ 4대 금융지주 회장 하반기 승부처는 '인공지능', 망분리 해제 앞두고 AX 진검승부 예고</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.mt.co.kr/finance/2026/07/21/2026072019545679255" target="_blank">→ 개인정보 해킹 막는다… 금융위, 운용사·GA·클라우드 전금법 포함 검토</a>
+  </div>
+  <div class="source-card">
+    <a href="https://zdnet.co.kr/view/?no=20260720223030" target="_blank">→ 라온시큐어, NH농협손보에 PQC 공급…금융권 수주 확대</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.edaily.co.kr/news/newspath.asp?newsid=02151686645516816" target="_blank">→ 따릉이 탔다 개인정보 털렸다…보상은 5천원 정기권</a>
+  </div>
+
+</div>
