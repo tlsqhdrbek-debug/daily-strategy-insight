@@ -1,0 +1,128 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-opportunity .insight-title{font-size:11px;font-weight:600;color:#0F6E56;margin-bottom:4px;}
+.insight-risk .insight-title{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:4px;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+<div class="wrap">
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">금융권 에이전틱 AI 전환 본격화 속, 산업별 AX 설계 차별화와 신뢰 기반 자율성 확보가 핵심 과제로 부상</div>
+  </div>
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">KB·신한·우리·NH 등 주요 금융사, <b>에이전틱 AI</b> 기반 AX 전환 본격 추진</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">AX 프로젝트 실패율 <b>70~85%</b>, 산업별 맞춤 설계 중요성 재조명</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">하나금융·두나무, 스테이블코인·STO·RWA 등 디지털 금융 전방위 협력 구상</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">금융권 디지털 채널에 <b>양자내성암호(PQC)</b> 보안 체계 도입 확산</div>
+  </div>
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">AI 에이전트 활용 시 여신 심사·고객 상담 등 <b>업무처리 속도 30% 개선</b> 기대. 캐피탈사 특성에 맞는 AX 설계로 업무 효율화 선점 가능</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">에이전틱 AI 오류가 실제 행동·결과로 연결되는 리스크 존재. AI 사고·오작동 비중 <b>2026년 상반기 22.1%</b>로 상승 추세</div>
+  </div>
+  <div class="section-title" style="margin-bottom:8px;">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">AI 에이전트 도입은 2026년 하반기~2027년 초 집중</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">디지털 금융 협력 모델 구체화 및 확산</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">디지털 금융 협력 모델 중장기 안착</div>
+    </div>
+  </div>
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content"><b>KB금융</b>: 전 금융권 최초 에이전틱 AI 기반 'KB GenAI 포털' 오픈, AI 데이터 분석 에이전트 'KB 다비스'·'AI 데브 센터' 운영 중. <b>우리은행</b>: 기업여신·자산관리·내부통제 등 <b>29개 업무</b>에 엔터프라이즈 레벨 AI 에이전트 적용 착수, <b>2026년 12월~2027년 초 175개 에이전트</b> 도입 예정.</div>
+  </div>
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">주요 은행·금융지주의 AI 에이전트 도입 가속화에 따른 캐피탈사 AX 추진 속도 점검 필요. 금융 산업 특성상 권한 설계·책임 범위 미정리 시 재설계 리스크 존재</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">에이전틱 AI 거버넌스·통제 체계 사전 설계 검토 필요. 디지털 채널 PQC 전환 및 <b>2026년 11월 양자기술산업법</b> 시행 대비 보안 체계 점검 필요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 여신 심사·고객 상담 등 캐피탈 핵심 업무 중 AI 에이전트 파일럿 적용 우선순위 과제 선정 및 <b>4~8주 단위</b> 검증 체계 수립 검토. ② 에이전틱 AI 도입 시 오판단 자동실행·지시범위 이탈 방지를 위한 인간 개입 지점(Human-in-the-Loop) 설계 기준 마련 검토</div>
+  </div>
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card">
+    <a href="http://www.hansbiz.co.kr/news/articleView.html?idxno=851171" target="_blank">→ 금융권 'AI에이전트' 전환…관건은 신뢰기반 자율성</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.ajunews.com/view/20260716180513323" target="_blank">→ [전문가 기고] 성공하는 AX 프로젝트는 산업별 설계가 다르다</a>
+  </div>
+  <div class="source-card">
+    <a href="https://www.yna.co.kr/view/AKR20260720151100002?input=1195m" target="_blank">→ '미래금융 새판짜기' 의기투합한 하나금융·두나무</a>
+  </div>
+  <div class="source-card">
+    <a href="https://zdnet.co.kr/view/?no=20260720223030" target="_blank">→ 라온시큐어, NH농협손보에 PQC 공급…금융권 수주 확대</a>
+  </div>
+</div>
