@@ -1,0 +1,140 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">금융권 AI 전환이 본격화되나, 노후 전산센터·규제가 병목으로 작용하며 외부 인프라 활용과 AI 에이전트 도입 경쟁 가속</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">금융권 AX, 노후 전산센터 전력·냉각 한계로 GPU 운영 난항</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">은행권 AI 에이전트·디지털뱅킹 구축 사업 연이어 발주</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">KB국민은행, AI 전문가 사외이사 영입으로 AI 경쟁력 강화 선언</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">AI 대체 가능 직종 분석 결과, 금융·사무 전문직 비중 최대</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">외부 전용 GPU 인프라·AI 에이전트 도입 시 <b>업무 자동화</b> 및 고객 응대 효율 대폭 개선 가능. 은행권 대규모 DX 사업 확대로 금융 IT 생태계 전반의 AI 서비스 표준 상향 흐름</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">노후 전산센터 보유 금융사는 AI 인프라 전환 비용이 <b>신축 수준</b>까지 상승 가능. <b>망분리·보안 규제</b> 미해소 시 외부 GPU 활용도 제한되어 AX 격차 확대 우려</div>
+  </div>
+
+  <div class="section-title">⏱ 영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">인프라 제약은 즉시 영향</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">AI 에이전트 도입 경쟁은 <b>6개월~1년</b> 내 본격화</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">KB국민은행이 AI 전문가(성균관대 정윤경 교수)를 사외이사로 영입하며 이사회 차원에서 <b>AI 기반 서비스·데이터 분석 역량</b>을 핵심 경쟁력으로 격상. IBK기업은행은 <b>약 87억원</b> 규모 디지털뱅킹 리빌딩 1단계 사업을 발주하고, NH농협은행은 AI 에이전트 뱅킹 서비스 구축 계약을 체결하는 등 주요 은행권의 AI·디지털 플랫폼 투자 가속 흐름</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">자사 전산센터의 <b>GPU 수용 역량</b>(전력·냉각·하중) 현황 즉시 점검 필요. 외부 데이터센터 전용 공간 활용 시 <b>망분리·보안 규제</b> 충족 방안 사전 검토 필요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">은행권 AI 에이전트 도입 확산에 따라 캐피탈사 고객 접점(상담·심사·사후관리)에도 <b>AI 에이전트 적용 로드맵</b> 수립 검토 필요. 금융·사무직 AI 대체 가속 전망에 따른 내부 <b>직무 재설계</b> 및 인력 재배치 방향 선제 논의 필요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 자사 AI 인프라 구축 방식(자체 센터 증설 vs 외부 전용 GPU 환경 임차) 비용·규제 비교 분석 실시<br>② 여신 심사·고객 상담·채권관리 등 핵심 업무 중 <b>AI 에이전트 우선 적용 가능 영역</b> 도출 및 PoC 계획 수립</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.mt.co.kr/tech/2026/07/23/2026072220021420083" target="_blank">→ 새 GPU 못 굴리는 옛 전산센터… '금융 AX' 발목</a></div>
+  <div class="source-card"><a href="https://zdnet.co.kr/view/?no=20260722160657" target="_blank">→ 웹케시, IBK 디지털뱅킹 사업 수주…금융권 DX 사업 속도</a></div>
+  <div class="source-card"><a href="https://www.news1.kr/industry/sb-founded/6235594" target="_blank">→ "금융 AI 전환 시스템 구축 속도"…웹케시, IBK 디지털뱅킹 수주</a></div>
+  <div class="source-card"><a href="https://economist.co.kr/article/view/ecn202607220045" target="_blank">→ "AI 경쟁력 강화" 국민은행, 신임 사외이사 후보에 정윤경 교수 추천</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260722_0003719152" target="_blank">→ 10년 뒤 AI 대체 인력…전문가 10만7천명 vs 단순노무 2천명</a></div>
+  <div class="source-card"><a href="https://zdnet.co.kr/view/?no=20260722141709" target="_blank">→ 오픈AI, 상장 앞두고 금융권 CEO 영입…이사회 무게 싣는다</a></div>
+
+</div>
