@@ -1,0 +1,143 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;border-radius:0;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">가계대출 총량관리 실패와 전세대출 규제 강화 기조가 캐피탈사 소매여신 전략에 직접적 영향 예상</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">인터넷은행 기타대출 폭증, 상반기 총량관리 목표 초과</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">대통령, 전세대출 규제 강화·<b>DSR</b> 지역별 차등 적용 지시</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">신한캐피탈 상반기 순이익 <b>전년 동기 대비 48.1% 증가</b></div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">제2금융권 고금리 대출 의존 서민층 부담 완화 논의 부각</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">미국 주담대 금리 <b>6.58%</b>로 11개월 내 최고, 글로벌 금리 상승 압력</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">은행권 대출 셧다운으로 <b>캐피탈사 개인여신</b> 대체 수요 유입 가능. 농어촌 금융 접근성 확대 흐름 속 비대면 소매대출 채널 경쟁력 부각 기회</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">전세대출·<b>DSR 규제</b> 강화 기조가 제2금융권으로 확산될 리스크. 글로벌 금리 상승 지속 시 조달비용 부담 및 차주 상환능력 저하 우려</div>
+  </div>
+  <div class="section-title" style="margin-top:4px;">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">은행 대출 축소에 따른 수요 이전</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">규제 확대 시 캐피탈사 여신한도 영향</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content">신한캐피탈, 2026년 상반기 순이익 <b>947억원</b>(전년 동기 대비 <b>48.1%</b> 증가) 달성. 조달비용 효율화와 대손비용 안정화가 실적 개선 견인. 다만 2분기 순이익은 유가증권 관련 이익 감소로 전분기 대비 <b>46.8%</b> 감소한 329억원 기록</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">은행권 <b>신용대출·마통 한도 축소</b>로 제2금융권 유입 수요 증가 예상, 심사 강도 및 건전성 모니터링 병행 필요. 비거주 1주택자 추가 규제 발표 시 관련 담보대출 영향 점검 요</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content"><b>DSR 지역별 차등 적용</b> 제도 개편 시 지방권 캐피탈 영업전략 재설계 검토 필요. 글로벌 금리 상승 장기화 시 조달금리 상승분의 여신금리 전가 한계 점검 요</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 은행권 대출 축소 시기별 BNK캐피탈 개인신용대출 신청 건수·승인율 변동 추이 분석으로 수요 이전 규모 추정<br>② DSR 지역별 차등 적용 시나리오에 따른 부산·경남권 소매여신 한도 영향 시뮬레이션</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="http://www.fnnews.com/news/202607231818522461" target="_blank">→ 식지 않는 '빚투'… 가계대출 관리 사실상 실패</a></div>
+  <div class="source-card"><a href="https://www.hani.co.kr/arti/economy/property/1269631.html" target="_blank">→ 이 대통령 "전세대출 규제 강화해야 집값 폭등 막는다"</a></div>
+  <div class="source-card"><a href="https://news.tvchosun.com/site/data/html_dir/2026/07/23/2026072390173.html" target="_blank">→ 李대통령 "전세대출 집값 폭등 원인…규제 강화해야"</a></div>
+  <div class="source-card"><a href="https://www.yna.co.kr/view/AKR20260724008900072?input=1195m" target="_blank">→ 인플레 우려에 미 주택담보대출 금리 11개월 만에 최고</a></div>
+  <div class="source-card"><a href="https://news.kbs.co.kr/news/pc/view/view.do?ncd=8618799&ref=A" target="_blank">→ 은행 없는 청양·태안…우체국에서 은행 대출 시범 운영</a></div>
+  <div class="source-card"><a href="https://www.sidae.com/article/2026072314234093171" target="_blank">→ 증권이 끌고 카드가 받쳤다…신한금융 비은행 순이익 38% '껑충'</a></div>
+  <div class="source-card"><a href="http://www.inews24.com/view/1987996" target="_blank">→ 채영병 전주시의원 "서민 위한 전주형 포용금융 정책을"</a></div>
+
+</div>
