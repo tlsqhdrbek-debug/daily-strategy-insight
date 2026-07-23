@@ -1,0 +1,145 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#F5F4F0;font-family:-apple-system,'Malgun Gothic',sans-serif;}
+.wrap{max-width:100%;margin:0;padding:0;}
+.section-title{font-size:13px;font-weight:600;color:#2C2C2A;margin-bottom:8px;}
+
+.summary-card{background:#FCEBEB;border-left:4px solid #A32D2D;padding:14px 16px;margin-bottom:16px;}
+.summary-label{font-size:11px;font-weight:600;color:#A32D2D;margin-bottom:6px;}
+.summary-body{font-size:15px;line-height:1.6;color:#501313;}
+
+.event-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;border-left:3px solid #888780;margin-bottom:8px;}
+.event-text{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.event-text b{color:#A32D2D;}
+
+.insight-opportunity{background:#E1F5EE;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-risk{background:#FCEBEB;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.insight-title{font-size:11px;font-weight:600;margin-bottom:4px;}
+.insight-opportunity .insight-title{color:#0F6E56;}
+.insight-risk .insight-title{color:#A32D2D;}
+.insight-content{font-size:13px;line-height:1.6;color:#2C2C2A;}
+.insight-risk .insight-content b{color:#A32D2D;}
+
+.timeline{position:relative;padding-left:20px;margin-bottom:16px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:#D3D1C7;}
+.tl-item{position:relative;margin-bottom:12px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-20px;top:6px;width:14px;height:14px;border-radius:50%;}
+.tl-dot.short{background:#A32D2D;}
+.tl-dot.mid{background:#BA7517;}
+.tl-dot.long{background:#185FA5;}
+.tl-label{font-size:11px;font-weight:600;margin-bottom:3px;}
+.tl-label.short{color:#A32D2D;}
+.tl-label.mid{color:#BA7517;}
+.tl-label.long{color:#185FA5;}
+.tl-content{font-size:12px !important;line-height:1.5;border-radius:8px !important;padding:8px 10px !important;}
+.tl-content.short{background:#FCEBEB !important;color:#501313 !important;}
+.tl-content.mid{background:#FAEEDA !important;color:#633806 !important;}
+.tl-content.long{background:#E6F1FB !important;color:#0C447C !important;}
+
+.competitor-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:16px;}
+.competitor-content{font-size:13px;color:#444441;line-height:1.6;}
+.competitor-content b{color:#A32D2D;}
+
+.impact-row{border-radius:10px;overflow:hidden;margin-bottom:8px;display:flex;flex-direction:column;}
+.impact-label{width:100%;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;}
+.impact-label.short-label{background:#FAEEDA;color:#854F0B;}
+.impact-label.mid-label{background:#E6F1FB;color:#0C447C;}
+.impact-label.ai-label{background:#EEEDFE;color:#3C3489;}
+.impact-content{padding:10px 12px;font-size:13px;line-height:1.6;color:#2C2C2A;background:#F1EFE8;flex:1;}
+.impact-content b{color:#A32D2D;}
+
+@media(min-width:600px){
+  .impact-row{flex-direction:row;}
+  .impact-label{width:90px;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 4px;word-break:keep-all;}
+}
+
+.source-note{font-size:11px;color:#888780;margin-bottom:8px;line-height:1.5;}
+.source-card{background:#F1EFE8;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
+.source-card a{color:#185FA5;text-decoration:none;font-size:12px;line-height:1.5;}
+</style>
+
+<div class="wrap">
+
+  <div class="summary-card">
+    <div class="summary-label">🔥 핵심 한줄 요약</div>
+    <div class="summary-body">금융권 AX가 보험·증권·유통 등 전 업종으로 확산되며, AI 에이전트 기반 업무 자동화와 디지털자산 제도화가 동시 가속</div>
+  </div>
+
+  <div class="section-title">📌 무슨 일이 일어나고 있나</div>
+  <div class="event-card">
+    <div class="event-text">재보험사 핵심 업무에 생성형 AI·멀티 에이전트 오케스트레이션 본격 적용</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">증권·유통업계, <b>1인 1 AI 투자 에이전트</b> 및 업무용 AI 에이전트 서비스 잇따라 출시</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">국산 오픈웨이트 LLM '<b>솔라 오픈 2</b>' 공개, AI 에이전트 특화 모델로 금융·공공 확장 본격화</div>
+  </div>
+  <div class="event-card">
+    <div class="event-text">금융위, 디지털자산 <b>커스터디 별도 영업 분리</b> 및 법인 시장 개방 제도화 검토 착수</div>
+  </div>
+  <div class="event-card" style="margin-bottom:16px;">
+    <div class="event-text">미래에셋, 가상자산 거래소 코빗 인수 후 '<b>디지털X</b>'로 사명 변경·디지털자산 사업 본격화</div>
+  </div>
+
+  <div class="section-title">💥 핵심 인사이트</div>
+  <div class="insight-opportunity">
+    <div class="insight-title">기회 요인</div>
+    <div class="insight-content">AI 에이전트·RPA 기술이 금융 핵심 업무(심사·요율산정·고객응대)에 실전 적용 단계 진입, 캐피탈사 여신심사·리스크 분석 자동화 적용 가능성 확대. 국산 오픈웨이트 LLM 등장으로 자체 구축 비용 절감 및 데이터 주권 확보 경로 다양화.</div>
+  </div>
+  <div class="insight-risk">
+    <div class="insight-title">위협/리스크 요인</div>
+    <div class="insight-content">증권·카드·보험사가 AI 기반 서비스 고도화에 선제 투자 중이며, 캐피탈사의 AX 대응 지연 시 상품·서비스 경쟁력 격차 확대 우려. 디지털자산 커스터디·법인 개방 등 새로운 규제 프레임워크가 금융업 전반의 사업 범위를 재편할 가능성.</div>
+  </div>
+
+  <div class="section-title">영향 시점</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot short"></div>
+      <div class="tl-label short">단기</div>
+      <div class="tl-content short">AI 에이전트 서비스 출시·LLM 도입 검토</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot mid"></div>
+      <div class="tl-label mid">중기</div>
+      <div class="tl-content mid">디지털자산 기본법 제정·커스터디 제도 확립</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot long"></div>
+      <div class="tl-label long">장기</div>
+      <div class="tl-content long">해당 없음</div>
+    </div>
+  </div>
+
+  <div class="section-title">🏢 경쟁사 동향</div>
+  <div class="competitor-card">
+    <div class="competitor-content"><b>KB캐피탈</b>: 2026년 상반기 순이익 <b>1,381억원</b>(전년 동기 대비 <b>11.3%</b> 증가), 충당금 부담 감소에 힘입어 실적 개선. 그룹 차원에서 AI 기반 운영모델 고도화 및 비은행 부문 자본 재배분 가속화 중.</div>
+  </div>
+
+  <div class="section-title">🎯 영향도 분석</div>
+  <div class="impact-row">
+    <div class="impact-label short-label">단기 기회/리스크</div>
+    <div class="impact-content">코리안리·카카오페이증권·롯데백화점 등 타 업종의 AI 에이전트 도입 사례를 벤치마킹하여, BNK캐피탈 내 여신심사·고객상담·문서처리 등 <b>AI 에이전트 적용 가능 업무 식별</b> 필요. 업스테이지 '솔라 오픈 2' 등 국산 오픈웨이트 모델의 자체 구축 가능성 점검 필요.</div>
+  </div>
+  <div class="impact-row">
+    <div class="impact-label mid-label">중기 고려사항</div>
+    <div class="impact-content">디지털자산 <b>커스터디 분리 규제</b> 및 법인 시장 개방이 제도화될 경우, 캐피탈사의 디지털자산 관련 사업 참여 범위·규제 영향 사전 검토 필요. KB금융 등 대형 금융그룹의 비은행 부문 AI 투자 확대에 대응한 BNK캐피탈 AX 로드맵 수립 검토.</div>
+  </div>
+  <div class="impact-row" style="margin-bottom:16px;">
+    <div class="impact-label ai-label">AI 분석 제안</div>
+    <div class="impact-content">① 여신심사·리스크 분석 업무 중 AI 에이전트 적용 시 효율 개선 효과가 큰 프로세스를 선별하여 <b>PoC(개념검증) 과제 1건</b> 기획 검토<br>② 금융권 망분리 환경 내 생성형 AI 내부망 구축 사례(코리안리 등)를 참고하여, BNK캐피탈 보안 환경에 적합한 <b>AI 인프라 도입 방안</b> 사전 조사</div>
+  </div>
+
+  <div class="section-title">🔗 출처 기사</div>
+  <div class="source-note">아래 출처 기사는 제목이 아닌 본문 내용을 기준으로 검토했으며, 현재 부서와 키워드에 실질적으로 관련된 내용만 선별·반영했습니다.</div>
+  <div class="source-card"><a href="https://www.edaily.co.kr/news/newspath.asp?newsid=05733446645517472" target="_blank">→ 메가존클라우드-코리안리, 재보험 AX 협력</a></div>
+  <div class="source-card"><a href="https://it.chosun.com/news/articleView.html?idxno=2023092166390" target="_blank">→ 메가존클라우드, 코리안리 AX 지원…재보험 업무 AI로 개선</a></div>
+  <div class="source-card"><a href="https://www.etnews.com/20260723000254" target="_blank">→ 카카오페이증권 "3년 내 투자자 2000만명"…'1인 1 AI 에이전트'로 승부</a></div>
+  <div class="source-card"><a href="https://www.newsis.com/view/NISX20260723_0003721005" target="_blank">→ 실제 업무 수행 능력에 초점 맞춘 에이전트 전용 모델</a></div>
+  <div class="source-card"><a href="https://www.donga.com/news/Economy/article/all/20260723/134353817/1" target="_blank">→ 롯데百, AI 에이전트 서비스 론칭… 포괄적 AI 비즈니스 생태계 구축</a></div>
+  <div class="source-card"><a href="https://www.hankyung.com/article/2026072326206" target="_blank">→ 박현주의 가상자산 승부수…"코빗→디지털X로 사명 변경"</a></div>
+  <div class="source-card"><a href="https://view.asiae.co.kr/article/2026072314240029094" target="_blank">→ 금융위 "디지털자산 커스터디, 별도 영업 분리 검토"</a></div>
+  <div class="source-card"><a href="https://www.sidae.com/article/2026072316462290748" target="_blank">→ 증권·카드 동반 성장…KB금융, 비은행 기여도 39%→44% '쑥'</a></div>
+
+</div>
